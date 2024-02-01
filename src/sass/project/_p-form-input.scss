@@ -1,0 +1,24 @@
+
+@use '../foundation' as *;
+
+.p-form-input {
+  text-align: end;
+}
+
+.p-form-input input {
+	padding: rem(18) rem(15);
+	width: per(856, 1080);
+	font-size: rem(15);
+	line-height: 1;
+	border-radius:  rem(10);
+	border: 1px solid #FF0707;
+	appearance: none;
+	background-color: #FF070738;
+	background-image: none;
+}
+
+.p-form-input input:focus {
+	border: 1px solid #ccc;
+	box-shadow: none;
+	outline: none;
+}

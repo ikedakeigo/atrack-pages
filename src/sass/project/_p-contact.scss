@@ -1,0 +1,28 @@
+@use "../foundation" as *;
+
+.p-contact {
+
+}
+
+.p-contact__inner {
+
+}
+
+
+.p-contact__title {
+  @include mq(md){
+    line-height: calc(48 / 40);
+    margin-bottom: rem(72);
+  }
+  p {
+    font-weight: 400;
+    @include mq(md){
+      font-size:  rem(20);
+    }
+  }
+}
+
+
+.p-contact__form {
+
+}

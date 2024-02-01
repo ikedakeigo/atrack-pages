@@ -33,3 +33,18 @@ jQuery(function ($) {
         $(".js-hamburger").removeClass("is-open");
     }
 });
+
+jQuery(function ($) {
+    const mv_swiper = new Swiper(".js-mv-swiper", {
+        loop: true,
+        speed: 2000,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    });
+});

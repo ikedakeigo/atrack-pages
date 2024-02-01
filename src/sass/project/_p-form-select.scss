@@ -1,0 +1,35 @@
+@use "../foundation" as *;
+
+.p-form-select {
+  flex-grow: 1;
+	text-align: end;
+}
+
+.p-form-select select {
+  padding: rem(18) rem(15);
+  width: per(856, 1080);
+  // font-size: rem(15);
+  // line-height: 1;
+  // background-image: url(./../images/common/arrow.svg);
+  // background-repeat: no-repeat;
+  // background-size: rem(15);
+  // background-position: right rem(15) top rem(15);
+  appearance: none;
+  background-color: #ff070738;
+  border-radius: rem(10);
+  border: 1px solid #ff0707;
+  cursor: pointer;
+}
+
+.p-form-select select option {
+  color: #00000069;
+}
+.p-form-select select::-ms-expand {
+  display: none;
+}
+
+.p-form-select select:focus {
+  border: 1px solid #ccc;
+  box-shadow: none;
+  outline: none;
+}

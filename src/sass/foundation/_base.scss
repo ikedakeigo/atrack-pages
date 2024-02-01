@@ -85,3 +85,29 @@ a:hover {
     display: block;
   }
 }
+
+/*===================================
+ * メインタイトル
+===================================*/
+.main-title{
+  font-size:  rem(20);
+  line-height: calc(24 / 20);
+  font-weight: 700;
+  @include mq(md){
+    font-size:  rem(40);
+    line-height: calc(48 / 40);
+  }
+}
+
+/*===================================
+ * テキスト
+===================================*/
+
+// #main p {
+//   font-size:  rem(18);
+//   font-weight: 400;
+//   line-height: 1.5;
+//   @include mq(md){
+//     font-size:  rem(20);
+//   }
+// }

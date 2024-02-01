@@ -1,0 +1,40 @@
+@use '../foundation' as *;
+
+.p-form-submit input {
+    padding: rem(25) rem(125);
+    color: $color-white;
+    display: inline-block;
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: 1;
+    background-color: $color-green;
+    background-image: none;
+    border: none;
+    border-radius:  rem(10);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+    width: 100%;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    @include mq(md){
+        padding:  rem(38) 0;
+        font-size:  rem(40);
+        line-height: calc(48 / 40);
+    }
+}
+
+.p-form-submit input:hover,
+.p-form-submit input:focus {
+    outline: none;
+}
+
+.p-form-submit input:hover {
+    @include mq(md){
+        opacity: .8;
+    }
+}
+
+.p-form-submit input::-moz-foucus-inner {
+    padding: 0;
+    border: none;
+}

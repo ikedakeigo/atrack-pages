@@ -1,8 +1,8 @@
 @use '../foundation' as *;
 
-.l-footer {
+.l-contact {
 
   @include mq(md){
-    margin-top:  rem(140);
+    margin:  rem(60) 0;
   }
 }

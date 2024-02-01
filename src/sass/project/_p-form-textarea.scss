@@ -1,0 +1,23 @@
+@use '../foundation' as *;
+
+.p-form-textarea {
+    text-align: end;
+}
+
+.p-form-textarea textarea {
+    padding: rem(8) rem(15);
+    width: per(856, 1080);
+    height: rem(150);
+    font-size: rem(15);
+    border-radius:  rem(10);
+    border: 1px solid #ccc;
+    appearance: none;
+    background-color: #D9D9D963;
+    background-image: none;
+}
+
+.p-form-textarea textarea:focus {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    outline: none;
+}

@@ -1,0 +1,148 @@
+@use '../foundation' as *;
+
+.p-about {
+
+}
+
+.p-about__inner {
+
+}
+
+.inner {
+
+}
+
+.p-about__wrap {
+
+}
+
+.p-about__title {
+  @include mq(md){
+    margin-bottom: rem(28);
+  }
+}
+
+.p-about__text {
+
+  @include mq(md){
+    margin-bottom: rem(130);
+  }
+}
+
+.p-about__img {
+  background-color: $color-green;
+  color: $color-white;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  @include mq(md){
+    width: per(728, 1280);
+    padding:  rem(30) 0;
+    margin-bottom: rem(115);
+  }
+}
+
+.p-about__text-box {
+  @include mq(md){
+    margin-bottom: rem(115);
+  }
+}
+
+.p-about__subtitle {
+
+}
+
+.p-about__note {
+
+}
+.p-about__note dl {
+  position: relative;
+  @include mq(md){
+    margin: 0 auto  rem(22);
+    padding-top: rem(20);
+  }
+
+&::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  width: 100%;
+  background-color: $color-green;
+}
+}
+.p-about__note dl dt {
+  position: absolute;
+  left:  rem(53);
+  width:  rem(183);
+  padding:  rem(13) 0 0;
+  margin:  rem(10) 0 0;
+  font-weight: bold;
+}
+.p-about__note dl dd {
+  min-height: 40px;
+  padding-top: rem(13);
+  padding-left: rem(150);
+    margin: 10px 53px 0;
+    border-top: solid 1px #d4d4d4;
+    position: static;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.p-about__topics-list {
+
+}
+
+.p-about__blog-list {
+
+}
+
+.p-about__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-about__left-column {
+  border: solid 1px $color-green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include mq(md){
+    width: per(600, 1280);
+    height:  rem(745);
+  }
+}
+.p-about__left-column h4 {
+@include mq(md){
+  margin-bottom: rem(82);
+}
+}
+
+.p-about__left-text {
+  font-weight: 700;
+}
+.p-about__left-text ul {
+  list-style: disc;
+}
+
+.p-about__left-title {
+  @include mq(md){
+    margin-bottom: rem(135);
+  }
+}
+
+.p-about__right-column {
+  border: solid 1px $color-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq(md){
+    width: per(648, 1280);
+    height:  rem(745);
+  }
+}
