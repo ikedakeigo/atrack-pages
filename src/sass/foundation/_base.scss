@@ -40,6 +40,8 @@ html {
       font-size: vw(375, strip-unit($base-font-size));
     }
   }
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -63,5 +65,23 @@ a:hover {
     @include mq("md") {
       opacity: 1;
     }
+  }
+}
+
+
+/*===================================
+ * sp・pc共通
+===================================*/
+.forSP {
+  display: block;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.forPC {
+  display: none;
+  @include mq("md") {
+    display: block;
   }
 }

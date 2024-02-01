@@ -1,0 +1,267 @@
+@use "../foundation" as *;
+
+.header {
+}
+
+.l-header {
+}
+
+.header__inner {
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(20);
+  @include mq(md) {
+    max-width: rem(1330);
+    padding: rem(27) rem(25);
+  }
+}
+
+.header__wrap {
+  display: none;
+  @include mq(md) {
+    align-items: center;
+    margin-bottom: rem(33);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__logo {
+  width: per(517, 1280);
+  text-align: center;
+  border: 1px solid $color-black;
+  border-radius: 10px;
+  font-size: rem(24);
+  font-weight: normal;
+  padding: rem(15) 0;
+}
+
+.header__menu {
+  @include mq(md) {
+    width: per(680, 1280);
+  }
+}
+
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__menu-item {
+  color: $color-white;
+  background-color: $color-orange;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 0px #00000040;
+  box-sizing: border-box;
+  text-align: center;
+  @include mq(md) {
+    width: per(334, 680);
+    font-size: rem(24);
+    line-height: calc(29 / 24);
+    padding: rem(20) rem(72);
+  }
+}
+
+.header__menu-link {
+}
+
+.header__nav {
+  width: 100%;
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.header__nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-black;
+  border-bottom: 8px solid #d9d9d9;
+  height: rem(54);
+  @include mq(md) {
+    width: per(178, 1280);
+    font-size: clamp(rem(15), 1.5vw, rem(18));
+    line-height: calc(24 / 20);
+  }
+}
+
+.header__nav-item.active {
+  border-bottom: 8px solid $color-green;
+}
+
+/*===================================
+ * sp_menu
+===================================*/
+.header__sp-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  rem(7) 0;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+/*===================================
+ * ハンバーガーメニュー
+===================================*/
+.header__hamburger {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 999;
+  width: rem(64);
+  height:  rem(60);
+  border-radius: 10px;
+  background-color: $color-green;
+  cursor: pointer;
+  transition: 0.3s;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.header__hamburger.is-open {
+  background-color: $color-white;
+  position: fixed;
+  right:  rem(20);
+}
+
+.header__hamburger span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: rem(22);
+  height: 1px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.header__hamburger.is-open span {
+  width: rem(32);
+  height: 3px;
+  background-color: $color-green;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: rem(-10);
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: rem(10);
+}
+
+.header__hamburger span:nth-of-type(3)::after {
+  content:"メニュー";
+  position: absolute;
+  top:  rem(3);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size:  rem(10);
+  text-transform: uppercase;
+  width: rem(60);
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: 0;
+  transform: translateX(-50%) rotate(35deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  top: rem(-6);
+  transform: translateX(-50%) rotate(-35deg);
+}
+.header__hamburger.is-open span:nth-of-type(3)::after {
+  content:"閉じる";
+    transform: translateX(-50%)  rotate(35deg);
+  top:  rem(10);
+  left:  rem(5);
+  width: rem(60);
+  color: $color-green;
+}
+/*===================================
+ * ドロワーメニュー
+===================================*/
+
+.header__drawer {
+  padding-top:  rem(121);
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: -120%;
+  width: 80%;
+  height: 100vh;
+  background-color: $color-green;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  transition: 0.6s;
+}
+
+.header__drawer-title{
+  position:absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size:  rem(20);
+  font-weight: 400;
+  color: $color-white;
+}
+
+.header__drawer.is-open {
+  right: 0;
+}
+
+.header__drawer::-webkit-scrollbar {
+  display: none;
+}
+
+.header__drawer-item {
+  border-bottom: 1px dashed #fff;
+  width: per(270, 300);
+  margin: 0 auto;
+}
+
+.header__drawer-item a {
+  padding: rem(15) 0;
+  display: flex;
+  align-items: center;
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+  &::before {
+    content: "";
+    display: inline-block;
+    background-image: url(./../img/common/triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: rem(32);
+    height:  rem(25);
+  }
+}

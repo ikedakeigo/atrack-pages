@@ -19,7 +19,7 @@
  * https://webdou.net/sass-rem/
  * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
 ******************************************/
-@function prem($pixels) {
+@function rem($pixels) {
   @return math.div($pixels , strip-unit($base-font-size)) * 1rem;
 }
 
@@ -31,4 +31,17 @@
 ******************************************/
 @function vw($screen-size, $pixels) {
   @return math.div($pixels , $screen-size) * 100vw;
+}
+
+/*****************************************
+ * アスペクト比の計算
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+@function per($number, $size) {
+  @return math.div($number, $size) * 100%;
+}
+
+// アスペクト比
+@function aspect($width, $height) {
+  @return math.div($height, $width) * 100%;
 }
