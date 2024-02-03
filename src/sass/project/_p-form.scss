@@ -35,12 +35,15 @@
 }
 
 .p-form__label span {
-  margin-left: rem(50);
+margin-left: rem(20);
   padding: rem(5);
   display: inline-block;
   font-size: rem(12);
   color: #fff;
   background-color: #D00000;
+  @include mq(md){
+    margin-left: rem(50);
+  }
 }
 
 .p-form__input,

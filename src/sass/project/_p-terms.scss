@@ -14,8 +14,11 @@
 
 }
 
-.p-flow__title {
-
+.p-terms__title {
+  margin-bottom: rem(24);
+  @include mq(md){
+    margin-bottom: rem(31);
+  }
 }
 
 
@@ -37,7 +40,8 @@
 }
 
 .p-terms__list  {
-  margin-bottom: rem(20);
+  margin-bottom: rem(50);
+  font-size:  rem(18);
   @include mq(md){
     margin-bottom: rem(30);
   }

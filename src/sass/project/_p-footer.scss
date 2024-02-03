@@ -1,7 +1,6 @@
 @use '../foundation' as *;
 
 .p-footer {
-    padding: rem(45) 0;
     background-color: #D9D9D9;
     @include mq(md){
         padding: rem(30) 0 rem(20);
@@ -10,7 +9,7 @@
 
 .p-footer__inner {
     margin: auto;
-    padding: 0 rem(15);
+    padding:  rem(30) rem(15);
     width: 100%;
     @include mq(md){
         padding: 0 rem(25);
@@ -60,20 +59,24 @@
   display: flex;
   align-items: center;
   height:  rem(66);
-
   position: relative;
-  &::before{
-    content: "";
-    position: absolute;
-    top: 30%;
-    right: 0;
-    height: 24px;
-    width: 1px;
-    background-color: $color-green;
+  @include mq(mw){
+    justify-content: center;
   }
-  &:last-child::before {
-    // 最後の要素の擬似要素のスタイルを無効にする
-    content: none;
+  @include mq(md){
+      &::before{
+        content: "";
+        position: absolute;
+        top: 30%;
+        right: 0;
+        height: 24px;
+        width: 1px;
+        background-color: $color-green;
+      }
+      &:last-child::before {
+        // 最後の要素の擬似要素のスタイルを無効にする
+        content: none;
+      }
   }
 }
 
@@ -82,23 +85,29 @@
     position: relative;
     display: block;
     font-size: rem(18);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1;
     text-align: center;
     @include mq(md){
         padding: rem(15);
     }
 }
+.p-footer__nav-item a.active {
+    font-weight: 700;
+}
 
 .p-footer__copyright {
     margin-top: rem(10);
+    padding: rem(20) 0;
     display: block;
     font-size: rem(12);
     line-height: 1;
     letter-spacing: 0.04em;
     text-align: center;
+    background-color: $color-white;
     @include mq(md){
         margin-top: rem(50);
+        margin-bottom: rem(-20);
     }
 }
 

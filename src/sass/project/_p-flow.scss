@@ -1,21 +1,22 @@
 @use "../foundation" as *;
 
 .p-flow-list {
-  @include mq(md){
+  @include mq(md) {
     max-width: rem(1120);
     margin: 0 auto;
   }
 }
 
 .p-flow__title {
-  @include mq(md){
+  margin-bottom: rem(50);
+  @include mq(md) {
     margin-bottom: rem(37);
   }
 }
 
 .p-flow-list__item {
   position: relative;
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: rem(73);
   }
   &::after {
@@ -26,11 +27,17 @@
     background-position: center;
     background-size: contain;
     width: rem(80);
-    height:  rem(47);
+    height: rem(47);
     position: absolute;
     bottom: -25%;
     left: 50%;
     transform: translateX(-50%);
+    @include mq(mw){
+      background-image: url(./../img/common/triangle_under-sp.svg);
+      width: rem(24);
+      height: rem(46);
+      bottom: -30%;
+    }
   }
   &:last-child::after {
     content: none;
@@ -38,7 +45,7 @@
 }
 
 .p-flow-list__item-wrap {
-  padding: rem(10) rem(20) rem(10) 0;
+  padding: rem(32) rem(22) rem(22) rem(22);
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -46,26 +53,58 @@
   border-radius: rem(10);
   @include mq(md) {
     padding: rem(30) rem(24);
-    padding-left:  rem(51);
+    padding-left: rem(51);
   }
 }
 
-.p-flow-list__item-box{
-  @include mq(md){
+.p-flow-list__item-box {
+  @include mq(md) {
     margin-left: rem(66);
   }
 }
 
 .p-flow-list__item-title {
-  font-size: rem(14);
+  font-size: rem(20);
   line-height: 1;
   font-weight: 700;
-  margin-bottom: rem(10);
+  margin-bottom: rem(28);
+  margin-left: rem(41);
+  &::before {
+    content: "";
+    width: rem(20);
+    height: rem(100);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 23%;
+    left: 10%;
+    transform: translate(-50%, -25%);
+  }
   @include mq(md) {
     font-size: rem(40);
     margin-bottom: rem(20);
   }
 }
+
+@include mq(mw){
+  .p-flow-list__item:nth-of-type(1) .p-flow-list__item-title::before {
+    background-image: url(./../img/common/1.svg);
+  }
+
+  .p-flow-list__item:nth-of-type(2) .p-flow-list__item-title::before {
+    background-image: url(./../img/common/2.svg);
+  }
+
+  .p-flow-list__item:nth-of-type(3) .p-flow-list__item-title::before {
+    background-image: url(./../img/common/3.svg);
+  }
+
+  .p-flow-list__item:nth-of-type(4) .p-flow-list__item-title::before {
+    background-image: url(./../img/common/4.svg);
+  }
+
+}
+
 
 .p-flow-list__item-text {
   font-size: rem(14);

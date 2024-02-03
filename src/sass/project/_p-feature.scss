@@ -21,6 +21,7 @@
 }
 
 .p-feature__title {
+  margin-bottom: rem(23);
   @include mq(md){
     margin-bottom: rem(32);
   }

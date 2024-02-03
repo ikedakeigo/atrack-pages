@@ -2,19 +2,25 @@
 @use '../foundation' as *;
 
 .p-form-input {
-  text-align: end;
+	@include mq(md){
+		text-align: end;
+	}
 }
 
 .p-form-input input {
 	padding: rem(18) rem(15);
-	width: per(856, 1080);
 	font-size: rem(15);
 	line-height: 1;
 	border-radius:  rem(10);
 	border: 1px solid #FF0707;
+	background-color: #FF07B929;
 	appearance: none;
-	background-color: #FF070738;
 	background-image: none;
+	width: 100%;
+	@include mq(md){
+		background-color: #FF070738;
+		width: per(856, 1080);
+	}
 }
 
 .p-form-input input:focus {

@@ -1,12 +1,20 @@
 @use '../foundation' as *;
 
+.p-form-submit{
+    margin-top: rem(30);
+    @include mq(md){
+        margin-top: rem(0);
+    }
+}
+
 .p-form-submit input {
-    padding: rem(25) rem(125);
+    padding: rem(33) 0;
     color: $color-white;
     display: inline-block;
-    font-size: rem(16);
+    font-size: rem(32);
+    line-height: calc(38 / 32);
     font-weight: 700;
-    line-height: 1;
+    // line-height: 1;
     background-color: $color-green;
     background-image: none;
     border: none;

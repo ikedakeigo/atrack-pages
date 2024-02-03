@@ -73,7 +73,7 @@
 
 .cords-list__item-title {
   margin-top: rem(8);
-  font-size: rem(14);
+  font-size: rem(18);
   font-weight: 700;
   line-height: 1.5;
   @include mq(md){
@@ -84,9 +84,9 @@
 
 .cords-list__item-text {
   margin-top: rem(10);
-  font-size: rem(12);
+  font-size: rem(18);
+  font-weight: 400;
   @include mq(md){
       margin-top: rem(25);
-      font-size: rem(18);
   }
 }

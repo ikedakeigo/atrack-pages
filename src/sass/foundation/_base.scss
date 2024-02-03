@@ -111,3 +111,18 @@ a:hover {
 //     font-size:  rem(20);
 //   }
 // }
+
+/*===================================
+ * 点
+===================================*/
+.listMemo01 li{
+  position: relative;
+  display: block;
+  padding-left:  rem(10);
+}
+
+.listMark01{
+  position: absolute;
+  top: 0;
+  left: 0;
+}

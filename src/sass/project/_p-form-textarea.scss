@@ -6,14 +6,21 @@
 
 .p-form-textarea textarea {
     padding: rem(8) rem(15);
-    width: per(856, 1080);
-    height: rem(150);
+    width: 100%;
+    height:  rem(216);
     font-size: rem(15);
     border-radius:  rem(10);
     border: 1px solid #ccc;
     appearance: none;
     background-color: #D9D9D963;
     background-image: none;
+    @include mq(mw){
+        margin-bottom: rem(30);
+    }
+    @include mq(md){
+        width: per(856, 1080);
+        height: rem(150);
+    }
 }
 
 .p-form-textarea textarea:focus {

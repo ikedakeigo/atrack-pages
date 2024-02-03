@@ -1,4 +1,4 @@
-@use '../foundation' as *;
+@use "../foundation" as *;
 
 .c-btn {
   padding: prem(14) prem(60);
@@ -21,7 +21,7 @@
 .btnBlock01 {
   margin-bottom: rem(20);
   margin-top: rem(20);
-  @include mq(md){
+  @include mq(md) {
     margin-top: rem(30);
     margin-bottom: rem(30);
   }
@@ -29,13 +29,17 @@
 
 .btn--black {
   border: 1px solid #ccc;
-  padding:  rem(60) 0;
+  padding: rem(16) 0;
   text-align: center;
   background: $color-green;
   box-sizing: border-box;
-  font-size:  rem(52);
+  font-size: rem(24);
   font-weight: 700;
   color: $color-white;
+  @include mq(md) {
+    font-size: rem(52);
+    padding: rem(60) 0;
+  }
 }
 
 .btnWFull {
