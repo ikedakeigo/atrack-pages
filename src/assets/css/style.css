@@ -640,6 +640,19 @@ a {
   }
 }
 
+.l-price-calculator {
+  margin-top: 3px;
+  margin-top: 0.1875rem;
+  margin-bottom: 33px;
+  margin-bottom: 2.0625rem;
+}
+@media screen and (min-width: 768px) {
+  .l-price-calculator {
+    margin-top: 3.9375rem;
+    margin-bottom: 5.875rem;
+  }
+}
+
 .c-btn {
   padding: prem(14) prem(60);
   padding: prem(14) prem(60);
@@ -2082,6 +2095,9 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -2171,6 +2187,112 @@ a {
   }
 }
 
+.p-price-calculator__title {
+  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
+}
+
+.p-price-calculator__form {
+  padding: 30px 22px 15px 22px;
+  padding: 1.875rem 1.375rem 0.9375rem 1.375rem;
+  border: 5px solid #00890E;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__form {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5.9375rem;
+    padding-bottom: 1.5625rem;
+  }
+}
+
+.p-price-calculator__field {
+  margin: 0 auto;
+}
+.p-price-calculator__field:not(:last-child) {
+  margin-bottom: 44px;
+  margin-bottom: 2.75rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__field:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__field {
+    width: 69.84375%;
+  }
+}
+
+.p-price-calculator__label {
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__label {
+    text-align: right;
+    width: 25.9507829978%;
+    font-size: 1.5rem;
+    line-height: 1.2083333333;
+    margin-right: 4.5rem;
+  }
+}
+
+.p-price-calculator__select {
+  width: 100%;
+  background-color: #D9D9D9;
+  padding: 15px 0;
+  padding: 0.9375rem 0;
+  border-radius: 0.3125rem;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__select {
+    width: 40.0447427293%;
+  }
+}
+
+.p-price-calculator__description {
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__description {
+    width: 66.171875%;
+  }
+}
+
+.p-price-calculator__button {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.p-price-calculator__button input {
+  width: 100%;
+  padding: 34px 0;
+  padding: 2.125rem 0;
+  background-color: #00890E;
+  color: #fff;
+  font-weight: 700;
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2509803922);
+          box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2509803922);
+  border: none;
+  border-radius: 0.625rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__button input {
+    padding: 2.375rem 0;
+    width: 87.1875%;
+    font-size: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .innerWidth {
     width: 100vw;
@@ -2178,6 +2300,18 @@ a {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+
+.u-bottom-line {
+  height: 1px;
+  width: 100%;
+  background-color: #333;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .u-bottom-line {
+    width: 69.84375%;
   }
 }
 /*# sourceMappingURL=style.css.map */

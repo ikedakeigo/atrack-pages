@@ -1,0 +1,11 @@
+@use '../foundation' as *;
+
+.u-bottom-line {
+  height: 1px;
+  width: 100%;
+  background-color: $color-black;
+  margin: 0 auto;
+  @include mq(md){
+    width: per(894, 1280);
+  }
+}
