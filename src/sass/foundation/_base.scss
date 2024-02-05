@@ -118,11 +118,18 @@ a:hover {
 .listMemo01 li{
   position: relative;
   display: block;
-  padding-left:  rem(10);
+  padding-left: rem(22.5);
 }
 
 .listMark01{
   position: absolute;
   top: 0;
   left: 0;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.listMark-grid{
+  font-size:  rem(14);
+  line-height: 1;
+  // padding-left: rem(10);
 }

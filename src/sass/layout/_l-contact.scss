@@ -6,3 +6,13 @@
     margin:  rem(60) 0;
   }
 }
+
+#contact {
+  .l-contact {
+    margin-bottom: rem(50);
+    @include mq(md){
+      margin-top: rem(20);
+      margin-bottom: rem(60);
+    }
+  }
+}

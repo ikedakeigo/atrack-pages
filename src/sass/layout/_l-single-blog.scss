@@ -1,8 +1,9 @@
 @use '../foundation' as *;
 
-.l-flow {
-  margin-bottom: rem(55);
+.l-single-blog {
+  margin-bottom: rem(61);
   @include mq(md){
+    margin-top: rem(30);
     margin-bottom: rem(60);
   }
 }

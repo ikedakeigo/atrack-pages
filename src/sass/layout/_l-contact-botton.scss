@@ -1,8 +1,9 @@
 @use '../foundation' as *;
 
-.l-flow {
-  margin-bottom: rem(55);
+.l-contact-botton {
+  margin-bottom: rem(30);
   @include mq(md){
+    padding-top: rem(60);
     margin-bottom: rem(60);
   }
 }

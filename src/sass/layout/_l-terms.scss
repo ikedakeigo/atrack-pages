@@ -3,6 +3,7 @@
 .l-terms {
 
   @include mq(md){
-    margin:  rem(60) 0;
+    // margin:  rem(60) 0;
+    margin-bottom: rem(44);
   }
 }
