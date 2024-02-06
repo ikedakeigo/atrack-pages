@@ -13,10 +13,10 @@ const srcPath = {
 
 // 吐き出し先（なければ生成される）
 const destPath = {
-    css: 'src/assets/css/',
-    js: 'src/assets/js/',
-    img: 'src/assets/img/',
-    html: 'src/*.html',
+    css: 'assets/css/',
+    js: 'assets/js/',
+    img: 'assets/img/',
+    html: '*.html',
 }
 
 // ブラウザーシンク（リアルタイムでブラウザに反映させる処理）

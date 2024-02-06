@@ -1,10 +1,10 @@
 @use '../foundation' as *;
 
-.l-price-calculator {
-  margin-top: rem(3);
+.l-price {
+  // margin-top: rem(3);
   margin-bottom: rem(33);
   @include mq(md){
-    margin-top: rem(63);
+    // margin-top: rem(63);
     margin-bottom: rem(94);
   }
 }

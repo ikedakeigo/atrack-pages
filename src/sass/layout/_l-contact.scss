@@ -11,7 +11,7 @@
   .l-contact {
     margin-bottom: rem(50);
     @include mq(md){
-      margin-top: rem(20);
+      margin-top: rem(0);
       margin-bottom: rem(60);
     }
   }

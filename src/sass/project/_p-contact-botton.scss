@@ -33,6 +33,9 @@
     font-size: rem(40);
     line-height: calc(48 / 40);
     padding: rem(33) rem(72);
+    &:not(:last-child){
+      margin-bottom: rem(0);
+    }
   }
 }
 
