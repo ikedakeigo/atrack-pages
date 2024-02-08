@@ -103,7 +103,7 @@
   cursor: pointer;
   @include mq(md) {
     padding: rem(14) rem(60) rem(14) rem(50);
-    font-size: rem(18);
+    font-size: rem(20);
   }
 }
 
@@ -121,7 +121,7 @@
   text-indent: rem(-20);
   @include mq(md) {
     padding: rem(20) rem(40) rem(15) rem(50);
-    font-size: rem(18);
+    font-size: rem(20);
   }
 }
 

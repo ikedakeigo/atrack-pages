@@ -25,9 +25,10 @@
 }
 
 .p-contact__text{
-  text-align: center;
+  text-align: left;
   font-weight: 400;
   @include mq(md){
+    text-align: center;
     font-size:  rem(20);
   }
 }
