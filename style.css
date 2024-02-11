@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+theme Name: いこいの里　WPテーマ
+Author: k-grid
+Description: original theme
+version： 1.0.0
+*/
+
+h2 {
+    font-size: 20px; /* フォントサイズを変更 */
+    font-weight: bold; /* 太文字にする */
+}
