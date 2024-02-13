@@ -165,6 +165,20 @@ register_taxonomy(
     'show_admin_column' => true
         )
       );
+
+        // Facilitiesカスタムポストタイプの登録
+  register_post_type('facilities', // ポストタイプのスラッグ
+  array(
+      'labels' => array(
+          'name' => __('Facilities'), // ポストタイプの名前
+          'singular_name' => __('Facility') // 単数形の名前
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-building', // 管理画面のメニューに表示されるアイコン
+      'supports' => array('title', 'editor', 'thumbnail'), // サポートする機能
+  )
+);
 }
 global $wp_rewrite;
 $wp_rewrite->flush_rules();

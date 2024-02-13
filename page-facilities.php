@@ -107,249 +107,46 @@ get_header(); ?>
             <h2 class="p-facility__title main-title">施設一覧</h2>
             <p class="p-facility__update">最終更新日：2023年12月30日</p>
             <ul class="p-facility__list">
+              <?php
+                $args = array(
+                  'post_type' => 'facility',
+                  'posts_per_page' => -1,
+              );
+              $facility = new WP_Query($args);
+              if($facility->have_posts()):
+                while($facility->have_posts()):
+                  $facility->the_post();
+              ?>
               <li class="p-facility-list__item">
-                <a href="#">
+                <a href="<?php the_permalink(); ?>">
                   <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
+                    <?php if( has_post_thumbnail()): ?>
+                      <?php the_post_thumbnail('full', ['class' => ""]);?>
+                    <?php else : ?>
+                      <img src="<?php get_template_directory_uri() ?>/assets/img/common/dummy.jpg" alt="ダミー" />
+                    <?php endif; ?>
                   </div>
                   <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">グループホーム いこいの里 中原</p>
-                    <p class="p-facility-list__item-text">〒804-0011 福岡県北九州市戸畑区中原西2丁目7-8</p>
+                    <p class="p-facility-list__item-title">
+                      <?php the_title(); ?>
+                    </p>
                     <p class="p-facility-list__item-text">
-                      TEL：093-873-3151 <br />
-                      FAX：093-873-3156
+                      <?php echo get_post_meta(get_the_ID(),'address', true);  ?>
+                    </p>
+                    <p class="p-facility-list__item-text">
+                      TEL：<?php echo get_post_meta(get_the_ID(), 'tel', true); ?>
+                      <br />
+                      FAX：<?php echo get_post_meta(get_the_ID(), 'fax', true); ?>
                     </p>
                   </div>
                 </a>
               </li>
 
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">グループホーム いこいの里 宇佐町</p>
-                    <p class="p-facility-list__item-text">〒802-0016 福岡県北九州市小倉北区宇佐町1丁目9-36</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-513-1266 <br />
-                      FAX：093-513-1267
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 若園</p>
-                    <p class="p-facility-list__item-text">〒802-0816 福岡県北九州市小倉南区若園3丁目11-1</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-932-5820 <br />
-                      FAX：093-932-5821
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 曽根壱番館</p>
-                    <p class="p-facility-list__item-text">〒800-0229 福岡県北九州市小倉南区曽根北町2番5号</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-474-3100 <br />
-                      FAX：093-474-3120
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 曽根弐番館</p>
-                    <p class="p-facility-list__item-text">〒800-0229 福岡県北九州市小倉南区曽根北町2番6号</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-474-0111 <br />
-                      FAX：093-474-0112
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 徳吉</p>
-                    <p class="p-facility-list__item-text">〒803-0278 福岡県北九州市小倉南区徳吉西3丁目2-6</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-452-3993 <br />
-                      FAX：093-452-3988
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 永犬丸</p>
-                    <p class="p-facility-list__item-text">〒807-0846 福岡県北九州市八幡西区里中2丁目1-28</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-611-3155 <br />
-                      FAX：093-611-3172
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 本城壱番館</p>
-                    <p class="p-facility-list__item-text">〒807-0815 福岡県北九州市八幡西区本城東4丁目4-42</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-693-5977 <br />
-                      FAX：093-692-4020
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 本城弐番館</p>
-                    <p class="p-facility-list__item-text">〒807-0815 福岡県北九州市八幡西区本城東4丁目4-3</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：093-693-5111 <br />
-                      FAX：093-693-5110
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">介護付有料老人ホーム いこいの里 小波瀬</p>
-                    <p class="p-facility-list__item-text">〒800-0344 福岡県京都郡苅田町大字新津1519-1</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：0930-24-8892 <br />
-                      FAX：0930-24-8893
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">グループホーム いこいの里 小波瀬</p>
-                    <p class="p-facility-list__item-text">〒800-0345 福岡県京都郡苅田町大字新津1505-27</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：0930-24-9051 <br />
-                      FAX：0930-24-9052
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 糸島</p>
-                    <p class="p-facility-list__item-text">〒819-1121 福岡県糸島市荻浦5丁目10-1</p>
-                    <p class="p-facility-list__item-text">TEL：092-330-7700</p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 古賀</p>
-                    <p class="p-facility-list__item-text">〒811-3117 福岡県古賀市今の庄2丁目15番10号</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：092-943-6677 <br />
-                      FAX：092-943-6655
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 伊万里</p>
-                    <p class="p-facility-list__item-text">〒848-0027 佐賀県伊万里市立花町2394-1</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：0955-22-7700 <br />
-                      FAX：0955-22-7705
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 唐津</p>
-                    <p class="p-facility-list__item-text">〒847-0081 佐賀県唐津市和多田南先石7-15</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：0955-65-7755 <br />
-                      FAX：0955-65-7750
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="p-facility-list__item">
-                <a href="#">
-                  <div class="p-facility-list__item-img">
-                    <img src="assets/img/common/dummy.jpg" alt="省略" />
-                  </div>
-                  <div class="p-facility-list__item-content">
-                    <p class="p-facility-list__item-title">住宅型有料老人ホーム いこいの里 巨勢</p>
-                    <p class="p-facility-list__item-text">〒840-0008 佐賀県佐賀市巨勢町大字牛島681-1</p>
-                    <p class="p-facility-list__item-text">
-                      TEL：0952-27-0001 <br />
-                      FAX：0952-27-0011
-                    </p>
-                  </div>
-                </a>
-              </li>
+              <?php
+                endwhile;
+              endif;
+              wp_reset_postdata();
+              ?>
             </ul>
 
             <p class="p-facility__info-text forPC">

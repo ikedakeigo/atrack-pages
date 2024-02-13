@@ -28,7 +28,7 @@
         <!-- ロゴ部分 -->
         <div class="header__wrap">
           <h1 class="header__logo">
-            <a href="#">
+            <a href="/">
               <span>ロゴ</span>
             </a>
           </h1>
