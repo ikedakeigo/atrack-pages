@@ -107,7 +107,7 @@
 }
 
 .p-facility-list__item-text {
-  width: per(309, 417);
+  // width: per(309, 417);
 }
 
 .p-facility__info-text {
@@ -117,4 +117,5 @@
   @include mq(md){
     margin-left: rem(77);
   }
+  
 }
