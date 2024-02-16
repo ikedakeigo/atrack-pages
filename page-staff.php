@@ -25,7 +25,7 @@ endif; ?>
             メディアで取り上げられました
           </p>
           <div class="p-staff-about__img innerWidth">
-            <img src="assets/img/staff/staff-media.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff-media.png" alt="" />
           </div>
           <p class="p-staff-about__text--bottom-sp">
             TV番組めんたいワイド［8分36秒］<br />
@@ -62,10 +62,10 @@ endif; ?>
         </p>
         <div class="p-staff-img__content">
           <div class="p-staff-info__img">
-            <img src="assets/img/common/dummy.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="" />
           </div>
           <div class="p-staff-info__img">
-            <img src="assets/img/common/dummy.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -84,10 +84,10 @@ endif; ?>
         </p>
         <div class="p-staff-img__content">
           <div class="p-staff-info__img">
-            <img src="assets/img/common/dummy.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="" />
           </div>
           <div class="p-staff-info__img">
-            <img src="assets/img/common/dummy.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="" />
           </div>
         </div>
       </div>

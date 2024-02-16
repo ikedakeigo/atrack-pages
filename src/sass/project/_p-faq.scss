@@ -74,10 +74,15 @@
   font-size: rem(15);
   text-indent: rem(-20);
   font-weight: 700;
+  letter-spacing: 0.08em;
   @include mq(md) {
     padding: rem(20) rem(40) rem(15) rem(80);
     font-size: rem(20);
   }
+}
+
+.p-faq-list__item-answer p {
+  display: inline;
 }
 
 .p-faq-list__item-answer span {

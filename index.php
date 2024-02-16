@@ -57,26 +57,58 @@
           <div class="p-about__note">
             <!-- トピックスの内容 -->
             <dl>
-              <dt>2024.01.31</dt>
-              <dd><a href="#">トピックタイトル</a></dd>
-
-              <dt>2024.01.31</dt>
-              <dd><a href="#">トピックタイトル</a></dd>
-
-              <dt>2024.01.31</dt>
-              <dd><a href="#">トピックタイトル</a></dd>
+              <!-- 最新記事を3つ表示させる -->
+              <?php
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3 // 表示件数
+              );
+              $topics_query = new WP_Query($args);
+              if ($topics_query->have_posts()) :
+                while ($topics_query->have_posts()) :
+                  $topics_query->the_post();
+              ?>
+                  <dt>
+                    <?php the_time('Y.m.j'); ?>
+                  </dt>
+                  <dd>
+                    <a href="<?php the_permalink(); ?>">
+                      <?php the_title(); ?>
+                    </a>
+                  </dd>
+              <?php
+                endwhile;
+                wp_reset_postdata();
+              endif;
+              ?>
             </dl>
           </div>
           <h3 class="p-about__subtitle">BLOG</h3>
           <div class="p-about__note">
             <!-- ブログの内容 -->
             <dl>
-              <dt>2024.01.31</dt>
-              <dd><a href="#">ブログタイトル</a></dd>
-              <dt>2024.01.31</dt>
-              <dd><a href="#">ブログタイトル</a></dd>
-              <dt>2024.01.31</dt>
-              <dd><a href="#">ブログタイトル</a></dd>
+              <?php $args = array(
+                'post_type' => 'blog',
+                'posts_per_page' => 3 // 表示件数
+              );
+              $blog_query = new WP_Query($args);
+              if ($blog_query->have_posts()) :
+                while ($blog_query->have_posts()) :
+                  $blog_query->the_post();
+              ?>
+                  <dt>
+                    <?php the_time('Y.m.j'); ?>
+                  </dt>
+                  <dd>
+                    <a href="<?php the_permalink(); ?>">
+                      <?php the_title(); ?>
+                    </a>
+                  </dd>
+              <?php
+                endwhile;
+                wp_reset_postdata();
+              endif;
+              ?>
             </dl>
           </div>
         </div>

@@ -21,8 +21,9 @@
 
 .p-staff-about__img {
   margin-bottom: rem(23);
+  display: flex;
   @include mq(mw){
-    display: flex;
+
     justify-content: center;
   }
   @include mq(md) {
@@ -31,6 +32,7 @@
   }
 
   img {
+    // flex-grow: 1;
     aspect-ratio: 390/220;
     object-fit: cover;
     height: auto;

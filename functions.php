@@ -22,10 +22,13 @@ function custom_menu_order($menu_ord)
     'separator1', // 仕切り
     'edit.php', // 投稿
     'edit.php?post_type=blog', // ブログ
-    'edit.php?post_type=print', // 印刷商品
+    'edit.php?post_type=facilitie', // 施設
+    'edit.php?post_type=faq', // よくあるご質問
     'edit.php?post_type=page', // 固定ページ
     'separator-last', // 仕切り
+    'edit.php?post_type=slider', // スライダー
     'upload.php', // メディア
+    'separator2',
   );
 }
 add_filter('custom_menu_order', 'custom_menu_order');
@@ -37,7 +40,7 @@ function Change_menulabel()
 {
   global $menu;
   global $submenu;
-  $name = '特集・お知らせ';
+  $name = 'お知らせ';
   $menu[5][0] = $name;
   $submenu['edit.php'][5][0] = $name . '一覧';
   $submenu['edit.php'][10][0] = '新規' . $name . '投稿';
@@ -45,7 +48,7 @@ function Change_menulabel()
 function Change_objectlabel()
 {
   global $wp_post_types;
-  $name = '特集・お知らせ';
+  $name = 'お知らせ';
   $labels = &$wp_post_types['post']->labels;
   $labels->name = $name;
   $labels->singular_name = $name;
@@ -93,6 +96,45 @@ add_action('login_enqueue_scripts', 'my_login_logo');
 function create_post_type()
 {
 
+  /* カスタム投稿タイプ ブログ */
+  register_post_type(
+    'blog',
+    array(
+      'labels' => array(
+        'name' => __('ブログ'),
+        'singular_name' => __('ブログ'),
+        'all_items' => __('ブログ一覧'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-format-aside',
+      'supports' => array(
+        'title',
+        'editor',
+        'author',
+        'custom-fields',
+        'thumbnail',
+      ),
+    )
+  );
+  // register_taxonomy(
+  //   'blog-cat', //カテゴリー名（任意）
+  //   'blog', //カスタム投稿名
+  //   array(
+  //     'hierarchical' => true, //カテゴリータイプの指定
+  //     'update_count_callback' => '_update_post_term_count',
+  //     //ダッシュボードに表示させる名前
+  //     'public'            => true,
+  //     'hierarchical'      => true,
+  //     'label'             => 'カテゴリー',
+  //     'show_ui'           => true,
+  //     'query_var'         => true,
+  //     'singular_label'    => 'カテゴリー名',
+  //     'show_in_rest'      => true, //追記
+  //     'show_admin_column' => true
+  //   )
+  // );
   // 施設の登録
   register_post_type(
     'facilitie', // ポストタイプのスラッグ
@@ -126,16 +168,34 @@ function create_post_type()
   register_post_type(
     'slider',
     array(
-    'labels' => array(
-      'name' => __('スライダー'),
-      'singular_name' => __('スライダー'),
-      'all_items' => __('スライダー一覧'),
-    ),
-    'public' => true,
-    'has_archive' => true,
-    'menu_icon' => 'dashicons-images-alt2',
-    'supports' => array('title'),
-  ));
+      'labels' => array(
+        'name' => __('スライダー'),
+        'singular_name' => __('スライダー'),
+        'all_items' => __('スライダー一覧'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-images-alt2',
+      'supports' => array('title'),
+    )
+  );
+
+  // よくあるご質問の登録
+  register_post_type(
+    'faq',
+    array(
+      'labels' => array(
+        'name' => __('よくあるご質問'),
+        'singular_name' => __('よくあるご質問'),
+        'all_items' => __('よくあるご質問一覧'),
+      ),
+      'rewrite' => array('slug' => 'faq'),
+      'public' => true,
+      // 'has_archive' => true,
+      'menu_icon' => 'dashicons-format-chat',
+      'supports' => array('title', 'editor'),
+    )
+  );
 }
 add_action('init', 'create_post_type');
 
@@ -297,3 +357,21 @@ function my_acf_save_post($post_id)
 
 // ACF の save_post アクションにフック
 add_action('acf/save_post', 'my_acf_save_post', 20);
+
+
+
+// 記事一覧ページのURLを変更
+add_filter('register_post_type_args', function($args, $post_type) {
+  if ($post_type === 'post') {
+    $slug = 'blog';
+    $args['labels'] = array(
+      'name' => 'ブログ'
+    );
+    $args['has_archive'] = $slug;
+    $args['rewrite'] = array(
+      'slug' => $slug,
+      'with_front' => false,
+    );
+  }
+  return $args;
+}, 10, 2);
