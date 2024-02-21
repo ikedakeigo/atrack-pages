@@ -105,6 +105,7 @@ function create_post_type()
         'singular_name' => __('ブログ'),
         'all_items' => __('ブログ一覧'),
       ),
+      'rewrite' => array('slug' => 'blog', 'with_front' => false),
       'public' => true,
       'has_archive' => true,
       'show_in_rest' => true,
@@ -118,23 +119,23 @@ function create_post_type()
       ),
     )
   );
-  // register_taxonomy(
-  //   'blog-cat', //カテゴリー名（任意）
-  //   'blog', //カスタム投稿名
-  //   array(
-  //     'hierarchical' => true, //カテゴリータイプの指定
-  //     'update_count_callback' => '_update_post_term_count',
-  //     //ダッシュボードに表示させる名前
-  //     'public'            => true,
-  //     'hierarchical'      => true,
-  //     'label'             => 'カテゴリー',
-  //     'show_ui'           => true,
-  //     'query_var'         => true,
-  //     'singular_label'    => 'カテゴリー名',
-  //     'show_in_rest'      => true, //追記
-  //     'show_admin_column' => true
-  //   )
-  // );
+  register_taxonomy(
+    'blog-cat', //カテゴリー名（任意）
+    'blog', //カスタム投稿名
+    array(
+      'hierarchical' => true, //カテゴリータイプの指定
+      'update_count_callback' => '_update_post_term_count',
+      //ダッシュボードに表示させる名前
+      'public'            => true,
+      'hierarchical'      => true,
+      'label'             => 'カテゴリー',
+      'show_ui'           => true,
+      'query_var'         => true,
+      'singular_label'    => 'カテゴリー名',
+      'show_in_rest'      => true, //追記
+      'show_admin_column' => true
+    )
+  );
   // 施設の登録
   register_post_type(
     'facilitie', // ポストタイプのスラッグ
@@ -199,8 +200,8 @@ function create_post_type()
 }
 add_action('init', 'create_post_type');
 
-global $wp_rewrite;
-$wp_rewrite->flush_rules();
+// global $wp_rewrite;
+// $wp_rewrite->flush_rules();
 
 
 //画像パスを相対パスに
@@ -361,17 +362,43 @@ add_action('acf/save_post', 'my_acf_save_post', 20);
 
 
 // 記事一覧ページのURLを変更
-add_filter('register_post_type_args', function($args, $post_type) {
-  if ($post_type === 'post') {
-    $slug = 'blog';
-    $args['labels'] = array(
-      'name' => 'ブログ'
-    );
-    $args['has_archive'] = $slug;
-    $args['rewrite'] = array(
-      'slug' => $slug,
-      'with_front' => false,
-    );
+// add_filter('register_post_type_args', function($args, $post_type) {
+//   if ($post_type === 'post') {
+//     $slug = 'blog';
+//     $args['labels'] = array(
+//       'name' => 'ブログ'
+//     );
+//     $args['has_archive'] = $slug;
+//     $args['rewrite'] = array(
+//       'slug' => $slug,
+//       'with_front' => false,
+//     );
+//   }
+//   return $args;
+// }, 10, 2);
+
+
+// ページネーションのクラスを変更
+function add_class_to_previous_post_link($output) {
+  $class = 'previouspostslink'; // 追加したいクラス名
+  return str_replace('<a href=', '<a class="' . $class . '" href=', $output);
+}
+add_filter('previous_post_link', 'add_class_to_previous_post_link');
+
+function add_class_to_next_post_link($output) {
+  $class = 'nextpostslink'; // 追加したいクラス名
+  return str_replace('<a href=', '<a class="' . $class . '" href=', $output);
+}
+add_filter('next_post_link', 'add_class_to_next_post_link');
+
+
+
+
+// [blog]メディアボタンを非表示にする
+function hide_media_button_for_pages() {
+  global $current_screen;
+  if ('blog' == $current_screen->id) {
+      echo '<style type="text/css">#insert-media-button{display: none;}</style>';
   }
-  return $args;
-}, 10, 2);
+}
+add_action('admin_head', 'hide_media_button_for_pages');

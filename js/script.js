@@ -86,3 +86,8 @@ jQuery(function ($) {
     }
   });
 });
+
+
+jQuery(document).ready(function($) {
+  $('.wp-pagenavi').addClass('wp-pagenavi-list');
+});

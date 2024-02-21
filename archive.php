@@ -1,21 +1,21 @@
 <?php get_header(); // ヘッダーを取得
 ?>
 
-<main id="blog">
+<main id="news">
   <!-- ページTop -->
   <?php get_template_part('template-parts/pageTop-item'); ?>
 
   <!-- p-blog -->
-  <section class="p-blog" id="blog">
+  <section class="p-blog">
     <div class="inner">
-      <h2 class="main-title">ブログ一覧</h2>
+      <h2 class="main-title">お知らせ一覧</h2>
       <div id="topics_block">
         <div class="">
           <div class="p-about__note">
             <!-- ブログの内容 -->
             <dl>
               <?php $args = array(
-                'post_type' => 'blog',
+                'post_type' => 'post',
                 'posts_per_page' => 10 // 表示件数
               );
               $blog_query = new WP_Query($args);

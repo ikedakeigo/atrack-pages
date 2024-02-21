@@ -59,12 +59,16 @@
     border-right: rem(3) solid $color-black;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%) rotate(45deg);
     @include mq(md) {
       width: rem(18);
       height: rem(18);
     }
+  }
+  &:hover::before {
+    border-top-color: $color-white; // :hover 状態での枠線の色
+    border-right-color: $color-white; // :hover 状態での枠線の色
   }
 }
 .p-pagenavi .previouspostslink {
@@ -83,24 +87,46 @@
     border-right: rem(3) solid $color-black;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%) rotate(-135deg);
     @include mq(md) {
       width: rem(18);
       height: rem(18);
     }
   }
+  &:hover::before {
+    border-top-color: $color-white; // :hover 状態での枠線の色
+    border-right-color: $color-white; // :hover 状態での枠線の色
+  }
 }
 
 .p-pagenavi .wp-pagenavi a:hover {
-  color: #fff;
-  background-color: #73b2c8;
-  border-color: #73b2c8;
+  color: $color-white;
+  background-color: $color-green;
+  border-color: $color-green;
   opacity: 1;
 }
 
 .p-pagenavi .wp-pagenavi .current {
-  color: #fff;
-  background-color: #73b2c8;
-  border-color: #73b2c8;
+  color: $color-white;
+  background-color: $color-green;
+  border-color: $color-green;
+}
+
+
+.p-pagenavi{
+  .page.larger{
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+
+// ボタンの非活性
+.p-pagenavi .wp-pagenavi a.inactive {
+  color: $color-white;
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }

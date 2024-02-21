@@ -18,7 +18,7 @@
   font-size: rem(12);
   line-height: 1;
   color: #fff;
-  background-color: #73b2c8;
+  background-color: $color-green;
 }
 
 .p-single-blog__title {
@@ -64,7 +64,7 @@
     padding-bottom: rem(24);
     font-size: rem(24);
     line-height: 1.5;
-    border-bottom: rem(2) solid #73b2c8;
+    border-bottom: rem(2) solid $color-green;
     @include mq(md) {
       margin-top: rem(80);
       padding-bottom: rem(30);
@@ -77,8 +77,8 @@
     padding: rem(20) 0;
     font-size: rem(22);
     line-height: 1.5;
-    border-top: 1px solid #73b2c8;
-    border-bottom: 1px solid #73b2c8;
+    border-top: 1px solid $color-green;
+    border-bottom: 1px solid $color-green;
     @include mq(md) {
       margin-top: rem(80);
       padding: rem(24) 0;
@@ -103,7 +103,7 @@
     padding: rem(4) 0 rem(4) rem(16);
     font-size: rem(15);
     line-height: 1.5;
-    border-left: rem(4) solid #73b2c8;
+    border-left: rem(4) solid $color-green;
     @include mq(md) {
       margin-top: rem(48);
       padding: rem(8) 0 rem(8) rem(16);
@@ -131,8 +131,8 @@
   }
 
   p a {
-    color: #73b2c8;
-    text-decoration: underline #73b2c8;
+    color: $color-green;
+    text-decoration: underline $color-green;
   }
 
   p a[target="_blank"]::after {
@@ -174,7 +174,7 @@
     width: rem(8);
     height: rem(8);
     display: inline-block;
-    background-color: #73b2c8;
+    background-color: $color-green;
     border-radius: 50%;
   }
 
@@ -199,7 +199,7 @@
     margin-right: rem(10);
     display: inline-block;
     line-height: 1;
-    color: #73b2c8;
+    color: $color-green;
   }
 
   figure {
@@ -220,12 +220,40 @@
 .p-single-blog__bottom-img{
   @include mq(md){
     display: flex;
-    justify-content: space-between;
-    gap: rem(30);
+    justify-content: center;
+    gap: rem(10);
+    flex-wrap: wrap;
+  }
+  figure {
+    margin-top: rem(32);
+    @include mq(md) {
+      margin-top: rem(48);
+      width: calc(35% - #{rem(30)});
+    }
   }
   img {
     aspect-ratio: 385/281;
     object-fit: cover;
     height: auto;
+  }
+}
+
+
+
+/*===================================
+ * ブログ一覧
+===================================*/
+
+#topics_block{
+  margin-top: rem(20);
+  @include mq(md){
+    margin-bottom: rem(30);
+  }
+}
+
+.p-blog{
+  margin-bottom: rem(40);
+  @include mq(md){
+    margin-bottom: rem(60);
   }
 }

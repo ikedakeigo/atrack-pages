@@ -99,6 +99,10 @@
     border-top: none;
   }
 
+  a {
+    display: block;
+  }
+
   @include mq(md) {
     min-height: 40px;
     padding-top: rem(13);
