@@ -60,7 +60,7 @@
               <!-- 最新記事を3つ表示させる -->
               <?php
               $args = array(
-                'post_type' => 'post',
+                'post_type' => 'news',
                 'posts_per_page' => 3 // 表示件数
               );
               $topics_query = new WP_Query($args);

@@ -368,7 +368,7 @@ p {
   }
 }
 
-.header__nav-item.active {
+.header__nav-item.current-menu-item {
   border-bottom: 8px solid #00890E;
 }
 
@@ -2417,6 +2417,7 @@ p {
 
 .p-price-calculator__field {
   margin: 0 auto;
+  text-align: center;
 }
 .p-price-calculator__field:not(:last-child) {
   margin-bottom: 44px;
@@ -2442,7 +2443,7 @@ p {
 @media screen and (min-width: 768px) {
   .p-price-calculator__label {
     text-align: right;
-    width: 25.9507829978%;
+    width: 27.9642058166%;
     font-size: 1.2rem;
     line-height: 1.2083333333;
     margin-right: 3.6rem;
@@ -2500,6 +2501,15 @@ p {
     width: 87.1875%;
     font-size: 2rem;
   }
+}
+
+#priceResult {
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 30px;
+  margin-top: 1.5rem;
 }
 
 .p-staff-about__title {

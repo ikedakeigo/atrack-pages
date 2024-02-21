@@ -34,6 +34,7 @@
 
 .p-price-calculator__field {
   margin: 0 auto;
+  text-align: center;
   &:not(:last-child){
     margin-bottom: rem(44);
     @include mq(md){
@@ -52,7 +53,7 @@
   width: 100%;
   @include mq(md){
     text-align: right;
-    width: per(232, 894);
+    width: per(250, 894);
     font-size:  rem(24);
     line-height: calc(29 / 24);
     margin-right: rem(72);
@@ -97,4 +98,12 @@
     width: per(1116, 1280);
     font-size:  rem(40);
   }
+}
+
+
+#priceResult{
+  font-weight: bold;
+  font-size:  rem(24);
+  text-align: center;
+  margin-top: rem(30);
 }

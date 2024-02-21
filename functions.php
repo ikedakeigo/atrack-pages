@@ -20,7 +20,7 @@ function custom_menu_order($menu_ord)
   return array(
     'index.php', // ダッシュボード
     'separator1', // 仕切り
-    'edit.php', // 投稿
+    'edit.php?post_type=news', // 投稿
     'edit.php?post_type=blog', // ブログ
     'edit.php?post_type=facilitie', // 施設
     'edit.php?post_type=faq', // よくあるご質問
@@ -63,6 +63,15 @@ function Change_objectlabel()
 }
 add_action('init', 'Change_objectlabel');
 add_action('admin_menu', 'Change_menulabel');
+
+
+//-----------------------------------------------------
+// 投稿メニューを非表示 投稿を消す
+//-----------------------------------------------------
+function remove_menus () {
+  remove_menu_page( 'edit.php' );
+}
+add_action('admin_menu', 'remove_menus');
 
 
 //ログイン画面設定
@@ -136,6 +145,47 @@ function create_post_type()
       'show_admin_column' => true
     )
   );
+
+  // カスタム投稿タイプ お知らせ
+  register_post_type(
+    'news',
+    array(
+      'labels' => array(
+        'name' => __('お知らせ'),
+        'singular_name' => __('お知らせ'),
+        'all_items' => __('お知らせ一覧'),
+      ),
+      'rewrite' => array('slug' => 'news', 'with_front' => false),
+      'public' => true,
+      'has_archive' => true,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-megaphone',
+      'supports' => array(
+        'title',
+        'editor',
+        'author',
+        'custom-fields',
+        'thumbnail',
+      ),
+    )
+  );
+  register_taxonomy(
+    'news-cat', //カテゴリー名（任意）
+    'news', //カスタム投稿名
+    array(
+      'hierarchical' => true, //カテゴリータイプの指定
+      'update_count_callback' => '_update_post_term_count',
+      //ダッシュボードに表示させる名前
+      'public'            => true,
+      'hierarchical'      => true,
+      'label'             => 'カテゴリー',
+      'show_ui'           => true,
+      'query_var'         => true,
+      'singular_label'    => 'カテゴリー名',
+      'show_in_rest'      => true, //追記
+      'show_admin_column' => true
+    )
+  );
   // 施設の登録
   register_post_type(
     'facilitie', // ポストタイプのスラッグ
@@ -195,6 +245,21 @@ function create_post_type()
       // 'has_archive' => true,
       'menu_icon' => 'dashicons-format-chat',
       'supports' => array('title', 'editor'),
+    )
+  );
+
+  register_post_type(
+    'price',
+    array(
+      'labels' => array(
+        'name' => __('入居料金計'),
+        'singular_name' => __('入居料金計'),
+      ),
+      'rewrite' => array('slug' => 'price'),
+      'public' => true,
+      // 'has_archive' => true,
+      'menu_icon' => 'dashicons-money',
+      'supports' => array('title'),
     )
   );
 }

@@ -30,7 +30,7 @@ endif; ?>
         <ul class="p-contact-botton__menu-list">
           <li class="p-contact-botton__menu-item">
             <!-- お問い合わせ -->
-            <a href="#" class="p-contact-botton__menu-link">
+            <a href="/contact/" class="p-contact-botton__menu-link">
               <span>お問い合わせ</span>
             </a>
           </li>

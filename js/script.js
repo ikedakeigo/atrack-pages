@@ -91,3 +91,34 @@ jQuery(function ($) {
 jQuery(document).ready(function($) {
   $('.wp-pagenavi').addClass('wp-pagenavi-list');
 });
+
+
+jQuery(document).ready(function($) {
+  $('.p-price-calculator__form').on('submit', function(e) {
+    e.preventDefault(); // フォームのデフォルト送信動作を防止
+
+    var roomType = $('#roomType').val(); // 介護度区分の値を取得
+    var serviceType = $('#serviceType').val(); // 介護保険の負担割合の値を取得
+
+    // ここで料金計算を行う
+    var price = calculatePrice(roomType, serviceType); // calculatePriceは実際の計算を行う関数
+    // priceが文字列の場合はアラートを表示
+    if (typeof price === 'string') {
+      alert(price);
+      return;
+    }
+    // 句読点を挿入
+    var priceNow = price.toLocaleString();
+    // 計算結果を表示エリアに挿入
+    $('#priceResult').text('計算結果: ' + priceNow + '円');
+  });
+});
+
+function calculatePrice(roomType, serviceType) {
+  // 実際の計算ロジックを実装
+  // 数字かどうかをチェック
+  if (isNaN(roomType) || isNaN(serviceType)) {
+    return '数値を入力してください';
+  }
+  return parseInt(roomType) + parseInt(serviceType);
+}

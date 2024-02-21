@@ -24,15 +24,35 @@ endif; ?>
           <div class="p-price-calculator__field">
             <label for="roomType" class="p-price-calculator__label">介護度区分</label>
             <select id="roomType" name="roomType" class="p-price-calculator__select">
-              <option value="選択してください"></option>
-              <!-- 介護度区分のオプションを追加 -->
+              <?php
+              $care_levels = get_field('care_level');
+              if (is_array($care_levels)) : // $care_levelsが配列かどうかを確認
+                foreach ($care_levels as $care_level_value) :
+              ?>
+                  <option value="<?php echo esc_attr($care_level_value); ?>">
+                    <?php echo esc_html($care_level_value); ?>
+                  </option>
+              <?php
+                endforeach;
+              endif;
+              ?>
             </select>
           </div>
           <div class="p-price-calculator__field">
             <label for="serviceType" class="p-price-calculator__label">介護保険の負担割合</label>
             <select id="serviceType" name="serviceType" class="p-price-calculator__select">
-              <option value="選択してください"></option>
-              <!-- 介護保険の負担割合のオプションを追加 -->
+              <?php
+              $insurance_burdens = get_field('insurance_burden');
+              if (is_array($insurance_burdens)) : // $care_levelsが配列かどうかを確認
+                foreach ($insurance_burdens as $insurance_burden_value) :
+              ?>
+                  <option value="<?php echo esc_attr($insurance_burden_value); ?>">
+                    <?php echo esc_html($insurance_burden_value); ?>
+                  </option>
+              <?php
+                endforeach;
+              endif;
+              ?>
             </select>
           </div>
           <div class="u-bottom-line"></div>
@@ -40,6 +60,12 @@ endif; ?>
           <div class="p-price-calculator__button">
             <input type="submit" value="料金を表示する" placeholder="料金を表示する" />
           </div>
+
+          <div class="inner">
+            <!-- 計算結果表示エリア -->
+            <div id="priceResult" class="p-price-calculator__result"></div>
+          </div>
+
         </form>
       </div>
     </div>
