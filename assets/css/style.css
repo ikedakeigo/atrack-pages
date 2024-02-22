@@ -1110,6 +1110,18 @@ p {
             transform: scale(1.2);
   }
 }
+.swiper-img img {
+  aspect-ratio: 400/500;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .swiper-img img {
+    aspect-ratio: 640/360;
+  }
+}
+
 .p-about__title {
   margin-bottom: 20px;
   margin-bottom: 1rem;
@@ -1391,8 +1403,14 @@ p {
   content: none;
 }
 .p-flow-list__item:nth-child(3):after {
-  bottom: -13%;
+  bottom: -22%;
 }
+@media screen and (max-width: 767px) {
+  .p-flow-list__item:nth-child(3):after {
+    bottom: -13%;
+  }
+}
+
 .p-flow-list__item-wrap {
   padding: 32px 22px 22px 22px;
   padding: 1.6rem 1.1rem 1.1rem 1.1rem;
@@ -1641,7 +1659,7 @@ p {
   font-size: 0.75rem;
   line-height: 1;
   border-radius: 0.5rem;
-  border: 1px solid #FF0707;
+  border: 1px solid #ff0707;
   background-color: rgba(255, 7, 185, .1607843137);
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1661,6 +1679,99 @@ p {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
+}
+
+/*===================================
+ * お問い合わせ確認ページ
+===================================*/
+.p-contact-confirm__title {
+  text-align: center;
+}
+
+.p-form-confirm {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .p-form-confirm {
+    width: 60%;
+  }
+}
+
+.p-contact-confirm {
+  padding: 20px;
+  padding: 1rem;
+}
+.p-contact-confirm .p-form-input {
+  text-align: left;
+}
+.p-contact-confirm .p-form-select {
+  text-align: left;
+}
+.p-contact-confirm .p-form__wrap {
+  display: block;
+  word-wrap: break-word;
+  word-wrap: break-word;
+}
+.p-contact-confirm .p-form__label {
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+.p-contact-confirm .p-form-textarea {
+  text-align: left;
+}
+.p-contact-confirm .p-contact-confirm__title {
+  margin-bottom: 20px;
+  margin-bottom: 1rem;
+}
+.p-contact-confirm .p-form-confirm {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  padding: 1rem;
+}
+.p-contact-confirm .p-form__wrap {
+  margin-bottom: 15px;
+  margin-bottom: 0.75rem;
+}
+.p-contact-confirm .p-form__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.p-contact-confirm .p-form__input,
+.p-contact-confirm .p-form__select,
+.p-contact-confirm .p-form__textarea {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding: 0.5rem;
+  width: 100%;
+}
+.p-contact-confirm .p-form__input input,
+.p-contact-confirm .p-form__select select,
+.p-contact-confirm .p-form__textarea textarea {
+  border: none;
+  width: 100%;
+}
+.p-contact-confirm .p-form__submit {
+  text-align: center;
+  margin-top: 20px;
+  margin-top: 1rem;
+}
+.p-contact-confirm .p-form__submit input[type=submit] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.wpcf7-previous {
+  margin-top: 20px;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .p-form-textarea {
@@ -2992,6 +3103,7 @@ p {
   text-indent: -20px;
   text-indent: -1rem;
   cursor: pointer;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .p-recruit-list__item-question {
@@ -3015,6 +3127,7 @@ p {
   font-size: 0.75rem;
   text-indent: -20px;
   text-indent: -1rem;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .p-recruit-list__item-answer {
@@ -3028,6 +3141,57 @@ p {
   margin-right: 1rem;
   display: inline-block;
   color: #de8430;
+}
+
+.p-recruit__submit {
+  margin-top: 30px;
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-recruit__submit {
+    margin-top: 0rem;
+  }
+}
+
+.p-recruit__submit a {
+  padding: 33px 0;
+  padding: 1.65rem 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 32px;
+  font-size: 1.6rem;
+  line-height: 1.1875;
+  font-weight: 700;
+  text-align: center;
+  background-color: #00890E;
+  background-image: none;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2509803922);
+          box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2509803922);
+}
+@media screen and (min-width: 768px) {
+  .p-recruit__submit a {
+    padding: 1.9rem 0;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+.p-recruit__submit a:hover,
+.p-recruit__submit a:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .p-recruit__submit a:hover {
+    opacity: 0.8;
+  }
 }
 
 @media screen and (min-width: 768px) {

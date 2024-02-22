@@ -43,9 +43,9 @@
     content: none;
   }
   &:nth-child(3):after {
-    bottom: -13%;
+    bottom: -22%;
     @include mq(mw){
-      // bottom: -23%;
+      bottom: -13%;
     }
   }
 }

@@ -84,4 +84,12 @@
 }
 
 .swiper-img {
+  img {
+    aspect-ratio: 400/500;
+    object-fit: cover;
+    height: auto;
+    @include mq(md){
+      aspect-ratio: 640/360;
+    }
+  }
 }

@@ -105,8 +105,8 @@ endif; ?>
           </dd>
         </dl>
       </div>
-      <div class="p-form__submit p-form-submit">
-        <input type="submit" value="応募・お問い合わせ" placeholder="応募・お問い合わせ" />
+      <div class="p-recruit__submit">
+        <a href="/contact">応募・お問い合わせ</a>
       </div>
     </div>
   </section>

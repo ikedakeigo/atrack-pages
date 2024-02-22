@@ -23,6 +23,7 @@ function custom_menu_order($menu_ord)
     'edit.php?post_type=news', // 投稿
     'edit.php?post_type=blog', // ブログ
     'edit.php?post_type=facilitie', // 施設
+    'edit.php?post_type=price', // 入居料金
     'edit.php?post_type=faq', // よくあるご質問
     'edit.php?post_type=page', // 固定ページ
     'separator-last', // 仕切り
@@ -72,34 +73,6 @@ function remove_menus () {
   remove_menu_page( 'edit.php' );
 }
 add_action('admin_menu', 'remove_menus');
-
-
-//ログイン画面設定
-
-function my_login_logo()
-{ ?>
-
-  <style type="text/css">
-    body.login div#login h1 a {
-
-      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/base/logo.png);
-
-      background-size: 280px 60px;
-
-      width: 280px;
-
-      height: 60px;
-
-      padding-bottom: 30px;
-
-    }
-  </style>
-
-<?php }
-
-add_action('login_enqueue_scripts', 'my_login_logo');
-
-
 
 
 function create_post_type()
@@ -201,21 +174,7 @@ function create_post_type()
       'supports' => array('title'), // サポートする機能
     )
   );
-  // // カスタムタクソノミーの登録
-  // register_taxonomy(
-  //   'facilities-cat', // タクソノミーのスラッグ
-  //   'facilities', // タクソノミーを関連付けるポストタイプ
-  //   array(
-  //     'hierarchical' => true, // 階層を持つかどうか
-  //     'update_count_callback' => '_update_post_term_count', // タームの数を更新するコールバック関数
-  //     'public' => true, // パブリックにするかどうか
-  //     'show_ui' => true, // 管理画面にUIを表示するかどうか
-  //     'query_var' => true, // クエリ変数を使うかどうか
-  //     'singular_label' => '施設カテゴリー', // タクソノミーの名前
-  //     'show_in_rest' => true, // REST APIで利用するかどうか
-  //     'show_admin_column' => true, // 管理画面の一覧にカラムを追加するかどうか
-  //   )
-  // );
+
   register_post_type(
     'slider',
     array(
@@ -252,8 +211,8 @@ function create_post_type()
     'price',
     array(
       'labels' => array(
-        'name' => __('入居料金計'),
-        'singular_name' => __('入居料金計'),
+        'name' => __('入居料金'),
+        'singular_name' => __('入居料金'),
       ),
       'rewrite' => array('slug' => 'price'),
       'public' => true,
@@ -264,9 +223,6 @@ function create_post_type()
   );
 }
 add_action('init', 'create_post_type');
-
-// global $wp_rewrite;
-// $wp_rewrite->flush_rules();
 
 
 //画像パスを相対パスに
@@ -426,23 +382,6 @@ add_action('acf/save_post', 'my_acf_save_post', 20);
 
 
 
-// 記事一覧ページのURLを変更
-// add_filter('register_post_type_args', function($args, $post_type) {
-//   if ($post_type === 'post') {
-//     $slug = 'blog';
-//     $args['labels'] = array(
-//       'name' => 'ブログ'
-//     );
-//     $args['has_archive'] = $slug;
-//     $args['rewrite'] = array(
-//       'slug' => $slug,
-//       'with_front' => false,
-//     );
-//   }
-//   return $args;
-// }, 10, 2);
-
-
 // ページネーションのクラスを変更
 function add_class_to_previous_post_link($output) {
   $class = 'previouspostslink'; // 追加したいクラス名
@@ -467,3 +406,14 @@ function hide_media_button_for_pages() {
   }
 }
 add_action('admin_head', 'hide_media_button_for_pages');
+
+
+
+// 入居料金の新規追加ボタンを非表示
+// function custom_edit_newpost_delete() {
+//   $screen = get_current_screen();
+//   if ( 'price' == $screen->post_type ) {
+//       echo '<style>.page-title-action{display: none;}</style>';
+//   }
+// }
+// add_action('admin_head', 'custom_edit_newpost_delete');

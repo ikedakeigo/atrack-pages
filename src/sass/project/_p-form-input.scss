@@ -1,30 +1,120 @@
-
 @use '../foundation' as *;
 
 .p-form-input {
-	@include mq(md){
-		text-align: end;
-	}
+    @include mq(md) {
+        text-align: end;
+    }
 }
 
 .p-form-input input {
-	padding: rem(18) rem(15);
-	font-size: rem(15);
-	line-height: 1;
-	border-radius:  rem(10);
-	border: 1px solid #FF0707;
-	background-color: #FF07B929;
-	appearance: none;
-	background-image: none;
-	width: 100%;
-	@include mq(md){
-		background-color: #FF070738;
-		width: per(856, 1080);
-	}
+    padding: rem(18) rem(15);
+    font-size: rem(15);
+    line-height: 1;
+    border-radius: rem(10);
+    border: 1px solid #ff0707;
+    background-color: #ff07b929;
+    appearance: none;
+    background-image: none;
+    width: 100%;
+    @include mq(md) {
+        background-color: #ff070738;
+        width: per(856, 1080);
+    }
 }
 
 .p-form-input input:focus {
-	border: 1px solid #ccc;
-	box-shadow: none;
-	outline: none;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    outline: none;
+}
+
+/*===================================
+ * お問い合わせ確認ページ
+===================================*/
+
+.p-contact-confirm__title {
+    text-align: center;
+}
+
+.p-form-confirm {
+    width: 100%;
+    margin: 0 auto;
+    @include mq(md) {
+        width: 60%;
+    }
+}
+
+.p-contact-confirm {
+    // background-color: #f9f9f9;
+    padding: rem(20);
+    .p-form-input {
+        text-align: left;
+    }
+    .p-form-select {
+        text-align: left;
+    }
+    .p-form__wrap {
+        display: block;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    .p-form__label {
+        margin-bottom: rem(10);
+    }
+    .p-form-textarea {
+        text-align: left;
+    }
+
+    .p-contact-confirm__title {
+        margin-bottom: rem(20);
+    }
+
+    .p-form-confirm {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: rem(20);
+    }
+
+    .p-form__wrap {
+        margin-bottom: rem(15);
+    }
+
+    .p-form__label {
+        font-weight: bold;
+        margin-bottom: rem(5);
+        display: block;
+    }
+
+    .p-form__input,
+    .p-form__select,
+    .p-form__textarea {
+        background-color: #eee;
+        border: 1px solid #ccc;
+        padding: rem(10);
+        width: 100%;
+    }
+
+    .p-form__input input,
+    .p-form__select select,
+    .p-form__textarea textarea {
+        border: none;
+        width: 100%;
+    }
+
+    .p-form__submit {
+        text-align: center;
+        margin-top: rem(20);
+    }
+
+    .p-form__submit input[type='submit'] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.wpcf7-previous {
+    margin-top: rem(20);
+    margin-bottom: rem(20);
 }

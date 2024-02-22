@@ -101,6 +101,7 @@
   font-size: rem(15);
   text-indent: rem(-20);
   cursor: pointer;
+  font-weight: bold;
   @include mq(md) {
     padding: rem(14) rem(60) rem(14) rem(50);
     font-size: rem(20);
@@ -119,6 +120,7 @@
   padding: rem(15) rem(30) rem(15) rem(40);
   font-size: rem(15);
   text-indent: rem(-20);
+  font-weight: bold;
   @include mq(md) {
     padding: rem(20) rem(40) rem(15) rem(50);
     font-size: rem(20);
@@ -129,4 +131,47 @@
   margin-right: rem(20);
   display: inline-block;
   color: #de8430;
+}
+
+
+.p-recruit__submit{
+  margin-top: rem(30);
+  @include mq(md){
+      margin-top: rem(0);
+  }
+}
+
+.p-recruit__submit a {
+  padding: rem(33) 0;
+  color: $color-white;
+  display: inline-block;
+  font-size: rem(32);
+  line-height: calc(38 / 32);
+  font-weight: 700;
+  text-align: center;
+  background-color: $color-green;
+  background-image: none;
+  border: none;
+  border-radius:  rem(10);
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s;
+  width: 100%;
+  box-shadow: 4px 4px 4px 0px #00000040;
+  @include mq(md){
+      padding:  rem(38) 0;
+      font-size:  rem(40);
+      line-height: calc(48 / 40);
+  }
+}
+
+.p-recruit__submit a:hover,
+.p-recruit__submit a:focus {
+  outline: none;
+}
+
+.p-recruit__submit a:hover {
+  @include mq(md){
+      opacity: .8;
+  }
 }

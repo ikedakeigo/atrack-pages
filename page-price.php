@@ -25,8 +25,8 @@ endif; ?>
             <label for="roomType" class="p-price-calculator__label">介護度区分</label>
             <select id="roomType" name="roomType" class="p-price-calculator__select">
               <?php
-              $care_levels = get_field('care_level');
-              if (is_array($care_levels)) : // $care_levelsが配列かどうかを確認
+              $care_levels = get_post_meta("262", 'care_level', true);
+              if (is_array($care_levels)) : 
                 foreach ($care_levels as $care_level_value) :
               ?>
                   <option value="<?php echo esc_attr($care_level_value); ?>">
@@ -42,8 +42,8 @@ endif; ?>
             <label for="serviceType" class="p-price-calculator__label">介護保険の負担割合</label>
             <select id="serviceType" name="serviceType" class="p-price-calculator__select">
               <?php
-              $insurance_burdens = get_field('insurance_burden');
-              if (is_array($insurance_burdens)) : // $care_levelsが配列かどうかを確認
+              $insurance_burdens = get_post_meta("262", 'insurance_burden', true);
+              if (is_array($insurance_burdens)) : 
                 foreach ($insurance_burdens as $insurance_burden_value) :
               ?>
                   <option value="<?php echo esc_attr($insurance_burden_value); ?>">
