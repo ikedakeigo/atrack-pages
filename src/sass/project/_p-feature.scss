@@ -1,11 +1,14 @@
 @use '../foundation' as *;
 
 .p-feature {
-
+  background-color: $color-background;
 }
 
 .l-feature {
 
+  @include mq(md){
+    padding:  rem(40);
+  }
 }
 
 .p-feature__inner {

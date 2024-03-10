@@ -1,4 +1,4 @@
-@use "../foundation" as *;
+@use '../foundation' as *;
 
 .p-about {
 }
@@ -13,102 +13,103 @@
 }
 
 .p-about__title {
-  margin-bottom: rem(20);
-  @include mq(md) {
-    margin-bottom: rem(28);
-  }
+    margin-bottom: rem(20);
+    @include mq(md) {
+        margin-bottom: rem(28);
+    }
 }
 
 .p-about__text {
-  border: solid 2px $color-green;
-  margin-bottom: rem(30);
-  padding: rem(20);
-  @include mq(md) {
-    border: none;
-    margin-bottom: rem(130);
-  }
+    // border: solid 2px $color-green;
+    margin-bottom: rem(30);
+    padding: rem(20);
+    background-color: $color-background;
+    @include mq(md) {
+        // border: none;
+        margin-bottom: rem(130);
+    }
 }
 
 .p-about__img {
-  background-color: $color-green;
-  color: $color-white;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  margin-bottom: rem(30);
-  padding: rem(30) 0;
-  @include mq(md) {
-    width: per(728, 1280);
-    margin-bottom: rem(115);
-  }
+    background-color: $color-green;
+    color: $color-white;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: rem(30);
+    padding: rem(30) 0;
+    @include mq(md) {
+        width: per(728, 1280);
+        margin-bottom: rem(115);
+    }
 }
 
 .p-about__text-box {
-  margin-bottom: rem(46);
-  @include mq(md) {
-    margin-bottom: rem(115);
-  }
+    margin-bottom: rem(46);
+    @include mq(md) {
+        margin-bottom: rem(120);
+    }
 }
 
 .p-about__subtitle {
-  font-size: rem(24);
-  font-weight: 400;
+    font-size: rem(24);
+    font-weight: 400;
 }
 
 .p-about__note {
 }
 .p-about__note dl {
-  position: relative;
-  margin: 0 auto rem(22);
-  @include mq(md) {
-    padding-top: rem(20);
-  }
+    position: relative;
+    margin: 0 auto rem(22);
+    @include mq(md) {
+        padding-top: rem(20);
+    }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    width: 100%;
-    background-color: $color-green;
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        width: 100%;
+        background-color: $color-green;
+    }
 }
 .p-about__note dl dt {
-  left: 0;
-  width: auto;
-  padding: 10px 0 0px;
-  margin: 0;
-  font-weight: bold;
-  @include mq(md) {
-    position: absolute;
-    left: rem(53);
-    width: rem(183);
-    padding: rem(13) 0 0;
-    margin: rem(10) 0 0;
-  }
+    left: 0;
+    width: auto;
+    padding: 10px 0 0px;
+    margin: 0;
+    font-weight: bold;
+    @include mq(md) {
+        position: absolute;
+        left: rem(53);
+        width: rem(183);
+        padding: rem(13) 0 0;
+        margin: rem(10) 0 0;
+    }
 }
 .p-about__note dl dd {
-  min-height: 0;
-  padding: 0 0 10px;
-  margin: 5px 0 0;
-  border-bottom: dotted 1px #d4d4d4;
-  position: static;
-  &:first-child {
-    border-top: none;
-  }
+    min-height: 0;
+    padding: 0 0 10px;
+    margin: 5px 0 0;
+    border-bottom: dotted 1px #d4d4d4;
+    position: static;
+    &:first-child {
+        border-top: none;
+    }
 
-  a {
-    display: block;
-  }
+    a {
+        display: block;
+    }
 
-  @include mq(md) {
-    min-height: 40px;
-    padding-top: rem(13);
-    padding-left: rem(150);
-    margin: rem(10) rem(53) 0;
-  }
+    @include mq(md) {
+        min-height: 40px;
+        padding-top: rem(13);
+        padding-left: rem(150);
+        margin: rem(10) rem(53) 0;
+    }
 }
 
 .p-about__topics-list {
@@ -118,66 +119,201 @@
 }
 
 .p-about__content {
-  @include mq(md) {
-    display: flex;
-    justify-content: space-between;
-  }
+    @include mq(md) {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .p-about__left-column {
-  border: solid 1px $color-green;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: rem(234);
-  @include mq(mw){
-    margin-bottom: rem(9);
-  }
-  @include mq(md) {
-    width: per(600, 1280);
-    height: rem(745);
-  }
+    border: solid 1px $color-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: rem(234);
+    @include mq(mw) {
+        margin-bottom: rem(9);
+    }
+    @include mq(md) {
+        width: per(600, 1280);
+        height: rem(745);
+    }
 }
 .p-about__left-column h4 {
-  font-size: rem(16);
-  margin-bottom: rem(30);
-  font-weight: 400;
-  @include mq(md) {
-    margin-bottom: rem(82);
-  }
+    font-size: rem(16);
+    margin-bottom: rem(30);
+    font-weight: 400;
+    @include mq(md) {
+        margin-bottom: rem(82);
+    }
 }
 
 .p-about__left-text {
-
-  @include mq(md){
-    font-weight: 700;
-  }
-  .listMemo01 {
-    font-size: rem(20);
-    font-weight: 400;
-  }
+    @include mq(md) {
+        font-weight: 700;
+    }
+    .listMemo01 {
+        font-size: rem(20);
+        font-weight: 400;
+    }
 }
 
 .p-about__left-title {
-  margin-left:  rem(50);
-  margin-right: rem(50);
-  @include mq(md) {
-    margin-bottom: rem(135);
-  }
-
+    margin-left: rem(50);
+    margin-right: rem(50);
+    @include mq(md) {
+        margin-bottom: rem(135);
+    }
 }
 
 .p-about__right-column {
-  border: solid 1px $color-green;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: rem(234);
-  @include mq(md) {
-    width: per(648, 1280);
-    height: rem(745);
+    border: solid 1px $color-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: rem(234);
+    @include mq(md) {
+        width: per(648, 1280);
+        height: rem(745);
+    }
+}
+
+.p-about__text--main {
+    text-align: center;
+    @include mq(md) {
+        margin-bottom: rem(120);
+    }
+}
+
+.p-about__text--main h2 {
+    font-family: 'Shippori Mincho';
+    font-weight: 500;
+    @include mq(md) {
+        font-size: rem(32);
+    }
+    span {
+        font-weight: bold;
+        @include mq(md) {
+            font-size: rem(42);
+        }
+
+        .red {
+            color: #e94f21;
+        }
+    }
+}
+
+.p-about__listBox {
+  margin-bottom: rem(100);
+  @include mq(md){
+    margin-bottom: rem(140);
   }
+}
+
+.p-about-list {
+    counter-reset: number;
+}
+
+.p-about-list__item {
+    background-color: $color-background;
+    border-radius: rem(20);
+    padding: rem(20);
+    @include mq(md) {
+        padding: rem(30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.p-about-list__item + .p-about-list__item {
+    margin-top: rem(70);
+    @include mq(md) {
+        margin-top: rem(100);
+    }
+}
+
+.p-about-list__item:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.p-about-list__item-img {
+    width: 100%;
+    @include mq(md) {
+        max-width: rem(600);
+    }
+}
+
+.p-about-list__item:nth-of-type(even) .p-about-list__item-img {
+    @include mq(md) {
+        margin-left: rem(80);
+    }
+}
+
+.p-about-list__item-img img {
+    width: 100%;
+    aspect-ratio: 590/462;
+    object-fit: cover;
+    border-radius: rem(20);
+}
+
+.p-about-list__item-text-wrap {
+    margin-top: rem(20);
+    max-width: rem(500);
+    width: 100%;
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(130);
+    }
+}
+
+.p-about-list__item:nth-of-type(even) .p-about-list__item-text-wrap {
+    margin-left: 0;
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
+.p-about-list__item-title {
+    font-size: rem(20);
+    line-height: 1.3;
+    margin-bottom: rem(40);
+    position: relative;
+    @include mq(md) {
+        margin-bottom: rem(50);
+        font-size: rem(30);
+    }
+}
+
+.p-about-list__item-title::before {
+    counter-increment: number;
+    content: counter(number, decimal-leading-zero);
+    position: absolute;
+    bottom: 25%;
+    left: -25%;
+    transform: translateX(25%);
+    font-size: rem(35);
+    line-height: 1;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: $color-green;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
+.p-about-list__item-text {
+    font-size: rem(12);
+    line-height: 1.6;
+    @include mq(md) {
+        font-size: rem(15);
+    }
 }

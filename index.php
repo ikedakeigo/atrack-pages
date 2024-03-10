@@ -8,8 +8,10 @@
   <section class="p-mv l-mv">
     <div class="p-mv__inner">
       <div class="p-mv__title-wrap">
-        <h2 class="p-mv__main-title">メインタイトル</h2>
-        <p class="p-mv__sub-title">ここにサブタイトルが入ります。<br />ここにサzzzブタイトルが入ります。</p>
+        <h2 class="p-mv__main-title">
+          <span>幸</span>せな日々を続ける、<br>
+          それを<span>喜</span>びあえる社会に
+        </h2>
       </div>
       <div class="p-mv__swiper swiper js-mv-swiper">
         <div class="swiper-wrapper">
@@ -48,7 +50,59 @@
     <div class="p-about__inner inner">
       <div class="p-about__wrap">
         <h2 class="p-about__title main-title">いこいの里ってどんな施設？</h2>
-        <p class="p-about__text">ご高齢者様の経済的な負担を軽減した『いこいの里シリーズ』はライフスタイルに合わせて選べる様々なカタチの住宅型有料老人ホームです。 入居者様の個々の性格や個性、人生観を大切にした生活支援は勿論、地域のお祭りに参加するなど繋がりや絆を尊重した社会との交流を大切にしています。さらに 職員の夢に向かうハツラツとした姿勢を真近で見ることで、入居者様の心に輝きや活力を与えるような好循環も生まれつつあります。職員の幸せが生み出す、こころのある介護が『いこいの里』の魅力なのです。 また医師による往診・服薬、お薬の管理、協力病院との連携など手厚い介護サポートを提供することで、ご家族様に大変喜ばれています。</p>
+        <p class="p-about__text">高齢者様の経済的な負担を軽減した『いこいの里シリーズ』は、ライフスタイルに合わせて選べる様々なカタチの住宅型有料老人ホームです。入居者様の個々の性格や個性、人生観を大切にした生活支援はもちろん、地域のお祭りに参加するなど、「繋がり」や「絆」を尊重した社会との交流を大切にしています。<br>
+          <br>
+          さらに職員の夢に向かうハツラツとした姿勢を真近で見ることで、入居者様の心に輝きや活力を与えるような好循環も生まれつつあります。職員の幸せが生み出す、こころのある介護が『いこいの里』の魅力です。<br>
+          <br>
+          要介護1〜5の幅広い介護ニーズ、病院受診・服薬管理などの医療的ニーズの両面で、安心してご入居いただける体制を整えております。
+        </p>
+        <div class="p-about__text--main">
+          <h2>
+            『いこいの里』はこれまで<span><span class="red">20</span>年以上</span>に渡って<br>
+            色々な地域で大勢の方に選んでいただいています。
+          </h2>
+        </div>
+        <div class="p-about__listBox">
+          <ol class="p-about__list p-about-list">
+            <li class="p-about-list__item">
+              <div class="p-about-list__item-img">
+                <img src="https://placehold.jp/590x400.png" alt="省略">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <h3 class="p-about-list__item-title">
+                  私たちが目指す社会
+                </h3>
+                <p class="p-about-list__item-text">
+                  介護を必要とする人、それを支える人、全ての人の尊厳を守り、幸せな日々を続けられる事を喜び合える社会を創造します。
+                </p>
+              </div>
+            </li>
+            <li class="p-about-list__item">
+              <div class="p-about-list__item-img">
+                <img src="https://placehold.jp/590x400.png" alt="省略">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <h3 class="p-about-list__item-title">お客様への想い</h3>
+                <p class="p-about-list__item-text">
+                  入居者様とそのご家族の両方を「お客様」とし、プロの視点で入居者一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組んでいます。
+                </p>
+              </div>
+            </li>
+            <li class="p-about-list__item">
+              <div class="p-about-list__item-img">
+                <img src="https://placehold.jp/590x400.png" alt="省略">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <h3 class="p-about-list__item-title">入居者様の尊厳</h3>
+                <p class="p-about-list__item-text">
+                  お客様それぞれの価値観に寄りそうために、ひとりの人間として敬意と関心を持って入居者様と接し、深く耳を傾け、思いを感じ取り、ご意向を確認しています。
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+
         <div class="p-about__img innerWidth">
           <span>ブログバナー</span>
         </div>
@@ -112,27 +166,13 @@
             </dl>
           </div>
         </div>
+
         <div class="p-about__content">
-          <div class="p-about__left-column">
-            <h3 class="p-about__left-title forPC">
-              めんたいワイド［8分36秒］ <br />
-              めんたいワイドのドキュめんのコーナーで放送されました。
-            </h3>
-            <h4>その他情報</h4>
-            <div class="p-about__left-text">
-              <span class="forPC">いこいの里ではお客様の安心を第一に考えます。</span>
-              <ul class="listMemo01">
-                <li style="font-size: unset" class="forSP"><span class="listMark01"></span>いこいの里では4つのお約束があります。</li>
-                <li style="font-size: unset"><span class="listMark01"></span>お客様第一主義を実現します</li>
-                <li style="font-size: unset"><span class="listMark01"></span>介護はお客様が主体となるものです</li>
-                <li style="font-size: unset"><span class="listMark01"></span>お客様の安心感を最大化します</li>
-                <li style="font-size: unset" class="forSP"><span class="listMark01"></span>人が介護の価値を磨きます。</li>
-              </ul>
-              <span class="forPC">人と人の繋がりを重視します</span>
+            <div class="p-about__content-img">
+              <img src="https://placehold.jp/950x1010.png" alt="">
             </div>
-          </div>
-          <div class="p-about__right-column">施設所在地</div>
         </div>
+
       </div>
     </div>
   </section>
