@@ -1,7 +1,7 @@
 <!-- flow -->
 <section class="p-flow l-flow" id="">
   <div class="p-flow__inner inner">
-    <h2 class="p-flow__title main-title">入居までの流れ</h2>
+    <h2 class="p-flow__title main-title iconHome">入居までの流れ</h2>
     <ol class="p-flow__list p-flow-list">
       <li class="p-flow-list__item">
         <div class="p-flow-list__item-wrap">

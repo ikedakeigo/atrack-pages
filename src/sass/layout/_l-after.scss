@@ -4,5 +4,6 @@
   margin-bottom: rem(53);
   @include mq(md){
     margin:  rem(60) 0;
+    margin-bottom: rem(120);
   }
 }

@@ -1,90 +1,123 @@
-@use "../foundation" as *;
+@use '../foundation' as *;
 
 .cords__list {
-  @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+    @include mq(md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .cords-list {
+    counter-reset: number;
 }
 
 .cords-list__item {
-  @include mq(md) {
-    max-width: calc(33.333% - #{rem(70)} * 2 / 3);
-    width: 100%;
-  }
+    @include mq(md) {
+        max-width: calc(33.333% - #{rem(70)} * 2 / 3);
+        width: 100%;
+    }
 }
 
 .cords-list__item + .cords-list__item {
-  margin-top: rem(30);
-  @include mq(md) {
-    margin-top: 0;
-    margin-left: rem(70);
-  }
+    margin-top: rem(30);
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(70);
+    }
 }
 .cords-list__item:nth-of-type(3n + 1) {
-  @include mq(md) {
-    margin-left: 0;
-  }
+    @include mq(md) {
+        margin-left: 0;
+    }
 }
 
 .cords-list__item:nth-of-type(n + 4) {
-  @include mq(md) {
-    margin-top: rem(70);
-  }
+    @include mq(md) {
+        margin-top: rem(70);
+    }
 }
 
 .cords-list__item a {
-  display: block;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 0 0 rem(40) 0 rgba(0, 0, 0, 0.05);
+    display: block;
+    height: 100%;
+    // background-color: #fff;
+    // box-shadow: 0 0 rem(40) 0 rgba(0, 0, 0, 0.05);
 }
 
 .cords-list__item-img {
+    margin-bottom: rem(10);
 }
 
 .cords-list__item-img img {
-  width: 100%;
-  aspect-ratio: 382/210;
-  object-fit: cover;
+    border-radius: rem(10);
+    width: 100%;
+    aspect-ratio: 390/290;
+    object-fit: cover;
 }
 
 .cords-list__item-content {
-  padding: rem(20) rem(25) rem(25);
-  @include mq(md) {
-    padding: 0 rem(30) rem(30);
-  }
+    // padding: rem(20) rem(25) rem(25);
+    @include mq(md) {
+        // padding: 0 rem(30) rem(30);
+    }
 }
 
 .cords-list__item-category {
-  font-size: rem(12);
-  font-weight: 500;
-  line-height: 1;
-  color: #aaa;
-  @include mq(md) {
-    font-size: rem(14);
-  }
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: 1;
+    color: #aaa;
+    @include mq(md) {
+        font-size: rem(14);
+    }
 }
 
 .cords-list__item-title {
-  margin-top: rem(8);
-  // font-size: rem(18);
-  font-weight: 700;
-  line-height: 1.5;
-  @include mq(md) {
-    margin-top: rem(25);
-    font-size: rem(20);
-  }
+    // margin-top: rem(8);
+    margin-left: rem(8);
+    font-weight: 700;
+    line-height: 1.5;
+    @include mq(md) {
+        margin-left: rem(8);
+        font-size: rem(20);
+    }
+}
+
+.cords-list__item-titleBox {
+    display: flex;
+    align-items: center;
+    margin-top: rem(12);
+    @include mq(-sm) {
+        justify-content: center;
+    }
+    @include mq(md) {
+        margin-top: rem(14);
+    }
+    .num::before {
+        counter-increment: number;
+        content: counter(number, decimal-leading-zero);
+        font-size: rem(18);
+        line-height: 1;
+        width: rem(60);
+        height: rem(60);
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        color: $color-black;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mq(md) {
+            font-size: rem(24);
+        }
+    }
 }
 
 .cords-list__item-text {
-  margin-top: rem(10);
-  // font-size: rem(18);
-  font-weight: 400;
-  @include mq(md) {
-    margin-top: rem(25);
-  }
+    margin-top: rem(10);
+    // font-size: rem(18);
+    font-weight: 400;
+    @include mq(md) {
+        margin-top: rem(10);
+    }
 }

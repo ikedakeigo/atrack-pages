@@ -258,6 +258,9 @@ function add_link_files()
   wp_enqueue_style('style', get_stylesheet_directory_uri() . '/assets/css/style.css');
   wp_enqueue_style('swiper', get_stylesheet_directory_uri() . '/assets/css/swiper-bundle.min.css');
 
+  // フォントファミリーの読み込み
+  wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap', array(), '3.6.4');
+
   // JavaScriptの読み込み
   wp_enqueue_script('jquery', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '3.6.4');
 

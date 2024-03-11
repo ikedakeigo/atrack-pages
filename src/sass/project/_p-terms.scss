@@ -1,59 +1,208 @@
 @use '../foundation' as *;
 
 .p-terms {
-
 }
-
 
 .p-terms__inner {
-
 }
 
-
 .p-terms__wrap {
+    .p-terms__content {
+        &:not(:nth-of-type(2)) {
+            background-color: $color-background;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            padding-bottom: rem(55);
+        }
+    }
+}
 
+.p-terms__content-inner {
+    max-width: 100%;
+    @include mq(md) {
+        max-width: rem(1120);
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 }
 
 .p-terms__title {
-  margin-bottom: rem(24);
-  @include mq(md){
-    margin-bottom: rem(31);
-  }
+    margin-bottom: rem(24);
+    @include mq(md) {
+        margin-bottom: rem(31);
+    }
 }
 
-
 .p-terms__content {
-  max-width: 100%;
-  @include mq(md){
-    margin: 0 auto;
-    max-width: rem(1120);
-  }
+    padding-top: rem(20);
+
+    &:not(:last-child) {
+        margin-bottom: rem(60);
+    }
 }
 
 .p-terms__subtitle {
-  font-weight: 700;
-  margin-bottom: rem(10);
-  @include mq(md){
-    font-size:  rem(32);
+    font-weight: 700;
+    margin-bottom: rem(10);
+    @include mq(md) {
+        font-size: rem(32);
+        margin-bottom: rem(20);
+    }
+
+    small {
+        font-size: rem(18);
+    }
+}
+
+.p-terms-status {
+    display: flex;
+    justify-content: flex-start;
     margin-bottom: rem(20);
-  }
+    @include mq(md) {
+        margin-bottom: rem(30);
+    }
 }
 
-.p-terms__list  {
-  margin-bottom: rem(50);
-  font-size:  rem(20);
-  @include mq(md){
-    margin-bottom: rem(30);
-  }
+/*===================================
+ * アイコン
+===================================*/
+.icon-checkmark {
+    position: relative;
+    &::before {
+        content: '';
+        background-image: url('../img/icon/icon_check.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: rem(20);
+        height: rem(20);
+    }
+}
+.icon-batumark {
+    position: relative;
+    &::before {
+        content: '';
+        background-image: url('../img/icon/icon_batu.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: rem(20);
+        height: rem(20);
+    }
+}
+.icon-sankakumark {
+    position: relative;
+    &::before {
+        content: '';
+        background-image: url('../img/icon/icon_sankaku.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: rem(20);
+        height: rem(20);
+    }
+}
+/*===================================
+ *
+===================================*/
+
+.p-terms-status__item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+        margin-right: rem(40);
+    }
+    p {
+        margin-left: rem(10);
+    }
 }
 
+.p-terms__list {
+    counter-reset: number;
+    font-size: rem(20);
+
+    &:not(:last-child) {
+        margin-bottom: rem(50);
+        @include mq(md) {
+            margin-bottom: rem(30);
+        }
+    }
+}
+
+.p-terms-list {
+    border-radius: rem(8);
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.p-terms-list__item {
+    display: flex;
+    align-items: center;
+
+    .num::before {
+        counter-increment: number;
+        content: counter(number, decimal-leading-zero);
+        font-size: rem(18);
+        line-height: 1;
+        width: rem(60);
+        height: rem(60);
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        color: $color-black;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mq(md) {
+            font-size: rem(24);
+        }
+    }
+}
+
+.p-terms-list__item-text {
+    margin-left: rem(22);
+}
 .p-terms__list li {
-  line-height: 1.6;
-  &:not(:last-child) {
-    margin-bottom: rem(20);
-  }
-  @include mq(md){
-    font-size:  rem(20);
-  }
+    line-height: 1.6;
+    &:not(:last-child) {
+        margin-bottom: rem(20);
+    }
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
 
+.p-terms-list {
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    border-collapse: collapse;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.p-terms-list__data {
+    padding: rem(10) 0;
+    font-size: rem(12);
+    width: calc(100% / 4);
+    border: 2px solid #000000;
+    @include mq(md) {
+        padding: rem(15) 0;
+        padding-left: rem(20);
+        font-size: rem(18);
+    }
+}
+
+.p-terms-list-data__inner {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-left: rem(10);
+    }
 }

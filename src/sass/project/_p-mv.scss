@@ -3,10 +3,10 @@
 .p-mv {
     position: relative;
     z-index: 1;
-    height: 30vh;
+    // height: 30vh;
     min-height: rem(400);
     @include mq(md) {
-        height: 100vh;
+        // height: 70vh;
     }
 }
 
@@ -34,7 +34,7 @@
     font-weight: 500;
     font-family: 'inter';
     text-shadow: 2px 4px 5px #000000;
-    letter-spacing:  rem(30);
+    letter-spacing: rem(30);
 
     @include mq(md) {
         font-size: rem(32);
@@ -98,7 +98,7 @@
         object-fit: cover;
         height: auto;
         @include mq(md) {
-            aspect-ratio: 640/360;
+            aspect-ratio: 1430/600;
         }
     }
 }

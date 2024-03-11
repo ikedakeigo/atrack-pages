@@ -86,7 +86,7 @@ p {
 .forPC {
     display: none;
     @include mq('md') {
-        display: block;
+        display: inline-block;
     }
 }
 
@@ -137,6 +137,29 @@ p {
     font-size: rem(14);
     line-height: 1;
     // padding-left: rem(10);
+}
+
+
+/*===================================
+ * アイコン
+===================================*/
+
+.iconHome{
+    display: flex;
+    align-items: center;
+    &::before {
+        content: '';
+        display: block;
+        background-image: url('../img/icon/icon_home.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(70);
+        height: rem(70);
+        margin-right: rem(20);
+    }
+    @include mq(md) {
+        margin-bottom: rem(28);
+    }
 }
 
 /*===================================

@@ -24,11 +24,12 @@
 }
 
 .p-feature__title {
-  margin-bottom: rem(23);
+  margin-bottom: rem(50);
   @include mq(md){
-    margin-bottom: rem(32);
+    margin-bottom: rem(80);
   }
 }
+
 
 .main-title {
 
