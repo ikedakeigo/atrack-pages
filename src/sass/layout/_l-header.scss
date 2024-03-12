@@ -33,11 +33,12 @@
 .header__logo {
   width: per(517, 1280);
   text-align: center;
-  border: 1px solid $color-black;
-  border-radius: 10px;
-  font-size: rem(24);
-  font-weight: normal;
   padding: rem(15) 0;
+  img{
+    aspect-ratio: 216/105;
+    object-fit: cover;
+    height: auto;
+  }
 }
 
 .header__menu {

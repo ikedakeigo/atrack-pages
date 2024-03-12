@@ -25,15 +25,25 @@
               if (!empty($image)) : ?>
                 <div class="swiper-slide">
                   <div class="swiper-img">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php the_title(); ?>" />
+                    <?php
+                    // 画像のIDから代替テキストを取得
+                    $alt_text = get_post_meta($image['id'], '_wp_attachment_image_alt', true);
+                    // 代替テキストが空の場合は、代わりのテキストを設定（例: 投稿のタイトル）
+                    if (empty($alt_text)) {
+                      $alt_text = get_the_title();
+                    }
+                    ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($alt_text); ?>" />
                   </div>
                 </div>
+
               <?php else : ?>
-                <div class="swiper-slide">
+
+                <!-- <div class="swiper-slide">
                   <div class="swiper-img">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="ダミー" />
                   </div>
-                </div>
+                </div> -->
           <?php endif;
             endwhile;
             wp_reset_postdata();
@@ -66,7 +76,7 @@
           <ol class="p-about__list p-about-list">
             <li class="p-about-list__item">
               <div class="p-about-list__item-img">
-                <img src="https://placehold.jp/590x400.png" alt="省略">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.png" alt="省略">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">01</span>
@@ -80,7 +90,7 @@
             </li>
             <li class="p-about-list__item">
               <div class="p-about-list__item-img">
-                <img src="https://placehold.jp/590x400.png" alt="省略">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.png" alt="省略">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">02</span>
@@ -92,7 +102,7 @@
             </li>
             <li class="p-about-list__item">
               <div class="p-about-list__item-img">
-                <img src="https://placehold.jp/590x400.png" alt="省略">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.png" alt="省略">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">03</span>
@@ -172,7 +182,7 @@
 
         <div class="p-about__content">
           <div class="p-about__content-img">
-            <img src="https://placehold.jp/950x1010.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="">
           </div>
         </div>
 
@@ -190,7 +200,7 @@
           <li class="cords-list__item">
             <a href="#">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -210,7 +220,7 @@
           <li class="cords-list__item">
             <a href="#">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -228,7 +238,7 @@
           <li class="cords-list__item">
             <a href="#">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -244,7 +254,7 @@
           <li class="cords-list__item">
             <a href="#">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -261,7 +271,7 @@
           <li class="cords-list__item">
             <a href="#">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -276,7 +286,7 @@
           <li class="cords-list__item">
             <a href="#">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -389,258 +399,7 @@
           </div>
         </div>
 
-        <div class="p-terms__content">
-          <h3 class="p-terms__subtitle">
-            対応可能な医療措置
-            <small class="forPC">(施設によって対応できない医療処置もございます)</small>
-          </h3>
-          <div class="p-terms-status">
-
-            <div class="p-terms-status__item">
-              <span class="icon-checkmark">
-              </span>
-              <p>受け入れ可能</p>
-            </div>
-            <div class="p-terms-status__item">
-              <span class="icon-batumark"></span>
-              <p>受け入れ不可</p>
-            </div>
-            <div class="p-terms-status__item">
-              <span class="icon-sankakumark"></span>
-              <p>要相談</p>
-            </div>
-
-          </div>
-          <table class="p-terms-list">
-            <tbody>
-              <!-- 1 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>介護食</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>流動食・嚥下食</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>リハビリ</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>糖尿病・インスリン</p>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- 2 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>胃ろう</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>鼻腔・経管栄養</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>ストーマ・人工肛門</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>在宅酸素療法</p>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- 3 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>人工呼吸器</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>褥瘡・床ずれ</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>たん吸引</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>人工透析</p>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- 4 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-batumark"></span>
-                    <p>気管切開</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-batumark"></span>
-                    <p>中心静脈栄養（IVH）</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>カテーテル・尿バルーン
-                  </div>
-                  </p>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>ペースメーカー</p>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- 5 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-sankakumark"></span>
-                    <p>ALS</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>誤嚥性肺炎</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>喘息・気管支炎</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>アルツハイマー</p>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- 6 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>脳血管性認知症</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>ピック病</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>レビー小体型認知症</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>パーキンソン病</p>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- 7 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>廃用症候群</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>うつ・鬱病</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>統合失調症</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>リウマチ・関節症</p>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- 8 -->
-              <tr>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>骨折・骨粗しょう症</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>脳梗塞・クモ膜下出血</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>心筋梗塞・狭心症</p>
-                  </div>
-                </td>
-                <td class="p-terms-list__data">
-                  <div class="p-terms-list-data__inner">
-                    <span class="icon-checkmark"></span>
-                    <p>がん・末期癌</p>
-                  </div>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
+        <?php get_template_part('template-parts/terms-tables') ?>
 
         <div class="p-terms__content">
           <div class="p-terms__content-inner">

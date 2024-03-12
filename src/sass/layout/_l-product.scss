@@ -1,6 +1,8 @@
 @use '../foundation' as *;
 
 .l-product {
+  padding-top:  rem(60);
+  padding-bottom: rem(60);
   @include mq(md){
     padding-top:  rem(100);
     padding-bottom: rem(100);

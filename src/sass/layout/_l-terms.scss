@@ -1,7 +1,7 @@
 @use '../foundation' as *;
 
 .l-terms {
-
+  margin-bottom: rem(30);
   @include mq(md){
     // margin:  rem(60) 0;
     margin-bottom: rem(44);

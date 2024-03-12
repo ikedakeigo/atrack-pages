@@ -9,7 +9,7 @@
 
           <li class="p-after-list__item">
             <div class="p-after-list__item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/after_01.png" alt="省略">
             </div>
             <div class="p-after-list__content">
               <h2 class="p-after-list__item-title">
@@ -23,7 +23,7 @@
 
           <li class="p-after-list__item">
             <div class="p-after-list__item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/after_01.png" alt="省略">
             </div>
             <div class="p-after-list__content">
               <h2 class="p-after-list__item-title">
@@ -37,7 +37,7 @@
 
           <li class="p-after-list__item">
             <div class="p-after-list__item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/after_03.png" alt="省略">
             </div>
             <div class="p-after-list__content">
               <h2 class="p-after-list__item-title">
@@ -57,7 +57,7 @@
             <li class="cords-list__item">
               <a href="#">
                 <div class="cords-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
                 </div>
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title">受診対応</p>
@@ -70,7 +70,7 @@
             <li class="cords-list__item">
               <a href="#">
                 <div class="cords-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
                 </div>
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title">感染症対策</p>
@@ -81,7 +81,7 @@
             <li class="cords-list__item">
               <a href="#">
                 <div class="cords-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
                 </div>
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title">外出について</p>
@@ -92,7 +92,7 @@
             <li class="cords-list__item">
               <a href="#">
                 <div class="cords-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
                 </div>
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title">入浴</p>
@@ -106,7 +106,7 @@
             <li class="cords-list__item">
               <a href="#">
                 <div class="cords-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
                 </div>
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title">服薬管理</p>
@@ -117,7 +117,7 @@
             <li class="cords-list__item">
               <a href="#">
                 <div class="cords-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/cords_01.png" alt="省略" />
                 </div>
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title">緊急時対応</p>

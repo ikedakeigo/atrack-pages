@@ -25,9 +25,11 @@
   margin-top: rem(24);
   font-size: rem(24);
   line-height: 1.5;
+  border-bottom: rem(4) solid $color-green;
+  margin-bottom: rem(13);
   @include mq(md) {
     margin-top: rem(48);
-    font-size: rem(36);
+    font-size: rem(48);
   }
 }
 

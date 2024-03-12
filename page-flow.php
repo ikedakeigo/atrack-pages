@@ -36,103 +36,150 @@ endif; ?>
   <section class="p-terms l-terms" id="">
     <div class="p-terms__inner inner">
       <div class="p-terms__wrap">
-        <h2 class="p-terms__title main-title">入居条件</h2>
-        <div class="p-terms__content">
-          <h3 class="p-terms__subtitle">原則</h3>
-          <ul class="p-terms__list listMemo01">
-            <li>
-              <span class="listMark01">・</span>
-              症状が安定しており、一定の医療行為の継続状態にあること
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              訪問診療医の診察で治療のできる状態にあること
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              症状がやや不安定であっても、入院の受け入れ体制の調整が可能な状態にあること
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              医療提供において、積極的な治療希望が本人、家族にない状態にあること
-            </li>
-          </ul>
+        <h2 class="p-terms__title main-title iconHome">入居条件</h2>
 
-          <h3 class="p-terms__subtitle">
-            入居可能な医療処置内容及び状態
-            <small class="forPC">(施設によって対応できない医療処置もございます)</small>
-          </h3>
-          <ul class="p-terms__list listMemo01">
-            <li>
-              <span class="listMark01">・</span>
-              尿道留置カテーテル<br><span class="listMark-grid">※前立腺肥大症の場合は、入院先病院での交換が必須</span>
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              酸素吸入（経鼻・マスク）
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              胃ろう（PEG、NGチューブ）、及び腸ろう<br>
-              <span class="listMark-grid">※チューブ類は入院先病院での交換が必須</span>
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              中心静脈栄養（IVH）及びポート埋め込み
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              人口呼吸器（ニップネーザル その他機器は、要相談）
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              腎ろう<br><span class="listMark-grid">※ステント交換は、入院先病院での交換が必須</span>
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              膀胱ろう（ウロストミー）
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              人工肛門（ストマ）
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              人工透析<br><span class="listMark-grid">※透析受診時、送迎サービスのある病院での施工が必須</span>
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              インシュリン注射及びデキスター測定
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              各種筋肉注射、皮下注射
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              口腔内吸引
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              末梢点滴<br><span class="listMark-grid">※1日500mlで14日間施工を限度とする 血管確保が困難になることを十分理解されていること</span>
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              抗がん剤の内服
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              麻薬の使用（内服・経皮）
-            </li>
-            <li>
-              <span class="listMark01">・</span>
-              ステロイドの内服など<br><span class="listMark-grid">※内服薬に関しての規制なし</span>
-            </li>
-          </ul>
+        <div class="p-terms__content">
+          <div class="p-terms__content-inner">
+            <h3 class="p-terms__subtitle">原則</h3>
+            <ol class="p-terms__list">
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  症状が安定しており、一定の医療行為の継続状態にあること
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  訪問診療医の診察で治療のできる状態にあること
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  症状がやや不安定であっても、入院の受け入れ体制の調整が可能な状態にあること
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  医療提供において、積極的な治療希望が本人、家族にない状態にあること
+                </p>
+              </li>
+            </ol>
+          </div>
         </div>
+
+        <?php get_template_part('template-parts/terms-tables') ?>
+
+        <div class="p-terms__content">
+          <div class="p-terms__content-inner">
+            <h3 class="p-terms__subtitle">入居困難及び相談が必要な方</h3>
+            <ol class="p-terms__list">
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  夜間帯の鼻腔内吸引
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  自傷行為・他害行為
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  アルコール依存症
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  頻繁な徘徊により、医療チューブを触る可能性のある方
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  重度認知症
+                </p>
+              </li>
+              <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  重度精神疾患
+                </p>
+              </li>
+            </ol>
+            <p>
+              個別で判断が必要な場合には、個別で判断させていただきます。
+            </p>
+          </div>
+        </div>
+
+        <div class="p-about__listBox">
+        <h2 class="p-terms__title main-title iconHome">いこいの里の理念</h2>
+          <ol class="p-about__list p-about-list">
+            <li class="p-about-list__item">
+              <div class="p-about-list__item-img">
+                <img src="https://placehold.jp/590x400.png" alt="省略">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <span class="num forPC">01</span>
+                <h3 class="p-about-list__item-title">
+                  私たちが目指す社会
+                </h3>
+                <p class="p-about-list__item-text">
+                  介護を必要とする人、それを支える人、全ての人の尊厳を守り、幸せな日々を続けられる事を喜び合える社会を創造します。
+                </p>
+              </div>
+            </li>
+            <li class="p-about-list__item">
+              <div class="p-about-list__item-img">
+                <img src="https://placehold.jp/590x400.png" alt="省略">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <span class="num forPC">02</span>
+                <h3 class="p-about-list__item-title">お客様への想い</h3>
+                <p class="p-about-list__item-text">
+                  入居者様とそのご家族の両方を「お客様」とし、プロの視点で入居者一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組んでいます。
+                </p>
+              </div>
+            </li>
+            <li class="p-about-list__item">
+              <div class="p-about-list__item-img">
+                <img src="https://placehold.jp/590x400.png" alt="省略">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <span class="num forPC">03</span>
+                <h3 class="p-about-list__item-title">お客様への想い</h3>
+                <p class="p-about-list__item-text">
+                入居者様とそのご家族の両方を「お客様」とし、プロの視点で入居者一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組みます。
+                </p>
+              </div>
+            </li>
+            <li class="p-about-list__item">
+              <div class="p-about-list__item-img">
+                <img src="https://placehold.jp/590x400.png" alt="省略">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <span class="num forPC">04</span>
+                <h3 class="p-about-list__item-title">入居者様の尊厳</h3>
+                <p class="p-about-list__item-text">
+                入居者様それぞれの価値観に寄りそうために、ひとりの人間として敬意と関心を持って入居者様と接し、深く耳を傾け（言語）、思いを感じ取り（非言語）、ご意向を（口頭で）確認しよう。汲み取り介護を実践しよう。介護につなげよう
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
       </div>
     </div>
   </section>
+
+
 
   <?php get_template_part('template-parts/after-item'); ?>
 

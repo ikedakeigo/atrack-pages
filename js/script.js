@@ -125,8 +125,13 @@ function calculatePrice(roomType, serviceType) {
 
 // 特定のボタンをクリックした際に#contactセクションへ移動
 
-jQuery('.wpcf7-previous').on('click', function() {
-  $('html, body').animate({
-      scrollTop: $('#wpcf7-f43-o1').offset().top
-  }, 8000);
+jQuery('.wpcf7-previous').on('click', function () {
+    $('html, body').animate(
+        {
+            scrollTop: $('#wpcf7-f43-o1').offset().top
+        },
+        8000
+    );
 });
+
+//最後に実行する

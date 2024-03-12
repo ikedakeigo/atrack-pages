@@ -2,7 +2,9 @@
 
 .l-feature {
   margin-bottom: rem(30);
+  // padding: rem(20);
   @include mq(md) {
+    // padding:  rem(40);
     margin: rem(60) 0;
   }
 }

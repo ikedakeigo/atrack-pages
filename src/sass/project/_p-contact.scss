@@ -13,14 +13,14 @@
   line-height: 1.5;
   @include mq(md){
     line-height: calc(48 / 40);
-    margin-bottom: rem(72);
+    margin-bottom: rem(24);
   }
-  p {
-    font-weight: 400;
-    margin-top: rem(20);
-    @include mq(md){
-      font-size:  rem(20);
-    }
+}
+.p-contact__text-top {
+  font-weight: 400;
+  margin-bottom: rem(42);
+  @include mq(md){
+    font-size:  rem(20);
   }
 }
 

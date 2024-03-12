@@ -69,8 +69,9 @@ add_action('admin_menu', 'Change_menulabel');
 //-----------------------------------------------------
 // 投稿メニューを非表示 投稿を消す
 //-----------------------------------------------------
-function remove_menus () {
-  remove_menu_page( 'edit.php' );
+function remove_menus()
+{
+  remove_menu_page('edit.php');
 }
 add_action('admin_menu', 'remove_menus');
 
@@ -386,13 +387,15 @@ add_action('acf/save_post', 'my_acf_save_post', 20);
 
 
 // ページネーションのクラスを変更
-function add_class_to_previous_post_link($output) {
+function add_class_to_previous_post_link($output)
+{
   $class = 'previouspostslink'; // 追加したいクラス名
   return str_replace('<a href=', '<a class="' . $class . '" href=', $output);
 }
 add_filter('previous_post_link', 'add_class_to_previous_post_link');
 
-function add_class_to_next_post_link($output) {
+function add_class_to_next_post_link($output)
+{
   $class = 'nextpostslink'; // 追加したいクラス名
   return str_replace('<a href=', '<a class="' . $class . '" href=', $output);
 }
@@ -402,10 +405,11 @@ add_filter('next_post_link', 'add_class_to_next_post_link');
 
 
 // [blog]メディアボタンを非表示にする
-function hide_media_button_for_pages() {
+function hide_media_button_for_pages()
+{
   global $current_screen;
   if ('blog' == $current_screen->id) {
-      echo '<style type="text/css">#insert-media-button{display: none;}</style>';
+    echo '<style type="text/css">#insert-media-button{display: none;}</style>';
   }
 }
 add_action('admin_head', 'hide_media_button_for_pages');
@@ -420,3 +424,4 @@ add_action('admin_head', 'hide_media_button_for_pages');
 //   }
 // }
 // add_action('admin_head', 'custom_edit_newpost_delete');
+

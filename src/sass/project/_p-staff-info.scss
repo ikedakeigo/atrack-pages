@@ -1,75 +1,131 @@
 @use '../foundation' as *;
 
 .p-staff-info {
-
 }
 
-
 .p-staff-info__inner {
-
 }
 
 .p-staff-info__wrap {
-
 }
 
 .p-staff-info__title {
-  display: flex;
-  align-items: center;
-  margin-bottom: rem(30);
-  @include mq(mw){
-    justify-content: center;
-  }
-  &::before{
-    content: '';
-    display: inline-block;
-    width: rem(6);
-    height:  rem(24);
-    background-color: $color-orange;
-    margin-right: rem(8);
-    @include mq(md){
-      margin-right: rem(20);
-      width: rem(10);
-      height:  rem(65);
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(30);
+    @include mq(mw) {
+        justify-content: center;
     }
-  }
+    &::before {
+        content: '';
+        display: inline-block;
+        width: rem(6);
+        height: rem(24);
+        background-color: $color-orange;
+        margin-right: rem(8);
+        @include mq(md) {
+            margin-right: rem(20);
+            width: rem(10);
+            height: rem(65);
+        }
+    }
 
-  @include mq(md){
-    margin-bottom: rem(20);
-  }
+    @include mq(md) {
+        margin-bottom: rem(20);
+    }
 }
 
+.p-staff-info__content {
+    @include mq(md) {
+        display: flex;
+    }
+}
+
+.p-staff-info__textBox {
+    width: 100%;
+    @include mq(md) {
+        width: per(700, 1280);
+        padding-top: rem(25);
+        margin-left: rem(45);
+    }
+}
+
+.p-staff-info__subTitle {
+    font-weight: bold;
+    font-size: rem(20);
+    margin-bottom: rem(20);
+    @include mq(md) {
+        font-size: rem(24);
+        margin-bottom: rem(40);
+    }
+}
 
 .p-staff-info__text {
-  margin-bottom: rem(20);
-  font-size:  rem(18);
-  font-weight: 400;
-  @include mq(md){
-    font-weight: 700;
-    font-size:  rem(20);
-    line-height: calc(24 / 20);
-    width: per(1254, 1280);
-    margin-left: auto;
-  }
+    font-size: rem(18);
+    font-weight: 400;
+    @include mq(md) {
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: calc(24 / 20);
+    }
 }
 
 .p-staff-img__content {
-  @include mq(md){
-    display: flex;
-    justify-content: space-between;
-  }
+    @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .p-staff-info__img {
-  &:not(:last-child){
-    margin-bottom: rem(15);
-  }
+    &:not(:last-child) {
+        margin-bottom: rem(15);
+    }
+    @include mq(md) {
+        width: per(400, 1280);
+    }
+    img {
+        aspect-ratio: 400/ 233;
+        object-fit: cover;
+        height: auto;
+    }
+}
+
+/*===================================
+ * トップテキスト
+===================================*/
+
+.p-staff-hero{
+
+}
+
+.p-staff-hero__title{
+  font-weight: bold;
+  font-size: rem(24);
+  margin-bottom: rem(20);
+  text-align: center;
   @include mq(md){
-    width: per(621, 1280);
+    font-size:  rem(32);
+    margin-bottom: rem(30);
   }
-  img {
-    aspect-ratio: 621/ 434;
-    object-fit: cover;
-    height: auto;
+}
+.p-staff-hero__wrap {
+  background-color: $color-background;
+  padding: rem(30);
+  border-radius: rem(20);
+  @include mq(md) {
+      padding: rem(50) ;
+  }
+}
+
+
+.p-staff-hero__text {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 auto;
+  @include mq(md) {
+      width: per(820, 1280);
+      font-size: rem(20);
   }
 }

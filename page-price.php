@@ -19,14 +19,14 @@ endif; ?>
   <section class="p-price-calculator l-price" id="">
     <div class="p-price-calculator__inner inner">
       <div class="p-price-calculator__wrap">
-        <h2 class="p-price-calculator__title main-title">入居料金計算</h2>
+        <h2 class="p-price-calculator__title main-title iconMath">入居料金計算</h2>
         <form class="p-price-calculator__form">
           <div class="p-price-calculator__field">
             <label for="roomType" class="p-price-calculator__label">介護度区分</label>
             <select id="roomType" name="roomType" class="p-price-calculator__select">
               <?php
               $care_levels = get_post_meta("262", 'care_level', true);
-              if (is_array($care_levels)) : 
+              if (is_array($care_levels)) :
                 foreach ($care_levels as $care_level_value) :
               ?>
                   <option value="<?php echo esc_attr($care_level_value); ?>">
@@ -43,7 +43,7 @@ endif; ?>
             <select id="serviceType" name="serviceType" class="p-price-calculator__select">
               <?php
               $insurance_burdens = get_post_meta("262", 'insurance_burden', true);
-              if (is_array($insurance_burdens)) : 
+              if (is_array($insurance_burdens)) :
                 foreach ($insurance_burdens as $insurance_burden_value) :
               ?>
                   <option value="<?php echo esc_attr($insurance_burden_value); ?>">
