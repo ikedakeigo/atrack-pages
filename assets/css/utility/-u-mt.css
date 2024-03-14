@@ -1,0 +1,544 @@
+@charset "UTF-8";
+/*
+ * 参考
+ * https://github.com/Andy-set-studio/modern-css-reset/blob/master/src/reset.css
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*****************************************
+ * 数値から単位を取り除く
+ * 参考
+ * https://css-tricks.com/snippets/sass/
+******************************************/
+/*****************************************
+ * px→remの計算
+ * 参考
+ * https://webdou.net/sass-rem/
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+/*****************************************
+ * vwの計算
+ * 参考
+ * https://webdou.net/sass-vw/
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+/*****************************************
+ * アスペクト比の計算
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 5.3333333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.6666666667vw;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: Meiryo, "メイリオ", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  a:hover {
+    opacity: 0.8;
+  }
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+}
+
+/*===================================
+ * sp・pc共通
+===================================*/
+.forSP {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .forSP {
+    display: none;
+  }
+}
+
+.forPC {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .forPC {
+    display: inline-block;
+  }
+}
+
+/*===================================
+ * メインタイトル
+===================================*/
+.main-title {
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/*===================================
+ * テキスト
+===================================*/
+/*===================================
+ * 点
+===================================*/
+.listMemo01 li {
+  position: relative;
+  display: block;
+  padding-left: 22.5px;
+  padding-left: 1.125rem;
+}
+
+.listMark01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.listMark-grid {
+  font-size: 14px;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+/*===================================
+ * アイコン
+===================================*/
+.iconHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.iconHome::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_home.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  width: 3.5rem;
+  height: 70px;
+  height: 3.5rem;
+  margin-right: 20px;
+  margin-right: 1rem;
+}
+.iconMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.iconMap::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_map.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  width: 3.5rem;
+  height: 70px;
+  height: 3.5rem;
+  margin-right: 20px;
+  margin-right: 1rem;
+}
+.iconMapIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.iconMapIcon::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_mapIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  width: 3.5rem;
+  height: 70px;
+  height: 3.5rem;
+  margin-right: 20px;
+  margin-right: 1rem;
+}
+.iconMath {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.iconMath::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_math.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  width: 3.5rem;
+  height: 70px;
+  height: 3.5rem;
+  margin-right: 20px;
+  margin-right: 1rem;
+}
+.iconQa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.iconQa::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_qa.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  width: 3.5rem;
+  height: 70px;
+  height: 3.5rem;
+  margin-right: 20px;
+  margin-right: 1rem;
+}
+/*===================================
+ * 404ページ
+===================================*/
+.text-wrapper {
+  margin: 100px auto;
+  font-size: large;
+}
+.text-wrapper h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: xx-large;
+  color: #00890E;
+}
+.text-wrapper p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.u-mt10 {
+  margin-top: 10px !important;
+  margin-top: 10px !important;
+  margin-top: 0.5rem !important;
+}
+
+.u-mt20 {
+  margin-top: 20px !important;
+  margin-top: 20px !important;
+  margin-top: 1rem !important;
+}
+
+.u-mt30 {
+  margin-top: 30px !important;
+  margin-top: 30px !important;
+  margin-top: 1.5rem !important;
+}
+
+.u-mt40 {
+  margin-top: 40px !important;
+  margin-top: 40px !important;
+  margin-top: 2rem !important;
+}
+
+.u-mt50 {
+  margin-top: 50px !important;
+  margin-top: 50px !important;
+  margin-top: 2.5rem !important;
+}
+
+.u-mt60 {
+  margin-top: 60px !important;
+  margin-top: 60px !important;
+  margin-top: 3rem !important;
+}
+
+.u-mt70 {
+  margin-top: 70px !important;
+  margin-top: 70px !important;
+  margin-top: 3.5rem !important;
+}
+
+.u-mt80 {
+  margin-top: 80px !important;
+  margin-top: 80px !important;
+  margin-top: 4rem !important;
+}
+
+.u-mt90 {
+  margin-top: 90px !important;
+  margin-top: 90px !important;
+  margin-top: 4.5rem !important;
+}
+
+.u-mt100 {
+  margin-top: 100px !important;
+  margin-top: 100px !important;
+  margin-top: 5rem !important;
+}
+
+.u-mt110 {
+  margin-top: 110px !important;
+  margin-top: 110px !important;
+  margin-top: 5.5rem !important;
+}
+
+.u-mt120 {
+  margin-top: 120px !important;
+  margin-top: 120px !important;
+  margin-top: 6rem !important;
+}
+
+.u-mt130 {
+  margin-top: 130px !important;
+  margin-top: 130px !important;
+  margin-top: 6.5rem !important;
+}
+
+.u-mt140 {
+  margin-top: 140px !important;
+  margin-top: 140px !important;
+  margin-top: 7rem !important;
+}
+
+.u-mt150 {
+  margin-top: 150px !important;
+  margin-top: 150px !important;
+  margin-top: 7.5rem !important;
+}
+
+.u-mt160 {
+  margin-top: 160px !important;
+  margin-top: 160px !important;
+  margin-top: 8rem !important;
+}
+
+.u-mt170 {
+  margin-top: 170px !important;
+  margin-top: 170px !important;
+  margin-top: 8.5rem !important;
+}
+
+.u-mt180 {
+  margin-top: 180px !important;
+  margin-top: 180px !important;
+  margin-top: 9rem !important;
+}
+
+.u-mt190 {
+  margin-top: 190px !important;
+  margin-top: 190px !important;
+  margin-top: 9.5rem !important;
+}
+
+.u-mt200 {
+  margin-top: 200px !important;
+  margin-top: 200px !important;
+  margin-top: 10rem !important;
+}
+
+@media screen and (max-width: 767px) {
+  .u-mtSp10 {
+    margin-top: 10px !important;
+    margin-top: 0.5rem !important;
+  }
+  .u-mtSp20 {
+    margin-top: 20px !important;
+    margin-top: 1rem !important;
+  }
+  .u-mtSp30 {
+    margin-top: 30px !important;
+    margin-top: 1.5rem !important;
+  }
+  .u-mtSp40 {
+    margin-top: 40px !important;
+    margin-top: 2rem !important;
+  }
+  .u-mtSp50 {
+    margin-top: 50px !important;
+    margin-top: 2.5rem !important;
+  }
+  .u-mtSp60 {
+    margin-top: 60px !important;
+    margin-top: 3rem !important;
+  }
+  .u-mtSp70 {
+    margin-top: 70px !important;
+    margin-top: 3.5rem !important;
+  }
+  .u-mtSp80 {
+    margin-top: 80px !important;
+    margin-top: 4rem !important;
+  }
+  .u-mtSp90 {
+    margin-top: 90px !important;
+    margin-top: 4.5rem !important;
+  }
+  .u-mtSp100 {
+    margin-top: 100px !important;
+    margin-top: 5rem !important;
+  }
+  .u-mtSp110 {
+    margin-top: 110px !important;
+    margin-top: 5.5rem !important;
+  }
+  .u-mtSp120 {
+    margin-top: 120px !important;
+    margin-top: 6rem !important;
+  }
+  .u-mtSp130 {
+    margin-top: 130px !important;
+    margin-top: 6.5rem !important;
+  }
+  .u-mtSp140 {
+    margin-top: 140px !important;
+    margin-top: 7rem !important;
+  }
+  .u-mtSp150 {
+    margin-top: 150px !important;
+    margin-top: 7.5rem !important;
+  }
+  .u-mtSp160 {
+    margin-top: 160px !important;
+    margin-top: 8rem !important;
+  }
+  .u-mtSp170 {
+    margin-top: 170px !important;
+    margin-top: 8.5rem !important;
+  }
+  .u-mtSp180 {
+    margin-top: 180px !important;
+    margin-top: 9rem !important;
+  }
+  .u-mtSp190 {
+    margin-top: 190px !important;
+    margin-top: 9.5rem !important;
+  }
+  .u-mtSp200 {
+    margin-top: 200px !important;
+    margin-top: 10rem !important;
+  }
+}
+/*# sourceMappingURL=-u-mt.css.map */

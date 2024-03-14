@@ -19,7 +19,7 @@ endif; ?>
   <section class="p-recrut-top l-recrut-top  " id="">
     <div class="p-recrut-top__inner inner">
       <div class="p-recrut-top__wrap">
-        <h2 class="p-recruit__title main-title iconHome">いこいの里 採用情報</h2>
+        <h2 class="p-recruit__title main-title iconHome u-textCenter">いこいの里 採用情報</h2>
         <div class="p-about__listBox">
           <ol class="p-about__list p-about-list">
             <li class="p-about-list__item">
@@ -28,7 +28,7 @@ endif; ?>
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">01</span>
-                <h3 class="p-about-list__item-title">
+                <h3 class="p-about-list__item-title u-w900">
                   私たちが目指す社会
                 </h3>
                 <p class="p-about-list__item-text">
@@ -42,7 +42,7 @@ endif; ?>
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">02</span>
-                <h3 class="p-about-list__item-title">お客様への想い</h3>
+                <h3 class="p-about-list__item-title u-w900">お客様への想い</h3>
                 <p class="p-about-list__item-text">
                   入居者様とそのご家族の両方を「お客様」とし、プロの視点で入居者一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組んでいます。
                 </p>
@@ -54,7 +54,7 @@ endif; ?>
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">03</span>
-                <h3 class="p-about-list__item-title">入居者様の尊厳</h3>
+                <h3 class="p-about-list__item-title u-w900">入居者様の尊厳</h3>
                 <p class="p-about-list__item-text">
                   お客様それぞれの価値観に寄りそうために、ひとりの人間として敬意と関心を持って入居者様と接し、深く耳を傾け、思いを感じ取り、ご意向を確認しています。
                 </p>
@@ -67,11 +67,11 @@ endif; ?>
   </section>
 
   <!-- recrut-vision -->
-  <section class="p-recrut-vision l-recrut-vision  " id="">
+  <section class="p-recrut-vision l-recrut-vision" id="">
     <div class="p-recrut-vision__inner inner">
       <div class="p-recrut-vision__wrap">
-        <h2 class="p-recruit__title main-title iconHome">いこいの里 採用情報</h2>
-        <p class="p-recruit-vision__text">
+        <h2 class="p-recruit__title main-title iconVision u-textCenter">ビジョン</h2>
+        <p class="p-recruit-vision__text u-w700">
           私たちは介護を必要とする人、それを支える人全ての人の尊厳を守り幸せな日々を続けられる事を喜び合える社会を創造します。
         </p>
         <div class="p-recruit-vision__content">
@@ -92,7 +92,9 @@ endif; ?>
   <!-- recruit -->
   <section class="p-recruit l-recruit" id="">
     <div class="p-recruit__inner inner">
-      <h2 class="p-recruit__title main-title iconHome">募集要項</h2>
+      <h2 class="p-recruit__title main-title iconHome u-textCenter">
+        募集要項<span>私たちに共感いただいた方だけ</span>
+      </h2>
       <p class="p-recruit__text">
         いこいの里では新しいメンバーを迎え入れ、一緒に入居者様の生活をサポートする仲間を募集しています。<br>
         「介護経験のある方」「久しぶりの方」「未経験の方」も基本的な知識と技術の習得のための研修制度を整えていますのでご安心ください。<br>

@@ -19,7 +19,7 @@ endif; ?>
   <section class="p-price-calculator l-price" id="">
     <div class="p-price-calculator__inner inner">
       <div class="p-price-calculator__wrap">
-        <h2 class="p-price-calculator__title main-title iconMath">入居料金計算</h2>
+        <h2 class="p-price-calculator__title main-title iconMath u-textMdCenter">入居料金計算</h2>
         <form class="p-price-calculator__form">
           <div class="p-price-calculator__field">
             <label for="roomType" class="p-price-calculator__label">介護度区分</label>

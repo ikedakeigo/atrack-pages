@@ -2,10 +2,16 @@
 
 .p-youtube {
     position: relative;
-    width: 1280px;
-    height: 720px;
     overflow: hidden;
     cursor: pointer;
+    padding-top: 56.25%;
+    height: 0;
+    margin-bottom: rem(7);
+    @include mq(md) {
+        margin-bottom: rem(23);
+        width: clamp(320px, 100%, 1280px);
+        height: clamp(180px, 100%, 720px);
+    }
 }
 
 .p-youtube img {
@@ -23,4 +29,12 @@
     width: 100%;
     height: 100%;
     display: none;
+}
+
+.p-youtube__dec {
+    text-align: right;
+    font-size:  rem(8);
+    @include mq(md){
+        font-size:  rem(22);
+    }
 }

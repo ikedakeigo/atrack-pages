@@ -1,9 +1,8 @@
 @use '../foundation' as *;
 
 .l-recruit {
-  margin-bottom: rem(24);
+  margin-bottom: rem(100);
   @include mq(md){
-    // margin-top: rem(24);
-    margin-bottom: rem(60);
+    margin-bottom: rem(140);
   }
 }

@@ -16,9 +16,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  margin-bottom: rem(20);
-    @include mq(md){
-      margin-bottom: rem(30);
+    margin-bottom: rem(20);
+    @include mq(mw) {
+        font-size: rem(40);
+    }
+    @include mq(md) {
+        margin-bottom: rem(30);
     }
     .num img {
         aspect-ratio: 67/96;
@@ -27,7 +30,7 @@
     }
 
     .num {
-      margin-right: rem(6);
+        margin-right: rem(6);
     }
 }
 
@@ -37,13 +40,14 @@
 }
 
 .p-product__list {
-  margin-top: rem(30);
-  display: grid;
-  justify-content: center;
+    margin-top: rem(30);
+    display: flex;
+    justify-content: center;
+    gap: clamp(rem(10), 1vw, rem(24));
+    flex-wrap: wrap;
     @include mq(md) {
-      margin-top: rem(40);
-        display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        margin-top: rem(40);
         justify-content: space-between;
     }
 }
@@ -53,28 +57,32 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: rem(300);
-    height: rem(300);
     font-weight: bold;
+    width: rem(170);
+    height: rem(170);
     color: #f24e1e;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include mq(-sm){
-      &:not(:last-child) {
-        margin-bottom: rem(30);
-
+    @include mq(md) {
+        width: rem(300);
+        height: rem(300);
     }
-  }
 }
 
 .p-product-list__item-title {
-    font-size: rem(24);
-    margin-bottom: rem(20);
+    margin-bottom: rem(10);
+    font-size: rem(16);
+    @include mq(md) {
+        font-size: rem(24);
+    }
 }
 
 .p-product-list__item-text {
-    font-size: rem(28);
+    font-size: rem(16);
+    @include mq(md) {
+        font-size: rem(28);
+    }
 }

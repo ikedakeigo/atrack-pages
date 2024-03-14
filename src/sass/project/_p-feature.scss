@@ -12,12 +12,15 @@
 
 .p-feature__wrap {
   background-color: $color-background;
-  padding:  rem(50);
+  padding:  rem(20);
   border-radius:  rem(20);
+  @include mq(md){
+    padding:  rem(50);
+  }
 }
 
 .p-feature__title {
-    margin-bottom: rem(50);
+    margin-bottom: rem(22);
     @include mq(md) {
         margin-bottom: rem(80);
     }

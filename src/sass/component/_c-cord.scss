@@ -12,6 +12,11 @@
 }
 
 .cords-list__item {
+    @include mq(mw) {
+        &:not(:last-child) {
+            margin-bottom: rem(80);
+        }
+    }
     @include mq(md) {
         max-width: calc(33.333% - #{rem(70)} * 2 / 3);
         width: 100%;
@@ -19,7 +24,7 @@
 }
 
 .cords-list__item + .cords-list__item {
-    margin-top: rem(30);
+    margin-top: rem(0);
     @include mq(md) {
         margin-top: 0;
         margin-left: rem(70);
@@ -74,12 +79,52 @@
 
 .cords-list__item-title {
     // margin-top: rem(8);
-    margin-left: rem(8);
-    font-weight: 700;
+    // margin-left: rem(30);
     line-height: 1.5;
+    font-size: rem(20);
+    // margin-left: rem(30);
+    width: 100%;
     @include mq(md) {
+        text-align: left;
+        width: 100%;
         margin-left: rem(8);
-        font-size: rem(20);
+    }
+
+    @include mq(mw) {
+        &.sp-Pl {
+            padding-left: rem(30);
+        }
+    }
+}
+
+.p-feature {
+    .cords-list__item-title {
+        position: relative;
+        text-align: center;
+        @include mq(md) {
+            text-align: left;
+        }
+        &::before {
+            @include mq(mw) {
+                counter-increment: number;
+                content: counter(number, decimal-leading-zero);
+                font-size: rem(18);
+                line-height: 1;
+                width: rem(40);
+                height: rem(40);
+                border-radius: 50%;
+                background-color: #d9d9d9;
+                color: $color-black;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
     }
 }
 
@@ -87,8 +132,8 @@
     display: flex;
     align-items: center;
     margin-top: rem(12);
-    @include mq(-sm) {
-        justify-content: center;
+    @include mq(mw) {
+        // justify-content: center;
     }
     @include mq(md) {
         margin-top: rem(14);
@@ -98,8 +143,8 @@
         content: counter(number, decimal-leading-zero);
         font-size: rem(18);
         line-height: 1;
-        width: rem(60);
-        height: rem(60);
+        width: rem(40);
+        height: rem(40);
         border-radius: 50%;
         background-color: #d9d9d9;
         color: $color-black;
@@ -109,14 +154,14 @@
         justify-content: center;
         @include mq(md) {
             font-size: rem(24);
+            width: rem(60);
+            height: rem(60);
         }
     }
 }
 
 .cords-list__item-text {
     margin-top: rem(10);
-    // font-size: rem(18);
-    font-weight: 400;
     @include mq(md) {
         margin-top: rem(10);
     }

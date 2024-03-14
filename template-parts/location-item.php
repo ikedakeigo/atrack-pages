@@ -2,7 +2,7 @@
 <section class="p-location-list l-location" id="">
   <div class="p-location-list__inner inner">
     <div class="p-location-list__wrap">
-      <h2 class="p-location-list__title main-title iconMapIcon">所在地一覧</h2>
+      <h2 class="p-location-list__title main-title iconMapIcon u-textCenter">所在地一覧</h2>
       <div class="p-location-list__grid">
         <ul class="p-location-list__list">
           <!-- 1 -->

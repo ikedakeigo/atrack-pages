@@ -10,7 +10,7 @@
 }
 
 .p-location-list__title {
-    margin-bottom: rem(20);
+    margin-bottom: rem(50);
     @include mq(md) {
         margin-bottom: rem(60);
     }
@@ -60,7 +60,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    @include mq(-sm) {
+    @include mq(mw) {
         height: 500px;
     }
     .p-location-list__list {
@@ -124,7 +124,7 @@
 }
 
 .p-location-list__item-title {
-    font-weight: 700;
+    font-weight: 900;
     font-size: rem(14);
     @include mq(md) {
         font-size: rem(20);

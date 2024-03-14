@@ -38,6 +38,7 @@
   padding: rem(15) rem(40);
   // margin-left: rem(20);
   // margin-right: rem(20);
+  box-shadow: 0 0 6px rgba($color: #1B1310, $alpha: .4);
   @include mq(md) {
     // margin-left: rem(120);
     // margin-right: rem(120);

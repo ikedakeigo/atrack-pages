@@ -1,4 +1,10 @@
-@use "u-dummy";
-@use "u-inner";
-@use "u-bottom-line";
+@use 'u-dummy';
+@use 'u-inner';
+@use 'u-bottom-line';
+@use 'u-font';
+@use 'u-ls';
+@use 'u-w';
+@use 'u-lh';
+@use 'u-mt';
+@use 'u-text';
 // 新規scssファイルは都度追記する

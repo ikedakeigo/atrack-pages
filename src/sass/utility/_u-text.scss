@@ -1,0 +1,17 @@
+@use '../foundation' as *;
+
+$alignList: Left, Center, Right, Justify;
+
+@each $align in $alignList {
+    .u-text#{$align} {
+        text-align: #{$align} !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @each $align in $alignList {
+        .u-textMd#{$align} {
+            text-align: #{$align} !important;
+        }
+    }
+}

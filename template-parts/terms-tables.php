@@ -1,7 +1,7 @@
 <div class="p-terms__content">
-  <h3 class="p-terms__subtitle">
+  <h3 class="p-terms__subTitle u-w700 u-font32">
     対応可能な医療措置
-    <small class="forPC">(施設によって対応できない医療処置もございます)</small>
+    <small class="forPC u-font18">(施設によって対応できない医療処置もございます)</small>
   </h3>
   <div class="p-terms-status">
 

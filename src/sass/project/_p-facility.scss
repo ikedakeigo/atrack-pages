@@ -12,6 +12,9 @@
 .p-facility-title__content {
     display: flex;
     margin-bottom: rem(35);
+    @include mq(mw) {
+        justify-content: center;
+    }
 }
 
 .p-facility__title {
@@ -21,10 +24,11 @@
 .p-facility__update {
     font-weight: 400;
     font-size: rem(16);
-    display: flex;
-    align-items: flex-end;
-    margin-left: rem(30);
+    margin-bottom: rem(15);
     @include mq(md) {
+        margin-left: rem(30);
+        margin-bottom: rem(0);
+        margin-top: auto;
         font-size: rem(20);
     }
 }
@@ -107,9 +111,7 @@
 }
 
 .p-facility__info-text {
-    font-size: rem(24);
     line-height: calc(29 / 24);
-    font-weight: 400;
     margin-bottom: rem(30);
     @include mq(md) {
         margin-bottom: rem(60);
@@ -135,15 +137,19 @@
     padding: rem(30);
     border-radius: rem(20);
     @include mq(md) {
-        padding: rem(50) ;
+        padding: rem(50);
     }
 }
 
 .p-facility-hero__title {
-    font-weight: bold;
-    font-size: rem(24);
     margin-bottom: rem(20);
     text-align: center;
+    font-size: rem(21);
+    @include mq(mw) {
+        .sp_S {
+            font-size: rem(16);
+        }
+    }
     @include mq(md) {
         font-size: rem(32);
         margin-bottom: rem(32);
@@ -151,12 +157,54 @@
 }
 
 .p-facility-hero__text {
-    font-size: rem(16);
-    font-weight: 400;
     line-height: 1.6;
     margin: 0 auto;
+    font-size: rem(16);
     @include mq(md) {
+        font-size: rem(24);
         width: per(780, 1280);
-        font-size: rem(20);
     }
+}
+
+/*===================================
+ * spのみリンクボタン
+===================================*/
+
+.p-facility-btn__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: rem(70);
+}
+
+.p-facility-btn__list-child {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:  rem(10);
+}
+
+.p-facility-btn__item {
+    width: rem(170);
+    height: rem(53);
+    background-color: rgba(0, 137, 14, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(7) 0;
+    border-radius: rem(30);
+    &:first-child {
+        margin-bottom: rem(12);
+    }
+}
+
+.p-facility-btn__link {
+    background-color: $color-green;
+    color: $color-white;
+    padding: rem(5) 0;
+    width: rem(146);
+    text-align: center;
+    border-radius: rem(30);
+    font-weight: 700;
+    font-size: rem(20);
 }

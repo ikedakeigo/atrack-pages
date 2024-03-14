@@ -12,8 +12,6 @@ $breakpoints: null;
     "lg": "screen and (min-width: 1000px)",
     "xl": "screen and (min-width: 1200px)",
     "mw": "screen and (max-width: 767px)",
-    // 追加
-    "-sm": "screen and (max-width: 767px)",
   );
 } @else {
   // ブレイクポイントの設定

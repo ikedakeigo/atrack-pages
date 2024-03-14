@@ -14,6 +14,7 @@
 
 .p-staff-concept__title {
     margin-bottom: rem(50);
+    font-size:  rem(24);
     @include mq(md) {
         margin-bottom: rem(70);
     }
@@ -46,6 +47,9 @@
 
 .p-staff-concept-list__item-img {
     width: 100%;
+    @include mq(mw){
+        margin-bottom: rem(20);
+    }
     @include mq(md) {
         width: per(600, 1280);
     }
@@ -68,22 +72,22 @@
 }
 
 .p-staff-concept-list__item-box {
+    @include mq(mw) {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
 }
 
 .p-staff-concept-list__item-title {
     font-weight: bold;
     font-size: rem(24);
     margin-bottom: rem(20);
-    @include mq(md){
-        font-size:  rem(40);
+    @include mq(md) {
+        font-size: rem(40);
         margin-bottom: rem(15);
     }
 }
 
 .p-staff-concept-list__item-text {
-    font-weight: regular;
-    font-size: rem(18);
-    @include mq(md){
-        font-size:  rem(24);
-    }
 }

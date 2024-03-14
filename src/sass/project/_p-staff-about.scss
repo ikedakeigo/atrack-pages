@@ -10,15 +10,21 @@
 }
 
 .p-staff-about__title {
-    margin-bottom: rem(20);
+    margin-bottom: rem(40);
+    @include mq(md){
+        margin-bottom: rem(60);
+    }
 }
 
 
 .p-staff-about__text-top {
-    margin-bottom: rem(30);
-    padding-left: rem(55);
-    font-size: rem(32);
-    font-weight: bold;
+    font-size:  rem(15);
+    margin-bottom: rem(20);
+    @include mq(md){
+        margin-bottom: rem(30);
+        padding-left: rem(55);
+        font-size:  rem(28);
+    }
 }
 
 .p-staff-about__text--bottom {

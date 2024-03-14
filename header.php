@@ -32,7 +32,7 @@
       <div class="header__wrap">
         <h1 class="header__logo">
           <a href="/">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.png" alt="いこいの里">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.png"alt="いこいの里">
           </a>
         </h1>
         <div class="header__menu">
@@ -65,7 +65,7 @@
       <div class="header__sp-menu">
         <h1 class="header__logo">
           <a href="/">
-            <span>ロゴ</span>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo_sp.png" alt="いこいの里">
           </a>
         </h1>
         <!-- キャッチコピー -->

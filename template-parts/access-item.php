@@ -1,7 +1,7 @@
 <section class="p-access l-access" id="">
   <div class="p-access__inner inner">
     <div class="p-access__map-wrap">
-      <h2 class="p-access__title main-title iconMap">拠点マップ</h2>
+      <h2 class="p-access__title main-title iconMap u-textMdCenter">拠点マップ</h2>
       <!-- <p class="p-access__text">
         複数事業所を運営しておりますので、急な対応や緊急の状況にもいずれかの施設にてご対応が可能です。<br />
         詳しくはお問い合わせください。

@@ -77,16 +77,16 @@ p {
  * sp・pc共通
 ===================================*/
 .forSP {
-    display: block;
+    display: block ;
     @include mq('md') {
-        display: none;
+        display: none !important;
     }
 }
 
 .forPC {
     display: none;
     @include mq('md') {
-        display: inline-block;
+        display: block;
     }
 }
 
@@ -94,7 +94,7 @@ p {
  * メインタイトル
 ===================================*/
 .main-title {
-    font-size: rem(20);
+    font-size: rem(24);
     line-height: calc(24 / 20);
     font-weight: 700;
     @include mq(md) {
@@ -139,98 +139,169 @@ p {
     // padding-left: rem(10);
 }
 
-
 /*===================================
  * アイコン
 ===================================*/
 
-.iconHome{
-    display: flex;
-    align-items: flex-end;
+.iconHome {
+    display: block;
     &::before {
         content: '';
         display: block;
         background-image: url('../img/icon/icon_home.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        width: rem(70);
-        height: rem(70);
-        margin-right: rem(20);
+        margin-right: auto;
+        margin-left: auto;
+        width: rem(40);
+        height: rem(40);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(70);
+            height: rem(70);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
     }
     @include mq(md) {
-        // margin-bottom: rem(28);
+        display: flex;
+        align-items: flex-end;
     }
 }
 
-.iconMap{
-    display: flex;
-    align-items: flex-end;
+.iconMap {
+    display: block;
     &::before {
         content: '';
         display: block;
         background-image: url('../img/icon/icon_map.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        width: rem(70);
-        height: rem(70);
-        margin-right: rem(20);
+        margin-right: auto;
+        margin-left: auto;
+        width: rem(40);
+        height: rem(40);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(70);
+            height: rem(70);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
     }
     @include mq(md) {
-        // margin-bottom: rem(28);
+        display: flex;
+        align-items: flex-end;
     }
 }
 
-.iconMapIcon{
-    display: flex;
-    align-items: flex-end;
+.iconMapIcon {
+    display: block;
     &::before {
         content: '';
         display: block;
         background-image: url('../img/icon/icon_mapIcon.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        width: rem(70);
-        height: rem(70);
-        margin-right: rem(20);
+        margin-right: auto;
+        margin-left: auto;
+        width: rem(40);
+        height: rem(40);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(70);
+            height: rem(70);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
     }
     @include mq(md) {
-        // margin-bottom: rem(28);
+        display: flex;
+        align-items: flex-end;
     }
 }
 
-.iconMath{
-    display: flex;
-    align-items: flex-end;
+.iconMath {
+    display: block;
     &::before {
         content: '';
         display: block;
         background-image: url('../img/icon/icon_math.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        width: rem(70);
-        height: rem(70);
-        margin-right: rem(20);
+        margin-right: auto;
+        margin-left: auto;
+        width: rem(40);
+        height: rem(40);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(70);
+            height: rem(70);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
     }
     @include mq(md) {
-        // margin-bottom: rem(28);
+        display: flex;
+        align-items: flex-end;
     }
 }
 
-.iconQa{
-    display: flex;
-    align-items: flex-end;
+.iconQa {
+    display: block;
     &::before {
         content: '';
         display: block;
         background-image: url('../img/icon/icon_qa.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        width: rem(70);
-        height: rem(70);
-        margin-right: rem(20);
+        margin-right: auto;
+        margin-left: auto;
+        width: rem(40);
+        height: rem(40);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(70);
+            height: rem(70);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
     }
     @include mq(md) {
-        // margin-bottom: rem(28);
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.iconVision {
+    display: block;
+    &::before {
+        content: '';
+        display: block;
+        background-image: url('../img/icon/icon_vision.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: auto;
+        margin-left: auto;
+        width: rem(40);
+        height: rem(40);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(70);
+            height: rem(70);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
+    }
+    @include mq(md) {
+        display: flex;
+        align-items: flex-end;
     }
 }
 
@@ -251,4 +322,11 @@ p {
         text-align: center;
         font-weight: bold;
     }
+}
+
+.acf-field .acf-label label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 3px;
+    padding: 0;
 }

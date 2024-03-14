@@ -1,8 +1,8 @@
 @use '../foundation' as *;
 
 .l-staff-value {
-    margin-bottom: rem(30);
+    margin-bottom: rem(60);
     @include mq(md) {
-        margin-bottom: rem(60);
+        margin-bottom: rem(90);
     }
 }

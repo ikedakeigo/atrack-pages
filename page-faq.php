@@ -17,7 +17,7 @@ endif; ?>
   <!-- faq -->
   <section class="p-faq l-faq" id="">
     <div class="p-faq__inner inner">
-      <h2 class="p-faq__title main-title">いこいの里に関するよくある質問</h2>
+      <h2 class="p-faq__title main-title iconQa u-textMdCenter">いこいの里に関するよくある質問</h2>
       <ul class="p-faq__list p-faq-list">
         <?php $args = array(
           'post_type' => 'faq',

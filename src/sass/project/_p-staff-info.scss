@@ -13,22 +13,23 @@
     display: flex;
     align-items: center;
     margin-bottom: rem(30);
+    font-size:  rem(20);
     @include mq(mw) {
         justify-content: center;
     }
-    &::before {
-        content: '';
-        display: inline-block;
-        width: rem(6);
-        height: rem(24);
-        background-color: $color-orange;
-        margin-right: rem(8);
-        @include mq(md) {
-            margin-right: rem(20);
-            width: rem(10);
-            height: rem(65);
-        }
-    }
+    // &::before {
+    //     content: '';
+    //     display: inline-block;
+    //     width: rem(6);
+    //     height: rem(24);
+    //     background-color: $color-orange;
+    //     margin-right: rem(8);
+    //     @include mq(md) {
+    //         margin-right: rem(20);
+    //         width: rem(10);
+    //         height: rem(65);
+    //     }
+    // }
 
     @include mq(md) {
         margin-bottom: rem(20);
@@ -36,6 +37,11 @@
 }
 
 .p-staff-info__content {
+    @include mq(mw){
+        &:not(:last-child) {
+            margin-bottom: rem(60);
+        }
+    }
     @include mq(md) {
         display: flex;
     }
@@ -51,21 +57,18 @@
 }
 
 .p-staff-info__subTitle {
-    font-weight: bold;
-    font-size: rem(20);
+    font-size: rem(18);
     margin-bottom: rem(20);
     @include mq(md) {
-        font-size: rem(24);
+        font-size:  rem(24);
         margin-bottom: rem(40);
     }
 }
 
 .p-staff-info__text {
-    font-size: rem(18);
-    font-weight: 400;
+    font-size:  rem(16);
     @include mq(md) {
-        font-weight: 700;
-        font-size: rem(20);
+        font-size:  rem(20);
         line-height: calc(24 / 20);
     }
 }
@@ -95,37 +98,29 @@
  * トップテキスト
 ===================================*/
 
-.p-staff-hero{
-
+.p-staff-hero {
 }
 
-.p-staff-hero__title{
-  font-weight: bold;
-  font-size: rem(24);
-  margin-bottom: rem(20);
-  text-align: center;
-  @include mq(md){
-    font-size:  rem(32);
-    margin-bottom: rem(30);
-  }
+.p-staff-hero__title {
+    margin-bottom: rem(20);
+    text-align: center;
+    @include mq(md) {
+        margin-bottom: rem(30);
+    }
 }
 .p-staff-hero__wrap {
-  background-color: $color-background;
-  padding: rem(30);
-  border-radius: rem(20);
-  @include mq(md) {
-      padding: rem(50) ;
-  }
+    background-color: $color-background;
+    padding: rem(30);
+    border-radius: rem(20);
+    @include mq(md) {
+        padding: rem(50);
+    }
 }
 
-
 .p-staff-hero__text {
-  font-size: rem(16);
-  font-weight: 400;
-  line-height: 1.6;
-  margin: 0 auto;
-  @include mq(md) {
-      width: per(820, 1280);
-      font-size: rem(20);
-  }
+    line-height: 1.6;
+    margin: 0 auto;
+    @include mq(md) {
+        width: per(820, 1280);
+    }
 }

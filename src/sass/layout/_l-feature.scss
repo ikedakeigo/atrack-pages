@@ -1,10 +1,8 @@
 @use "../foundation" as *;
 
 .l-feature {
-  margin-bottom: rem(30);
-  // padding: rem(20);
+  margin-bottom: rem(80);
   @include mq(md) {
-    // padding:  rem(40);
     margin: rem(60) 0;
   }
 }

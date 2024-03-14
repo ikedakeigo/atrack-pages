@@ -4,8 +4,9 @@
     position: relative;
     z-index: 1;
     // height: 30vh;
-    min-height: rem(400);
+    min-height: rem(280);
     @include mq(md) {
+        min-height: rem(600);
         // height: 70vh;
     }
 }
@@ -34,9 +35,9 @@
     font-weight: 500;
     font-family: 'inter';
     text-shadow: 2px 4px 5px #000000;
-    letter-spacing: rem(30);
-
+    letter-spacing: rem(10);
     @include mq(md) {
+        letter-spacing: rem(30);
         font-size: rem(32);
     }
 }
@@ -94,7 +95,7 @@
 
 .swiper-img {
     img {
-        aspect-ratio: 400/500;
+        aspect-ratio: 390/280;
         object-fit: cover;
         height: auto;
         @include mq(md) {

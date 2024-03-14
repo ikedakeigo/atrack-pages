@@ -21,6 +21,22 @@
   background-color: $color-green;
 }
 
+.p-single-blog__list{
+  margin-top: rem(20);
+  display: flex;
+  gap: rem(10);
+  // 反転
+  flex-direction: row-reverse;
+  @include mq(md){
+    margin-top: rem(30);
+  }
+
+}
+
+.p-single-blog__title-wrap{
+
+}
+
 .p-single-blog__title {
   margin-top: rem(24);
   font-size: rem(24);

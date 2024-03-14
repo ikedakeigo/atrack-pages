@@ -22,10 +22,10 @@ endif; ?>
   <section class="p-facility-hero l-facility-hero  " id="">
     <div class="p-facility-hero__inner inner">
       <div class="p-facility-hero__wrap">
-        <h2 class="p-facility-hero__title">
-          私達が目指しているのは、<br class="forSP">「家庭の延長線にあるホーム」です。
+        <h2 class="p-facility-hero__title u-w900">
+          <span class="sp_S">私達が目指しているのは、</span><br class="forSP"><span>「家庭の延長線にあるホーム」です。</span>
         </h2>
-        <p class="p-facility-hero__text">
+        <p class="p-facility-hero__text u-w400">
           人としての関わりを大切にしながら午後からの入浴や日々の生活援助など、今まで営んできた生活リズムにできる限り近づけられるよう、またご本人が生きがい・自分でできたという達成感を感じられる介護を心がけながらお手伝いさせていただいております。
         </p>
       </div>
@@ -36,7 +36,7 @@ endif; ?>
   <section class="p-location-list l-location" id="">
     <div class="p-location-list__inner inner">
       <div class="p-location-list__wrap">
-        <h2 class="p-location-list__title main-title iconMapIcon">所在地一覧</h2>
+        <h2 class="p-location-list__title main-title iconMapIcon u-textMdCenter">所在地一覧</h2>
         <div class="p-location-list__grid">
           <ul class="p-location-list__list">
             <!-- 1 -->
@@ -154,15 +154,47 @@ endif; ?>
       <div class="p-facility__wrap">
         <div class="p-facility-title__content">
           <h2 class="p-facility__title main-title iconHome">施設一覧</h2>
-          <p class="p-facility__update">
+          <p class="p-facility__update forPC">
             最終更新日：<?php the_modified_date("Y年m月d日"); ?>
           </p>
         </div>
-        <p class="p-facility__info-text forPC">
+        <p class="p-facility__info-text  u-font24 u-w400 forPC">
           複数事業所を運営しておりますので、急な対応や緊急の状況にもいずれかの施設にてご対応が可能です。<br>
           詳しくはお問い合わせください。
         </p>
+        <ul class="p-facility-btn__list forSP">
+          <li class="p-facility-btn__item">
+            <a href="#nakahara" class="p-facility-btn__link">
+              北九州市
+            </a>
+          </li>
+          <ul class="p-facility-btn__list-child">
+            <li class="p-facility-btn__item">
+              <a href="#usamati" class="p-facility-btn__link">
+                苅田
+              </a>
+            </li>
+            <li class="p-facility-btn__item">
+              <a href="#usamati" class="p-facility-btn__link">
+                糸島
+              </a>
+            </li>
+            <li class="p-facility-btn__item">
+              <a href="#usamati" class="p-facility-btn__link">
+                古賀
+              </a>
+            </li>
+            <li class="p-facility-btn__item">
+              <a href="#usamati" class="p-facility-btn__link">
+                佐賀
+              </a>
+            </li>
+          </ul>
+        </ul>
         <ul class="p-facility__list">
+          <p class="p-facility__update forSP">
+            最終更新日：<?php the_modified_date("Y年m月d日"); ?>
+          </p>
           <?php
           $args = array(
             'post_type' => 'facilitie',
