@@ -76,6 +76,20 @@
         background-color: $color-green;
     }
 }
+
+.p-about__note dt {
+    display: flex;
+    align-items: center;
+    .entry-item-tag {
+        color: $color-white;
+        font-size: rem(12);
+        align-items: center;
+        display: flex;
+        margin-left: rem(10);
+        padding: rem(10);
+        border-radius: rem(5);
+    }
+}
 .p-about__note dl dt {
     left: 0;
     width: auto;
@@ -85,7 +99,7 @@
     @include mq(md) {
         position: absolute;
         left: rem(53);
-        width: rem(183);
+        width: rem(300);
         padding: rem(13) 0 0;
         margin: rem(10) 0 0;
     }
@@ -107,7 +121,7 @@
     @include mq(md) {
         min-height: 40px;
         padding-top: rem(13);
-        padding-left: rem(150);
+        padding-left: rem(250);
         margin: rem(10) rem(53) 0;
     }
 }
@@ -364,7 +378,7 @@
 
 .p-about-list__item-text {
     line-height: 1.6;
-    font-size:  rem(20);
+    font-size: rem(20);
     @include mq(md) {
         margin-left: rem(80);
         font-size: rem(24);

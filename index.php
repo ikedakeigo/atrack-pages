@@ -121,7 +121,7 @@
         </div>
         <div class="p-about__text-box">
           <h3 class="p-about__subtitle">TOPICS</h3>
-          <div class="p-about__note">
+          <div class="p-about__note" id="news">
             <!-- トピックスの内容 -->
             <dl>
               <!-- 最新記事を3つ表示させる -->
@@ -148,6 +148,18 @@
                       echo '<time datetime="' . esc_attr($day->format('c')) . '">' . esc_html($day->format('Y.m.d')) . '</time>';
                     }
                     ?>
+                    <?php
+                    $post_id = get_the_ID(); // 現在の投稿のIDを取得
+                    $taxonomy = 'news-cat'; // カスタムタクソノミーの名前を指定
+                    $terms = get_the_terms($post_id, $taxonomy);
+
+                    if ($terms && !is_wp_error($terms)) :
+                      $category = $terms[0];
+                    ?>
+                      <span class="entry-item-tag">
+                        <?php echo $category->name; ?>
+                      </span>
+                    <?php endif; ?>
                   </dt>
                   <dd>
                     <a href="<?php the_permalink(); ?>">
@@ -162,7 +174,7 @@
             </dl>
           </div>
           <h3 class="p-about__subtitle">BLOG</h3>
-          <div class="p-about__note">
+          <div class="p-about__note" id="blog">
             <!-- ブログの内容 -->
             <dl>
               <?php $args = array(
@@ -187,6 +199,18 @@
                       echo '<time datetime="' . esc_attr($day->format('c')) . '">' . esc_html($day->format('Y.m.d')) . '</time>';
                     }
                     ?>
+                    <?php
+                    $post_id = get_the_ID(); // 現在の投稿のIDを取得
+                    $taxonomy = 'blog-cat'; // カスタムタクソノミーの名前を指定
+                    $terms = get_the_terms($post_id, $taxonomy);
+
+                    if ($terms && !is_wp_error($terms)) :
+                      $category = $terms[0];
+                    ?>
+                      <span class="entry-item-tag">
+                        <?php echo $category->name; ?>
+                      </span>
+                    <?php endif; ?>
                   </dt>
                   <dd>
                     <a href="<?php the_permalink(); ?>">

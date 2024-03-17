@@ -55,7 +55,7 @@
               </div>
               <!-- 投稿コンテンツ -->
               <div class="p-single-blog__content">
-                <?php get_field('textarea'); ?>
+                <?php the_field('textarea'); ?>
                 <div class="p-single-blog__bottom-img">
                   <?php for ($i = 1; $i <= 8; $i++) : ?>
                     <?php $image = get_field('image_' . $i); ?>
