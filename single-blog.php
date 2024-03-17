@@ -28,13 +28,17 @@
                 <!-- 投稿タイトル -->
                 <h2 class="p-single-blog__title main-title">
                   <?php the_title(); ?>
-                  <?php // カテゴリー１つ目の名前を表示
-                  ?>
-                  <?php $category = get_the_category(); ?>
-                  <?php if ($category[0]) : ?>
-                    <div class="entry-item-tag"><?php echo $category[0]->cat_name; ?></div><!-- /entry-item-tag -->
-                  <?php endif; ?>
                 </h2>
+                <?php
+                $post_id = get_the_ID(); // 現在の投稿のIDを取得
+                $taxonomy = 'blog-cat'; // カスタムタクソノミーの名前を指定
+                $terms = get_the_terms($post_id, $taxonomy);
+
+                if ($terms && !is_wp_error($terms)) :
+                  $category = $terms[0];
+                ?>
+                  <div class="entry-item-tag"><?php echo $category->name; ?></div>
+                <?php endif; ?>
               </div>
               <!-- 投稿メタ情報 (日付とカテゴリー) -->
               <div class="p-single-blog__meta">
@@ -51,7 +55,7 @@
               </div>
               <!-- 投稿コンテンツ -->
               <div class="p-single-blog__content">
-                <?php the_content(); ?>
+              <?php get_field('textarea'); ?>
                 <div class="p-single-blog__bottom-img">
                   <?php for ($i = 1; $i <= 8; $i++) : ?>
                     <?php $image = get_field('image_' . $i); ?>

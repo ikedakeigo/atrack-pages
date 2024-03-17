@@ -1,5 +1,23 @@
 @use '../foundation' as *;
 
+#blog {
+    .p-archive-blog__sidebar-title {
+        background-color: $color-orange;
+    }
+    .entry-item-tag {
+        background-color: $color-orange;
+    }
+}
+
+#news {
+    .p-archive-blog__sidebar-title {
+        background-color: #ec6941;
+    }
+    .entry-item-tag {
+        background-color: #ec6941;
+    }
+}
+
 .p-archive-blog__sidebar {
     display: none;
     @include mq(md) {
@@ -27,6 +45,7 @@
     background-color: $color-green;
     color: $color-white;
     border-radius: rem(5);
+    text-align: center;
 }
 
 .p-archive-blog__link {

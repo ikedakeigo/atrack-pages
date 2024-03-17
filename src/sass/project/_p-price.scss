@@ -74,8 +74,10 @@
 .p-price-calculator__description {
   margin: 0 auto;
   margin-top: rem(40);
+  font-size:  rem(16);
   @include mq(md){
     width: per(847, 1280);
+    font-size:  rem(20);
   }
 }
 

@@ -135,3 +135,15 @@ jQuery('.wpcf7-previous').on('click', function () {
 });
 
 //最後に実行する
+
+// window.addEventListener('scroll', () => {
+//     const header = document.getElementById('smaller');
+//     const scrollPosition = window.scrollY;
+
+//     if (scrollPosition > 295 && window.innerWidth > 1000) {
+//         header.classList.add('smaller');
+//     } else if (scrollPosition <= 60) {
+//         header.classList.remove('smaller');
+//     }
+// });
+

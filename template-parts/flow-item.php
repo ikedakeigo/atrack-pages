@@ -16,6 +16,11 @@
           </div>
         </div>
       </li>
+      <p class="allow">
+        <img class="forPC" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/triangle_under.svg" alt="矢印">
+        <img class="forSP" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/triangle_under-sp.svg" alt="矢印">
+      </p>
+
       <li class="p-flow-list__item">
         <div class="p-flow-list__item-wrap">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/2.svg" class="forPC" alt="" />
@@ -29,6 +34,10 @@
           </div>
         </div>
       </li>
+      <p class="allow">
+        <img class="forPC" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/triangle_under.svg" alt="矢印">
+        <img class="forSP" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/triangle_under-sp.svg" alt="矢印">
+      </p>
       <li class="p-flow-list__item">
         <div class="p-flow-list__item-wrap">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/3.svg" class="forPC" alt="" />
@@ -41,6 +50,10 @@
           </div>
         </div>
       </li>
+      <p class="allow">
+        <img class="forPC" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/triangle_under.svg" alt="矢印">
+        <img class="forSP" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/triangle_under-sp.svg" alt="矢印">
+      </p>
       <li class="p-flow-list__item">
         <div class="p-flow-list__item-wrap">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/4.svg" class="forPC" alt="" />

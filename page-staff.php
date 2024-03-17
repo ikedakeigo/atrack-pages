@@ -130,7 +130,7 @@ endif; ?>
   <section class="p-staff-concept l-staff-concept  " id="">
     <div class="p-staff-concept__inner inner">
       <div class="p-staff-concept__wrap">
-        <h2 class="p-staff-concept__title main-title u-textMdCenter">
+        <h2 class="p-staff-concept__title main-title u-textMdCenter iconConcept">
           『いこいの里』の介護基本理念
         </h2>
         <ul class="p-staff-concept__list p-staf-concept-list">
@@ -192,8 +192,14 @@ endif; ?>
 
           <!-- spのみ -->
           <li class="p-staff-concept-list__item forSP">
-            <div class="p-staff-concept-list__item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略">
+
+            <div class="p-staff-concept-img__content">
+              <div class="p-staff-concept-list__item-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略">
+              </div>
+              <div class="p-staff-concept-list__item-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="省略">
+              </div>
             </div>
             <div class="p-staff-concept-list__item-text-wrap">
 

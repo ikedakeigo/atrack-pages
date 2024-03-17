@@ -1,0 +1,49 @@
+@use '../foundation' as *;
+
+#fixedMenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: $color-green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    @include mq(md) {
+        display: none;
+    }
+
+    .fixedMenu-list {
+        display: flex;
+        justify-content: space-around;
+    }
+    .fixedMenu-btn {
+        background-color: $color-orange;
+        display: block;
+        width: 48%;
+        border-radius: rem(10);
+        padding: 10px;
+        color: $color-white;
+        text-align: center;
+        line-height: 1;
+        margin: auto;
+
+        .fixedMenu-btn__textM {
+            font-size: rem(20);
+            font-weight: bold;
+        }
+
+        .fixedMenu-btn__textS {
+            font-size: rem(14);
+        }
+    }
+    .fixedMenu-btn:hover {
+        transform: translateY(3px);
+        background-color: $color-white;
+        color: $color-orange;
+    }
+    .fixedMenu-btn {
+        transition: background-color 0.3s;
+    }
+}
+

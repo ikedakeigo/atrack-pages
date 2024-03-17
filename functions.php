@@ -135,7 +135,6 @@ function create_post_type()
       'menu_icon' => 'dashicons-megaphone',
       'supports' => array(
         'title',
-        'editor',
         'author',
         'custom-fields',
         'thumbnail',
@@ -159,6 +158,7 @@ function create_post_type()
       'show_admin_column' => true
     )
   );
+
   // 施設の登録
   register_post_type(
     'facilitie', // ポストタイプのスラッグ
@@ -172,6 +172,22 @@ function create_post_type()
       'has_archive' => true,
       'menu_icon' => 'dashicons-building', // 管理画面のメニューに表示されるアイコン
       'supports' => array('title'), // サポートする機能
+    )
+  );
+  register_taxonomy(
+    'facility-cat', // カテゴリースラッグ
+    'facilitie', // カスタム投稿タイプ
+    array(
+      'hierarchical' => true, // カテゴリータイプの指定
+      'update_count_callback' => '_update_post_term_count',
+      'public' => true,
+      'hierarchical' => true,
+      'label' => '施設カテゴリー', // ダッシュボードに表示させる名前
+      'show_ui' => true,
+      'query_var' => true,
+      'singular_label' => '施設カテゴリー名',
+      'show_in_rest' => true,
+      'show_admin_column' => true
     )
   );
 

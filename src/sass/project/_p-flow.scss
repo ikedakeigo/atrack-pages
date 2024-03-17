@@ -7,6 +7,17 @@
     }
 }
 
+.p-flow-list .allow {
+    display: grid;
+    place-content: center;
+    margin-bottom: rem(20);
+    margin-top: rem(20);
+    @include mq(md) {
+        margin-top: rem(35);
+        margin-bottom: rem(35);
+    }
+}
+
 .p-flow__title {
     margin-bottom: rem(20);
     @include mq(md) {
@@ -17,38 +28,38 @@
 .p-flow-list__item {
     position: relative;
     &:not(:last-child) {
-        margin-bottom: rem(73);
+        // margin-bottom: rem(73);
     }
-    &::after {
-        content: '';
-        display: inline-block;
-        background-image: url(./../img/common/triangle_under.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: rem(80);
-        height: rem(47);
-        position: absolute;
-        bottom: -25%;
-        left: 50%;
-        transform: translateX(-50%);
+    // &::after {
+    //     content: '';
+    //     display: inline-block;
+    //     background-image: url(./../img/common/triangle_under.svg);
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     background-size: contain;
+    //     width: rem(80);
+    //     height: rem(47);
+    //     position: absolute;
+    //     bottom: -25%;
+    //     left: 50%;
+    //     transform: translateX(-50%);
 
-        @include mq(mw) {
-            background-image: url(./../img/common/triangle_under-sp.svg);
-            width: rem(24);
-            height: rem(46);
-            bottom: -25%;
-        }
-    }
-    &:last-child::after {
-        content: none;
-    }
-    &:nth-child(3):after {
-        bottom: -20%;
-        @include mq(mw) {
-            bottom: -20%;
-        }
-    }
+    //     @include mq(mw) {
+    //         background-image: url(./../img/common/triangle_under-sp.svg);
+    //         width: rem(24);
+    //         height: rem(46);
+    //         bottom: -25%;
+    //     }
+    // }
+    // &:last-child::after {
+    //     content: none;
+    // }
+    // &:nth-child(3):after {
+    //     bottom: -20%;
+    //     @include mq(mw) {
+    //         bottom: -20%;
+    //     }
+    // }
 }
 
 .p-flow-list__item-wrap {
@@ -88,7 +99,7 @@
         left: -10%;
         transform: translate(-25%, -25%);
         @include mq(md) {
-          transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
             left: -5%;
             width: rem(30);
             height: rem(30);

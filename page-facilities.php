@@ -162,57 +162,47 @@ endif; ?>
           複数事業所を運営しておりますので、急な対応や緊急の状況にもいずれかの施設にてご対応が可能です。<br>
           詳しくはお問い合わせください。
         </p>
-        <ul class="p-facility-btn__list forSP">
-          <li class="p-facility-btn__item">
-            <a href="#nakahara" class="p-facility-btn__link">
-              北九州市
-            </a>
-          </li>
-          <ul class="p-facility-btn__list-child">
-            <li class="p-facility-btn__item">
-              <a href="#usamati" class="p-facility-btn__link">
-                苅田
-              </a>
-            </li>
-            <li class="p-facility-btn__item">
-              <a href="#usamati" class="p-facility-btn__link">
-                糸島
-              </a>
-            </li>
-            <li class="p-facility-btn__item">
-              <a href="#usamati" class="p-facility-btn__link">
-                古賀
-              </a>
-            </li>
-            <li class="p-facility-btn__item">
-              <a href="#usamati" class="p-facility-btn__link">
-                佐賀
-              </a>
-            </li>
-          </ul>
-        </ul>
-        <ul class="p-facility__list">
-          <p class="p-facility__update forSP">
-            最終更新日：<?php the_modified_date("Y年m月d日"); ?>
-          </p>
-          <?php
+
+        <!-- spのみ表示 facility-item-link -->
+        <?php get_template_part('template-parts/facility-item-link') ?>
+
+        <p class="p-facility__update forSP">
+          最終更新日：<?php the_modified_date("Y年m月d日"); ?>
+        </p>
+        <?php
+        // 地方のカテゴリー名
+        $terms = ['北九州', '苅田町', '糸島市', '古賀市', '佐賀県'];
+
+        foreach ($terms as $term) {
+          echo "<h3 class=\"p-facility__list-title\" id=\"{$term}\">{$term}</h3>";
           $args = array(
             'post_type' => 'facilitie',
             'posts_per_page' => -1,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'facility-cat',
+                'field' => 'slug',
+                'terms' => $term
+              )
+            )
           );
-          $facility = new WP_Query($args);
-          if ($facility->have_posts()) :
-            while ($facility->have_posts()) :
-              $facility->the_post();
+          $facility_query = new WP_Query($args);
+          if ($facility_query->have_posts()) :
+
+            echo "<ul class=\"p-facility__list\">";
+            while ($facility_query->have_posts()) :
+              $facility_query->the_post();
+              // htmlをphpに埋め込む
 
               // テンプレートパーツの読み込み
               get_template_part('template-parts/facility-item');
             endwhile;
+            echo "</ul>";
+
           endif;
           wp_reset_postdata();
-          ?>
-
-        </ul>
+        }
+        ?>
 
       </div>
     </div>

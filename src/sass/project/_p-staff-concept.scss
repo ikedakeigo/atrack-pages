@@ -14,8 +14,9 @@
 
 .p-staff-concept__title {
     margin-bottom: rem(50);
-    font-size:  rem(24);
+    font-size: rem(24);
     @include mq(md) {
+        font-size: rem(40);
         margin-bottom: rem(70);
     }
 }
@@ -45,18 +46,30 @@
     }
 }
 
+.p-staff-concept-img__content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(20);
+}
+
 .p-staff-concept-list__item-img {
     width: 100%;
-    @include mq(mw){
-        margin-bottom: rem(20);
+    @include mq(mw) {
+        width: per(185, 375);
+        &:not(:first-child) {
+            margin-left: rem(10);
+        }
     }
     @include mq(md) {
         width: per(600, 1280);
     }
     img {
-        aspect-ratio: 580/600;
+        aspect-ratio: 185/234;
         object-fit: cover;
         height: auto;
+        @include mq(md) {
+            aspect-ratio: 580/600;
+        }
     }
 }
 

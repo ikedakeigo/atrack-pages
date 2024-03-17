@@ -52,6 +52,7 @@
   </div>
   <small class="p-footer__copyright">&copy;2024 <span>株式会社ウキシロケアセンター</span></small>
 </footer>
+<?php get_template_part('template-parts/fixed-btn') ?>
 <?php wp_footer(); ?>
 <!-- JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
