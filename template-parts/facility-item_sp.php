@@ -2,10 +2,10 @@
 $post_id = get_field('id');
 $url = get_field('url');
 ?>
-<li id="<?php echo $post_id ?>" class="p-facility-list__item">
+<li id="<?php echo $post_id ?>" class="p-facility-list__item ">
 
   <a href="<?php echo $url; ?>">
-    <div class="p-facility-list__item-img">
+    <div class="p-facility-list__item-img u-hover-img ">
       <?php
       $image = get_field('image');
       if (!empty($image)) :
@@ -15,12 +15,12 @@ $url = get_field('url');
         <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/dummy.jpg" alt="ダミー" />
       <?php endif; ?>
     </div>
-    <div class="p-facility-list__item-content">
-      <p class="p-facility-list__item-title">
+    <div class="p-facility-list__item-content ">
+      <p class="p-facility-list__item-title ">
         <?php the_title(); ?>
         <?php the_post_thumbnail(); ?>
       </p>
-      <p class="p-facility-list__item-text">
+      <p class="p-facility-list__item-text ">
         <?php
         $custom_postNum = get_field('post_number');
 
@@ -32,7 +32,7 @@ $url = get_field('url');
         echo get_post_meta(get_the_ID(), 'address', true);
         ?>
       </p>
-      <p class="p-facility-list__item-text">
+      <p class="p-facility-list__item-text ">
         <?php
         $custom_tel = get_field('tel');
         $custom_fax = get_field('fax');

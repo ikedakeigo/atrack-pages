@@ -1,5 +1,4 @@
 <div id="fixedMenu">
-    <!-- <p class="fixedMenu-title">見学予約・お問い合わせ</p> -->
     <div class="fixedMenu-list">
         <a href="/contact/" class="fixedMenu-btn">
             <span class="fixedMenu-btn__textM">
@@ -10,7 +9,7 @@
                 受付:24時間
             </span>
         </a>
-        <a href="#" class="fixedMenu-btn">
+        <a href="tel:093-871-5800" class="fixedMenu-btn">
             <span class="fixedMenu-btn__textM">
                 電話
             </span>

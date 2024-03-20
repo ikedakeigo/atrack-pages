@@ -20,7 +20,10 @@
 }
 
 .p-staff-value__list {
+    border-radius:  rem(10);
+    background-color: $color-background;
     @include mq(md) {
+        padding:  rem(30);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -32,8 +35,7 @@
 }
 
 .p-staff-value-list__item {
-
-    @include mq(mw){
+    @include mq(mw) {
         &:not(:last-child) {
             margin-bottom: rem(30);
         }
@@ -44,7 +46,7 @@
     }
 
     &:nth-of-type(1),
-    &:nth-of-type(2) ,
+    &:nth-of-type(2),
     &:nth-of-type(3) {
         @include mq(md) {
             margin-bottom: rem(50);

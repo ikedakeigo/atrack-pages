@@ -25,7 +25,7 @@ endif; ?>
         <h2 class="p-facility-hero__title u-w900">
           <span class="sp_S">私達が目指しているのは、</span><br class="forSP"><span>「家庭の延長線にあるホーム」です。</span>
         </h2>
-        <p class="p-facility-hero__text u-w400">
+        <p class="p-facility-hero__text u-w400 u-lh20">
           人としての関わりを大切にしながら午後からの入浴や日々の生活援助など、今まで営んできた生活リズムにできる限り近づけられるよう、またご本人が生きがい・自分でできたという達成感を感じられる介護を心がけながらお手伝いさせていただいております。
         </p>
       </div>
@@ -158,56 +158,136 @@ endif; ?>
             最終更新日：<?php the_modified_date("Y年m月d日"); ?>
           </p>
         </div>
-        <p class="p-facility__info-text  u-font24 u-w400 forPC">
+        <p class="p-facility__info-text  u-font24 u-w400 forPC u-lh20">
           複数事業所を運営しておりますので、急な対応や緊急の状況にもいずれかの施設にてご対応が可能です。<br>
           詳しくはお問い合わせください。
         </p>
 
         <!-- spのみ表示 facility-item-link -->
-        <?php get_template_part('template-parts/facility-item-link') ?>
+        <!-- <?php get_template_part('template-parts/facility-item-link') ?> -->
 
         <p class="p-facility__update forSP">
           最終更新日：<?php the_modified_date("Y年m月d日"); ?>
         </p>
-        <?php
-        // 地方のカテゴリー名
-        $terms = ['北九州', '苅田町', '糸島市', '古賀市', '佐賀県'];
-
-        foreach ($terms as $term) {
-          echo "<h3 class=\"p-facility__list-title\" id=\"{$term}\">{$term}</h3>";
-          $args = array(
-            'post_type' => 'facilitie',
-            'posts_per_page' => -1,
-            'tax_query' => array(
-              array(
-                'taxonomy' => 'facility-cat',
-                'field' => 'slug',
-                'terms' => $term
+        <div class="forPC">
+          <?php
+          // 地方のカテゴリー名
+          $terms = ['北九州', '佐賀県', '苅田町'];
+          foreach ($terms as $term) {
+            echo "<h3 class=\"p-facility__list-title delay\" id=\"{$term}\">{$term}</h3>";
+            $args = array(
+              'post_type' => 'facilitie',
+              'posts_per_page' => -1,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'facility-cat',
+                  'field' => 'slug',
+                  'terms' => $term
+                )
               )
-            )
-          );
-          $facility_query = new WP_Query($args);
-          if ($facility_query->have_posts()) :
+            );
+            $facility_query = new WP_Query($args);
+            if ($facility_query->have_posts()) :
+              echo "<ul class=\"p-facility__list\">";
+              while ($facility_query->have_posts()) :
+                $facility_query->the_post();
+                // htmlをphpに埋め込む
+                // テンプレートパーツの読み込み
+                get_template_part('template-parts/facility-item');
+              endwhile;
+              echo "</ul>";
+            endif;
+            wp_reset_postdata();
+          }
+          ?>
+          <?php
+          // 地方のカテゴリー名
+          function display_facilities_by_category($category_name)
+          {
+            echo "<h3 class=\"p-facility__list-title\" id=\"{$category_name}\">{$category_name}</h3>";
+            $args = array(
+              'post_type' => 'facilitie',
+              'posts_per_page' => -1,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'facility-cat',
+                  'field' => 'slug',
+                  'terms' => $category_name
+                )
+              )
+            );
+            $facility_query = new WP_Query($args);
+            if ($facility_query->have_posts()) :
+              echo "<ul class=\"p-facility__list\">";
+              while ($facility_query->have_posts()) :
+                $facility_query->the_post();
+                get_template_part('template-parts/facility-item');
+              endwhile;
+              echo "</ul>";
+            endif;
+            wp_reset_postdata();
+          }
+          ?>
+          <div class="p-facility-column">
+            <div class="p-facility-column__item">
+              <?php display_facilities_by_category('糸島市'); ?>
+            </div>
+            <div class="p-facility-column__item">
+              <?php display_facilities_by_category('古賀市'); ?>
+            </div>
+          </div>
+        </div>
 
-            echo "<ul class=\"p-facility__list\">";
-            while ($facility_query->have_posts()) :
-              $facility_query->the_post();
-              // htmlをphpに埋め込む
+        <!-- spのみ -->
+        <div class="forSP">
+          <?php
+          // 地方のカテゴリー名
+          function display_facilities_by_category2($category_name)
+          {
+            echo "<h3 class=\"p-facility__list-title js-accordion delay btn03  pushdown\" id=\"{$category_name}\">{$category_name}</h3>";
+            $args = array(
+              'post_type' => 'facilitie',
+              'posts_per_page' => -1,
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'facility-cat',
+                  'field' => 'slug',
+                  'terms' => $category_name
+                )
+              )
+            );
+            $facility_query = new WP_Query($args);
+            if ($facility_query->have_posts()) :
+              echo "<ul class=\"p-facility__list\">";
+              while ($facility_query->have_posts()) :
+                $facility_query->the_post();
+                get_template_part('template-parts/facility-item_sp');
+              endwhile;
+              echo "</ul>";
+            endif;
+            wp_reset_postdata();
+          }
+          ?>
 
-              // テンプレートパーツの読み込み
-              get_template_part('template-parts/facility-item');
-            endwhile;
-            echo "</ul>";
+          <?php display_facilities_by_category2('北九州'); ?>
+          <?php display_facilities_by_category2('佐賀県'); ?>
+          <?php display_facilities_by_category2('苅田町'); ?>
+          <?php display_facilities_by_category2('糸島市'); ?>
+          <?php display_facilities_by_category2('古賀市'); ?>
 
-          endif;
-          wp_reset_postdata();
-        }
-        ?>
+        </div>
 
       </div>
     </div>
   </section>
-
+  <script>
+    jQuery(function($) {
+      $('.js-accordion').on('click', function() {
+        $(this).next().slideToggle();
+        $(this).toggleClass('is-open');
+      });
+    });
+  </script>
   <?php get_template_part('template-parts/contact-item'); ?>
 </main>
 <?php get_footer(); ?>

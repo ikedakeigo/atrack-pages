@@ -3,10 +3,10 @@
     <?php
     if (is_singular('blog')) {
       $post_type = 'blog';
-      $title = 'BLOG';
+      $title = 'ブログ';
     } elseif (is_singular('news')) {
       $post_type = 'news';
-      $title = 'NEWS';
+      $title = 'お知らせ';
     }
 
     if (isset($title)) :

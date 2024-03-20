@@ -85,7 +85,7 @@
 }
 
 .p-staff-concept-list__item-box {
-    @include mq(mw) {
+    @include mq(md) {
         &:not(:last-child) {
             margin-bottom: rem(30);
         }

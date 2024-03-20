@@ -50,6 +50,7 @@
         align-items: center;
         display: grid;
         color: $color-white;
+        letter-spacing: .3rem;
         @include mq(md) {
             width: rem(70);
         }
@@ -120,6 +121,11 @@
         @include mq(md) {
             margin-bottom: rem(34);
         }
+    }
+
+    a {
+        text-decoration: underline;
+
     }
 }
 

@@ -66,6 +66,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-shadow: 0 0 8px rgb(239, 237, 237);
     @include mq(md) {
         width: rem(300);
         height: rem(300);

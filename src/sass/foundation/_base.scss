@@ -77,7 +77,7 @@ p {
  * sp・pc共通
 ===================================*/
 .forSP {
-    display: block ;
+    display: block;
     @include mq('md') {
         display: none !important;
     }
@@ -356,3 +356,5 @@ p {
     margin: 0 0 3px;
     padding: 0;
 }
+
+

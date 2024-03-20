@@ -36,7 +36,7 @@ endif; ?>
           </li>
           <li class="p-contact-botton__menu-item">
             <!-- 電話番号 -->
-            <a href="#" class="p-contact-botton__menu-link">
+            <a href="tel:093-871-5800" class="p-contact-botton__menu-link">
               <span>電話する</span>
             </a>
           </li>

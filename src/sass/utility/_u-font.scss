@@ -76,3 +76,11 @@
         font-size: rem(52);
     }
 }
+
+.u-title span {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 70%,
+        rgb(27, 202, 47) 70%
+    );
+    text-shadow: 0 0 rem(2) rgb(243, 232, 232);
+}

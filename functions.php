@@ -281,6 +281,9 @@ function add_link_files()
   wp_enqueue_script('jquery', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '3.6.4');
 
   wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/script.js', array());
+
+  // animation.jsの読み込み
+  wp_enqueue_script('animation', get_stylesheet_directory_uri() . '/js/animation/web-animations.min.js', array());
 }
 add_action('wp_enqueue_scripts', 'add_link_files');
 
@@ -362,7 +365,7 @@ function format_japanese_phone_number($number)
   $digits = preg_replace('/\D+/', '', $number);
 
   if (strlen($digits) === 10) {
-    return substr($digits, 0, 2) . '-' . substr($digits, 2, 4) . '-' . substr($digits, 6);
+    return substr($digits, 0, 3) . '-' . substr($digits, 2, 4) . '-' . substr($digits, 6);
   } elseif (strlen($digits) === 11) {
     return substr($digits, 0, 3) . '-' . substr($digits, 3, 4) . '-' . substr($digits, 7);
   } elseif (strlen($digits) === 7) {
@@ -444,7 +447,8 @@ add_action('admin_head', 'hide_media_button_for_pages');
 /**
  * アーカイブタイトル書き換え
  */
-function my_archive_title($title) {
+function my_archive_title($title)
+{
 
   if (is_category()) { // カテゴリーアーカイブの場合
     $title = single_cat_title('', false);
@@ -471,3 +475,12 @@ function my_archive_title($title) {
   return $title;
 };
 add_filter('get_the_archive_title', 'my_archive_title');
+
+
+//ヘッダーメニューにclassを追加する
+function wp_nav_menu_allow_html($menu) {
+  return preg_replace_callback('/&(lt|gt);/', function ($m) {
+      return $m[1] == 'lt' ? '<' : '>';
+  }, $menu);
+}
+add_filter('wp_nav_menu', 'wp_nav_menu_allow_html');

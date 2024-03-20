@@ -69,10 +69,10 @@
 }
 
 .p-terms-status {
-    display: flex;
-    justify-content: flex-start;
     margin-bottom: rem(20);
     @include mq(md) {
+        display: flex;
+        justify-content: flex-start;
         margin-bottom: rem(30);
     }
 }

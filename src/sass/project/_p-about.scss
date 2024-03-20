@@ -31,8 +31,6 @@
 }
 
 .p-about__img {
-    background-color: $color-green;
-    color: $color-white;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -41,6 +39,14 @@
     @include mq(md) {
         width: per(728, 1280);
         margin-bottom: rem(115);
+    }
+    img {
+        aspect-ratio: 393/140;
+        object-fit: cover;
+        height: auto;
+        @include mq(md) {
+            aspect-ratio: 786/280;
+        }
     }
 }
 
@@ -54,6 +60,14 @@
 .p-about__subtitle {
     font-size: rem(24);
     font-weight: 400;
+}
+.p-about__subtitle-map {
+    font-size: rem(24);
+    font-weight: bold;
+    text-align: center;
+    @include mq(md){
+        font-size:  rem(40);
+    }
 }
 
 .p-about__note {
@@ -85,8 +99,8 @@
         font-size: rem(12);
         align-items: center;
         display: flex;
-        margin-left: rem(10);
-        padding: rem(10);
+        margin-left: rem(30);
+        padding: rem(5) rem(10);
         border-radius: rem(5);
     }
 }
@@ -110,6 +124,7 @@
     margin: 5px 0 0;
     border-bottom: dotted 1px #d4d4d4;
     position: static;
+    font-weight: bold;
     &:first-child {
         border-top: none;
     }
@@ -347,10 +362,12 @@
     display: flex;
     align-items: center;
     font-size: rem(24);
+
     @include mq(mw) {
         justify-content: center;
     }
     @include mq(md) {
+        text-shadow: 0 0 8px rgb(252, 246, 246);
         font-size: rem(40);
         margin-top: rem(-30);
         margin-left: rem(80);

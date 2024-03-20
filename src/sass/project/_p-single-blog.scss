@@ -66,9 +66,10 @@ article {
 
 .p-single-blog__mv {
     width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 calc(50% - 50vw);
+    // position: relative;
+    // left: 50%;
+    // transform: translateX(-50%);
     margin-bottom: rem(60);
 }
 

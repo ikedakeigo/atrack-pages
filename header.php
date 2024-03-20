@@ -26,7 +26,7 @@
 </head>
 
 <body>
-  <header class="header l-header" >
+  <header class="header l-header">
     <div class="header__inner">
       <!-- ロゴ部分 -->
       <div class="header__wrap">
@@ -45,6 +45,7 @@
             'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'li_class' => 'header__menu-item',
             'a_class' => 'header__menu-link',
+
           ));
           ?>
         </div>
@@ -69,7 +70,7 @@
           </a>
         </h1>
         <!-- キャッチコピー -->
-        <p class="header__catch">キャッチコピー</p>
+        <!-- <p class="header__catch">キャッチコピー</p> -->
         <!-- ハンバーガーメニューボタン -->
         <button class="header__hamburger js-hamburger">
           <span></span>

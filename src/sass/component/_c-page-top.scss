@@ -1,32 +1,52 @@
 @use '../foundation' as *;
 
+.l-page-top {
+    position: fixed;
+    right: rem(15);
+    bottom: rem(100);
+    @include mq(md) {
+        bottom: rem(15);
+    }
+}
+
 .c-page-top {
     padding-top: rem(15);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: rem(67);
-    height: rem(67);
+    width: rem(50);
+    height: rem(50);
     font-size: rem(15);
     line-height: 1;
-    color: #fff;
+    border: 2px solid $color-green;
     text-transform: uppercase;
     border-radius: 50%;
-    background-color: #739099;
+    background-color: $color-white;
     cursor: pointer;
     position: fixed;
     z-index: 100;
+    @include mq(md){
+        width: rem(98);
+        height: rem(98);
+    }
 }
 
 .c-page-top::before {
-    content: "";
+    content: '';
     position: absolute;
-    top: rem(20);
+    top: 50%;
     left: 50%;
-    width: rem(13);
-    height: rem(13);
-    border-top: rem(3) solid #fff;
-    border-right: rem(3) solid #fff;
-    transform: translateX(-50%) rotate(-45deg);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-bottom: 18px solid #00890e;
+    border-top: 0;
+    @include mq(md){
+        border-right: 21px solid transparent;
+        border-left: 21px solid transparent;
+        border-bottom: 29px solid #00890e;
+    }
 }
-
