@@ -42,6 +42,7 @@ html {
     }
 
     scroll-behavior: smooth;
+    scroll-padding-top: clamp(rem(200), 10vw, rem(300));
 }
 
 body {
@@ -357,4 +358,24 @@ p {
     padding: 0;
 }
 
+<<<<<<< HEAD
 
+=======
+/*===================================
+ * テキストリンク
+===================================*/
+.textLink {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #1d3994 !important;
+    margin-right: rem(0);
+}
+
+.anchor {
+    position: absolute;
+    top: rem(-100);
+    @include mq(md) {
+        top: rem(-250);
+    }
+}
+>>>>>>> 8b88864 (first commit)

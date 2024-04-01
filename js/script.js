@@ -91,6 +91,7 @@ jQuery(function ($) {
 
 jQuery(document).ready(function ($) {
     $('.wp-pagenavi').addClass('wp-pagenavi-list');
+<<<<<<< HEAD
 });
 
 jQuery(document).ready(function ($) {
@@ -112,6 +113,8 @@ jQuery(document).ready(function ($) {
         // 計算結果を表示エリアに挿入
         $('#priceResult').text('計算結果: ' + priceNow + '円');
     });
+=======
+>>>>>>> 8b88864 (first commit)
 });
 
 function calculatePrice(roomType, serviceType) {
@@ -134,6 +137,7 @@ jQuery('.wpcf7-previous').on('click', function () {
     );
 });
 
+<<<<<<< HEAD
 function delayScrollAnime() {
     var time = 0.2; // 遅延時間を増やす秒数の値
     var value = time;
@@ -177,6 +181,52 @@ jQuery(window).scroll(function () {
 jQuery(window).on('load', function () {
     delayScrollAnime(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+=======
+jQuery(function ($) {
+    function delayScrollAnime() {
+        var time = 0.2; // 遅延時間を増やす秒数の値
+        var value = time;
+        $('.delay').each(function () {
+            var parent = this; // 親要素を取得
+            var elemPos = $(this).offset().top; // 要素の位置まで来たら
+            var scroll = $(window).scrollTop(); // スクロール値を取得
+            var windowHeight = $(window).height(); // 画面の高さを取得
+            var childs = $(this).children(); // 子要素を取得
+
+            // スクロールが要素の位置に達したか、またはそれを超えたかチェック
+            // かつ、スクロールが要素の下端よりも上にあるかチェック（要素が完全にビューポートから消えたらアニメーションを停止）
+            if (
+                scroll >= elemPos - windowHeight &&
+                scroll <= elemPos + $(parent).outerHeight() &&
+                !$(parent).hasClass('play')
+            ) {
+                $(childs).each(function () {
+                    if (!$(this).hasClass('fadeUp')) {
+                        $(parent).addClass('play'); // 親要素にクラス名playを追加
+                        $(this).css('animation-delay', value + 's'); // アニメーション遅延のCSS animation-delayを追加
+                        $(this).addClass('fadeUp'); // アニメーションのクラス名を追加
+                        value = value + time; // delay時間を増加させる
+
+                        var index = $(childs).index(this);
+                        if (childs.length - 1 == index) {
+                            $(parent).removeClass('play');
+                        }
+                    }
+                });
+            }
+        });
+    }
+    // 画面をスクロールをしたら動かしたい場合の記述
+    jQuery(window).scroll(function () {
+        delayScrollAnime(); /* アニメーション用の関数を呼ぶ*/
+    }); // ここまで画面をスクロールをしたら動かしたい場合の記述
+
+    // 画面が読み込まれたらすぐに動かしたい場合の記述
+    jQuery(window).on('load', function () {
+        delayScrollAnime(); /* アニメーション用の関数を呼ぶ*/
+    }); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+});
+>>>>>>> 8b88864 (first commit)
 
 // 以下追加0320
 jQuery(document).ready(function ($) {
@@ -234,3 +284,338 @@ jQuery(function ($) {
         });
     }
 });
+<<<<<<< HEAD
+=======
+
+jQuery(function ($) {
+    // 計算する
+    function calculatePrice(roomType, serviceType) {
+        let initialCost = 0; // 敷金
+        let monthlyCost = 0; // 共済費
+        let careCost = 0; // 要介護費用
+        let monthlyFee = 0; // 月額費用
+        let totalMonthlyCost = 0; // 総月額費用
+
+        // 施設と要介護レベルに応じて料金を決定
+        if (roomType === 'いこいの里小波瀬') {
+            initialCost = 100000;
+            monthlyCost = 20000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16140;
+            } else if (serviceType === '要介護2') {
+                careCost = 18120;
+            } else if (serviceType === '要介護3') {
+                careCost = 20220;
+            } else if (serviceType === '要介護4') {
+                careCost = 22140;
+            } else if (serviceType === '要介護5') {
+                careCost = 24210;
+            }
+
+            monthlyFee = 92000;
+        } else if (roomType === 'グループホーム小波瀬') {
+            initialCost = 100000;
+            monthlyCost = 0;
+
+            if (serviceType === '要介護1') {
+                careCost = 22560;
+            } else if (serviceType === '要介護2') {
+                careCost = 23610;
+            } else if (serviceType === '要介護3') {
+                careCost = 24330;
+            } else if (serviceType === '要介護4') {
+                careCost = 24810;
+            } else if (serviceType === '要介護5') {
+                careCost = 25320;
+            }
+
+            monthlyFee = 95000;
+        } else if (roomType === 'グループホーム中原') {
+            initialCost = 100000;
+            monthlyCost = 0;
+
+            if (serviceType === '要介護1') {
+                careCost = 22560;
+            } else if (serviceType === '要介護2') {
+                careCost = 23610;
+            } else if (serviceType === '要介護3') {
+                careCost = 24330;
+            } else if (serviceType === '要介護4') {
+                careCost = 24810;
+            } else if (serviceType === '要介護5') {
+                careCost = 25320;
+            }
+
+            monthlyFee = 117850;
+        } else if (roomType === 'グループホーム宇佐町') {
+            initialCost = 100000;
+            monthlyCost = 0;
+
+            if (serviceType === '要介護1') {
+                careCost = 22920;
+            } else if (serviceType === '要介護2') {
+                careCost = 24000;
+            } else if (serviceType === '要介護3') {
+                careCost = 24690;
+            } else if (serviceType === '要介護4') {
+                careCost = 25200;
+            } else if (serviceType === '要介護5') {
+                careCost = 25740;
+            }
+
+            monthlyFee = 135200;
+        } else if (roomType === 'いこいの里若園') {
+            initialCost = 0;
+            monthlyCost = 20000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 153700;
+        } else if (roomType === 'いこいの里赤犬丸') {
+            initialCost = 0;
+            monthlyCost = 20000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 81200;
+        } else if (roomType === 'いこいの里本城壱番館') {
+            initialCost = 0;
+            monthlyCost = 20000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 88200;
+        } else if (roomType === 'いこいの里本城弐番館') {
+            initialCost = 0;
+            monthlyCost = 20000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 107200;
+        } else if (roomType === 'いこいの里本城徳吉') {
+            initialCost = 0;
+            monthlyCost = 20000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 105700;
+        } else if (roomType === 'いこいの里曽根壱番館') {
+            initialCost = 0;
+            monthlyCost = 40000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 105700;
+        } else if (roomType === 'いこいの里曽根弐番館') {
+            initialCost = 0;
+            monthlyCost = 40000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 95700;
+        } else if (roomType === 'いこいの里古賀') {
+            initialCost = 0;
+            monthlyCost = 40000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 105700;
+        } else if (roomType === 'いこいの里糸島') {
+            initialCost = 0;
+            monthlyCost = 40000;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 98700;
+        } else if (roomType === 'いこいの里伊万里') {
+            initialCost = 0;
+            monthlyCost = 0;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 73700;
+        } else if (roomType === 'いこいの里唐津') {
+            initialCost = 0;
+            monthlyCost = 0;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 89700;
+        } else if (roomType === 'いこいの里巨勢') {
+            initialCost = 0;
+            monthlyCost = 0;
+
+            if (serviceType === '要介護1') {
+                careCost = 16765;
+            } else if (serviceType === '要介護2') {
+                careCost = 19705;
+            } else if (serviceType === '要介護3') {
+                careCost = 27048;
+            } else if (serviceType === '要介護4') {
+                careCost = 30938;
+            } else if (serviceType === '要介護5') {
+                careCost = 36217;
+            }
+
+            monthlyFee = 99500;
+        }
+
+        totalMonthlyCost = initialCost + monthlyCost;
+        let monthlyCost2 = monthlyFee + careCost;
+
+        return {
+            initialCost,
+            monthlyCost,
+            careCost,
+            totalMonthlyCost,
+            monthlyCost2,
+            monthlyFee
+        };
+    }
+
+    $('.p-price-calculator__form').on('submit', function (e) {
+        e.preventDefault();
+
+        var roomType = $('#roomType').val();
+        var serviceType = $('#serviceType').val();
+
+        var price = calculatePrice(roomType, serviceType);
+
+        // 結果を表示
+        $('#totalMonthlyCost').text(
+            `${price.totalMonthlyCost.toLocaleString()}円`
+        );
+        $('#deposit').text(`${price.initialCost.toLocaleString()}円`);
+        $('#mutualAid').text(`${price.monthlyCost.toLocaleString()}円`);
+        $('#monthlyCost2').text(`${price.monthlyCost2.toLocaleString()}円`);
+        $('#monthlyFee').text(`${price.monthlyFee.toLocaleString()}円`);
+        $('#careLevelLabel').text(serviceType);
+        $('#careLevelCost').text(`${price.careCost.toLocaleString()}円`);
+
+        $('#roomType2').text('「' + roomType + '」');
+        $('#serviceType2').text('「' + serviceType + '」');
+
+        // モーダルを表示
+        $('#1').fadeIn();
+        $('html,body').css('overflow', 'hidden');
+        $('body').append('<div class="maskModal"></div>');
+    });
+
+    $('.js-modal-close').on('click', function () {
+        $('.js-modal').fadeOut();
+        $('html,body').css('overflow', 'visible');
+        $('.maskModal').remove();
+    });
+});
+>>>>>>> 8b88864 (first commit)

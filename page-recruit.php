@@ -21,7 +21,53 @@ endif; ?>
       <div class="p-recrut-top__wrap">
         <h2 class="p-recruit__title main-title iconHome u-textCenter delay">いこいの里 採用情報</h2>
         <div class="p-about__listBox">
+<<<<<<< HEAD
           <?php get_template_part('template-parts/about-item'); ?>
+=======
+          <ol class="p-about__list p-about-list delay">
+            <li class="p-about-list__item delay">
+              <div class="p-about-list__item-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.jpg" alt="私たちが目指す社会">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <span class="num forPC">01</span>
+                <h3 class="p-about-list__item-title u-w900">
+                  私たちが目指す社会
+                </h3>
+                <p class="p-about-list__item-text u-lh20">
+                  介護を必要とする人、それを支える人、全ての人の尊厳を守り、幸せな日々を続けられる事を喜び合える社会を創造します。
+                </p>
+              </div>
+            </li>
+            <li class="p-about-list__item delay">
+              <div class="p-about-list__item-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_02.jpg" alt="私たちが目指す職場">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <span class="num forPC">02</span>
+                <h3 class="p-about-list__item-title u-w900">私たちが目指す職場</h3>
+                <p class="p-about-list__item-text u-lh20">
+                  ・全ての社員が生活と心に豊かさを持てる職場<br>
+                  ・お客様の笑顔と社員の笑顔が循環する職場<br>
+                  ・彩りのある思い出が残るサービスを提供できる職場を追求し、より魅力的な職場を実現します！
+                </p>
+              </div>
+            </li>
+            <li class="p-about-list__item delay">
+              <div class="p-about-list__item-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_03.jpg" alt="私たちの使命">
+              </div>
+              <div class="p-about-list__item-text-wrap">
+                <span class="num forPC">03</span>
+                <h3 class="p-about-list__item-title u-w900">私たちの使命</h3>
+                <p class="p-about-list__item-text u-lh20">
+                人としての想いと接遇、介護のプロとしての知識と技術をもって家庭では実現できない安心で豊かな生活を提供します。
+                </p>
+              </div>
+            </li>
+          </ol>
+
+>>>>>>> 8b88864 (first commit)
         </div>
       </div>
     </div>
@@ -73,9 +119,13 @@ endif; ?>
             パート介護スタッフ <br>
             ケアマネージャー（介護支援専門員） <br>
             常勤看護師 <br>
+<<<<<<< HEAD
             生活相談員・サービス提供責任者 <br>
             調理スタッフ <br>
             パート調理スタッフ
+=======
+            生活相談員・サービス提供責任者 
+>>>>>>> 8b88864 (first commit)
           </dd>
         </dl>
         <dl class="p-recruit-profile__list delay">
@@ -86,8 +136,12 @@ endif; ?>
           <dd class="p-recruit-profile__description lh2">
             北九州市（戸畑区、小倉北区、小倉南区、八幡西区） <br>
             苅田町、糸島市、古賀市 <br>
+<<<<<<< HEAD
             佐賀県：佐賀市、伊万里市、唐津市 <br>
             <span class='listMark-grid'>※上記は勤務可能地です。ご本人の希望がない限り異動・転勤はありません。</span>
+=======
+            佐賀県：佐賀市、伊万里市、唐津市
+>>>>>>> 8b88864 (first commit)
           </dd>
 
         </dl>
@@ -125,23 +179,21 @@ endif; ?>
               <span>A.</span>
               地域ごとでの採用を行っているため、原則として転居を伴う転勤はありません。
             </p>
-            <p class="p-recruit-list__item-question">
-              <span>Q.</span>
-              社宅には入寮できますか？
-            </p>
-            <p class="p-recruit-list__item-answer">
-              <span>A.</span>
-              原則として入寮できる方は正社員に限らせていただいていますが、詳細は面接時にご相談ください。
-            </p>
           </dd>
         </dl>
 
         <dl class="p-recruit-profile__list delay">
           <dt class="p-recruit-profile__term">法人</dt>
           <dd class="p-recruit-profile__description lh2">
+<<<<<<< HEAD
             株式会社いこいの里佐賀<br>
             株式会社ウキシロケアセンター<br>
             株式会社ウキシロホールディングス<br>
+=======
+            株式会社ウキシロホールディングス<br>
+            株式会社ウキシロケアセンター<br>
+            株式会社いこいの里佐賀<br>
+>>>>>>> 8b88864 (first commit)
             <br>
             3社で運営。<br>
             スケールメリットを活かした経営を心がけています。

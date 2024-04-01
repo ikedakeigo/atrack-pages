@@ -478,9 +478,25 @@ add_filter('get_the_archive_title', 'my_archive_title');
 
 
 //ヘッダーメニューにclassを追加する
+<<<<<<< HEAD
 function wp_nav_menu_allow_html($menu) {
   return preg_replace_callback('/&(lt|gt);/', function ($m) {
       return $m[1] == 'lt' ? '<' : '>';
   }, $menu);
 }
 add_filter('wp_nav_menu', 'wp_nav_menu_allow_html');
+=======
+function wp_nav_menu_allow_html($menu)
+{
+  return preg_replace_callback('/&(lt|gt);/', function ($m) {
+    return $m[1] == 'lt' ? '<' : '>';
+  }, $menu);
+}
+add_filter('wp_nav_menu', 'wp_nav_menu_allow_html');
+
+
+//ページごとにタイトルを自動設定する
+add_action('init', function () {
+  add_theme_support('title-tag');
+});
+>>>>>>> 8b88864 (first commit)

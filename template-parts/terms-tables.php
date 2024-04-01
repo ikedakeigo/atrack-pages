@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <div class="p-terms__content delay">
   <h3 class="p-terms__subTitle u-w700 u-font32 delay">
+=======
+<div class="p-terms__content">
+  <h3 class="p-terms__subTitle u-w700 u-font32 ">
+>>>>>>> 8b88864 (first commit)
     対応可能な医療措置
     <small class="forPC u-font18">(施設によって対応できない医療処置もございます)</small>
   </h3>

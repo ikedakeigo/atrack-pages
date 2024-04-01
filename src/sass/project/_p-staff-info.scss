@@ -38,6 +38,12 @@
 }
 
 .p-staff-info__content {
+<<<<<<< HEAD
+=======
+    background-color: $color-background;
+    border-radius: rem(10);
+    padding: rem(30);
+>>>>>>> 8b88864 (first commit)
     &:not(:last-child) {
         margin-bottom: rem(30);
     }
@@ -53,10 +59,18 @@
 
 .p-staff-info__textBox {
     width: 100%;
+<<<<<<< HEAD
     background-color: $color-background;
     border-radius: rem(10);
     @include mq(md) {
         width: per(700, 1280);
+=======
+    // background-color: $color-background;
+    // border-radius: rem(10);
+    @include mq(md) {
+        width: per(700, 1280);
+        height: clamp(100%, 2vw, rem(300));
+>>>>>>> 8b88864 (first commit)
         // padding: rem(23) rem(20) rem(50) rem(20);
         padding: rem(20) rem(30);
         margin-left: rem(45);
@@ -68,7 +82,11 @@
     margin-bottom: rem(20);
     @include mq(md) {
         font-size: rem(24);
+<<<<<<< HEAD
         margin-bottom: rem(30);
+=======
+        // margin-bottom: rem(25);
+>>>>>>> 8b88864 (first commit)
     }
 }
 
@@ -90,11 +108,18 @@
 .p-staff-info__img {
     border-radius: rem(5);
     overflow: hidden;
+<<<<<<< HEAD
     &:not(:last-child) {
         margin-bottom: rem(15);
     }
     @include mq(md) {
         width: per(400, 1280);
+=======
+    margin-bottom: rem(10);
+    @include mq(md) {
+        width: per(400, 1280);
+        margin-bottom: rem(0);
+>>>>>>> 8b88864 (first commit)
     }
     img {
         aspect-ratio: 400/ 300;

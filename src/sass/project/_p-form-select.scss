@@ -18,11 +18,12 @@
   background-position: right rem(15) top rem(15);
   appearance: none;
   border-radius: rem(10);
-  background-color: #FF07B929;
-  border: 1px solid #ff0707;
+  // background-color: #FF07B929;
+  border: 1px solid #ccc;
+  background-color: #D9D9D963;
   cursor: pointer;
   @include mq(md){
-    background-color: #ff070738;
+    // background-color: #ff070738;
     width: per(856, 1080);
   }
 }

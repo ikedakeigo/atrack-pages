@@ -22,6 +22,10 @@ endif; ?>
 
   <!-- terms -->
   <section class="p-terms l-terms delay" id="">
+<<<<<<< HEAD
+=======
+    <p class="anchor" id="terms"></p>
+>>>>>>> 8b88864 (first commit)
     <div class="p-terms__inner inner delay">
       <div class="p-terms__wrap">
         <h2 class="p-terms__title main-title iconHome u-textMdCenter delay">入居条件</h2>
@@ -33,34 +37,58 @@ endif; ?>
               <li class="p-terms-list__item delay">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text u-font24">
+<<<<<<< HEAD
                   症状が安定しており、一定の医療行為の継続状態にあること
+=======
+                要介護認定を受けられていること。<br>
+                (申請準備中、申請中であっても入居可能です。)
+>>>>>>> 8b88864 (first commit)
                 </p>
               </li>
               <li class="p-terms-list__item delay">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text u-font24">
+<<<<<<< HEAD
                   訪問診療医の診察で治療のできる状態にあること
+=======
+                症状が安定しており、在宅生活が可能な状況にあること。
+>>>>>>> 8b88864 (first commit)
                 </p>
               </li>
               <li class="p-terms-list__item delay">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text u-font24">
+<<<<<<< HEAD
                   症状がやや不安定であっても、入院の受け入れ体制の調整が可能な状態にあること
                 </p>
               </li>
               <li class="p-terms-list__item delay">
+=======
+                自傷行動、他害行動がないこと。
+                </p>
+              </li>
+              <!-- <li class="p-terms-list__item delay">
+>>>>>>> 8b88864 (first commit)
                 <span class="num"></span>
                 <p class="p-terms-list__item-text u-font24">
                   医療提供において、積極的な治療希望が本人、家族にない状態にあること
                 </p>
+<<<<<<< HEAD
               </li>
+=======
+              </li> -->
+>>>>>>> 8b88864 (first commit)
             </ol>
           </div>
         </div>
 
         <?php get_template_part('template-parts/terms-tables') ?>
 
+<<<<<<< HEAD
         <div class="p-terms__content">
+=======
+        <!-- <div class="p-terms__content">
+>>>>>>> 8b88864 (first commit)
           <div class="p-terms__content-inner">
             <h3 class="p-terms__subTitle u-font32 u-w700 delay">入居困難及び相談が必要な方</h3>
             <ol class="p-terms__list">
@@ -105,7 +133,11 @@ endif; ?>
               個別で判断が必要な場合には、個別で判断させていただきます。
             </p>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+        </div> -->
+>>>>>>> 8b88864 (first commit)
 
         <div class="p-about__listBox u-mt100 u-mtSp10 delay">
           <h2 class="p-terms__title main-title iconHome u-textMdCenter delay">いこいの里の理念</h2>

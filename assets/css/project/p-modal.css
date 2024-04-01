@@ -1,0 +1,835 @@
+@charset "UTF-8";
+/*
+ * 参考
+ * https://github.com/Andy-set-studio/modern-css-reset/blob/master/src/reset.css
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*****************************************
+ * 数値から単位を取り除く
+ * 参考
+ * https://css-tricks.com/snippets/sass/
+******************************************/
+/*****************************************
+ * px→remの計算
+ * 参考
+ * https://webdou.net/sass-rem/
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+/*****************************************
+ * vwの計算
+ * 参考
+ * https://webdou.net/sass-vw/
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+/*****************************************
+ * アスペクト比の計算
+ * Sassではmath.div関数の使用が推奨のため、スラッシュ(/)演算子から変更
+******************************************/
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+  scroll-padding-top: clamp(10rem, 10vw, 15rem);
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 5.3333333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.6666666667vw;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: Meiryo, "メイリオ", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  a:hover {
+    opacity: 0.8;
+  }
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+}
+
+/*===================================
+ * sp・pc共通
+===================================*/
+.forSP {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .forSP {
+    display: none !important;
+  }
+}
+
+.forPC {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .forPC {
+    display: block;
+  }
+}
+
+/*===================================
+ * メインタイトル
+===================================*/
+.main-title {
+  font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/*===================================
+ * テキスト
+===================================*/
+/*===================================
+ * 点
+===================================*/
+.listMemo01 li {
+  position: relative;
+  display: block;
+  padding-left: 22.5px;
+  padding-left: 1.125rem;
+}
+
+.listMark01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.listMark-grid {
+  font-size: 14px;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+/*===================================
+ * アイコン
+===================================*/
+.iconHome {
+  display: block;
+}
+.iconHome::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_home.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconHome::before {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconHome {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.iconMap {
+  display: block;
+}
+.iconMap::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_map.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconMap::before {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconMap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.iconMapIcon {
+  display: block;
+}
+.iconMapIcon::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_mapIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconMapIcon::before {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconMapIcon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.iconMath {
+  display: block;
+}
+.iconMath::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_math.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconMath::before {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconMath {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.iconQa {
+  display: block;
+}
+.iconQa::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_qa.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconQa::before {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconQa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.iconVision {
+  display: block;
+}
+.iconVision::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_vision.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconVision::before {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconVision {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.iconConcept {
+  display: block;
+}
+.iconConcept::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/icon_concept.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconConcept::before {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconConcept {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+/*===================================
+ * 404ページ
+===================================*/
+.text-wrapper {
+  margin: 100px auto;
+  font-size: large;
+}
+.text-wrapper h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: xx-large;
+  color: #00890E;
+}
+.text-wrapper p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.acf-field .acf-label label {
+  display: block;
+  font-weight: bold;
+  margin: 0 0 3px;
+  padding: 0;
+}
+
+/*===================================
+ * テキストリンク
+===================================*/
+.textLink {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #1d3994 !important;
+  margin-right: 0px;
+  margin-right: 0rem;
+}
+
+.anchor {
+  position: absolute;
+  top: -100px;
+  top: -5rem;
+}
+@media screen and (min-width: 768px) {
+  .anchor {
+    top: -12.5rem;
+  }
+}
+
+.p-price-calculator__result {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: scroll;
+  z-index: 1001;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__result {
+    top: 0;
+  }
+}
+
+.p-modal {
+  padding: 100px 0;
+  padding: 5rem 0;
+  display: none;
+}
+
+.p-modal__close-button {
+  position: fixed;
+  top: 5%;
+  right: 0;
+  margin: 0;
+  padding: 20px 35px;
+  padding: 1rem 1.75rem;
+  outline: none;
+  border: none;
+  font-size: 13px;
+  font-size: 0.65rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0.5rem;
+  background-color: #FF9213;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .p-modal__close-button {
+    right: 10%;
+    top: 2.5rem;
+    padding: 1.25rem 2rem;
+  }
+}
+
+.p-modal__inner {
+  margin: auto;
+  padding: 20px;
+  padding: 1rem;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 6px rgba(27, 19, 16, .4);
+          box-shadow: 0 0 6px rgba(27, 19, 16, .4);
+}
+@media screen and (max-width: 767px) {
+  .p-modal__inner {
+    max-height: 80vh; /* ビューポートの高さの80%を最大高さとする */
+    overflow-y: auto; /* 縦方向にコンテンツがオーバーフローしたらスクロールバーを表示 */
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-modal__inner {
+    padding: 2.5rem;
+    max-width: 50rem;
+  }
+}
+
+.p-modal__inner .main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.p-modal__inner .main-title::before {
+  content: "";
+  background-image: url("../img/icon/fee_icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 40px;
+  width: 2rem;
+  height: 40px;
+  height: 2rem;
+  margin-right: 10px;
+  margin-right: 0.5rem;
+}
+
+/*===================================
+ * calculator
+===================================*/
+.p-price-calculator__result-content {
+  max-width: 645px;
+  max-width: 32.25rem;
+  margin: 0 auto;
+}
+
+.p-price-calculator__result-head {
+  padding-bottom: 20px;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #00890E;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__result-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.p-price-calculator__result-head .col1 {
+  font-size: 28px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #00890E;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__result-head .col1 {
+    width: 65%;
+    padding-left: 0.5rem;
+    text-align: left;
+  }
+}
+
+.p-price-calculator__result-head .col2 {
+  font-size: 28px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__result-head .col2 {
+    width: 35%;
+    padding-right: 2rem;
+    text-align: right;
+  }
+}
+
+.p-price-calculator__result-body {
+  font-size: 21px;
+  font-size: 1.05rem;
+  margin-top: 15px;
+  margin-top: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__result-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 5.05rem;
+  }
+}
+
+.p-price-calculator__result-body .head {
+  height: 100%;
+  text-align: center;
+  padding-top: 35px;
+  padding-top: 1.75rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__result-body .head {
+    width: 5.5rem;
+    border-right: 1px solid #b3b3b3;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-price-calculator__result-body .body {
+    width: 23.4rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.p-price-calculator__result-body .body .row {
+  height: 50px;
+  height: 2.5rem;
+  line-height: 50px;
+  line-height: 2.5rem;
+  border-bottom: 1px dashed #b3b3b3;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row p {
+  width: 50%;
+}
+
+.t_left {
+  text-align: left;
+}
+.t_left small {
+  font-size: 12px;
+  font-size: 0.6rem;
+}
+
+.t_right {
+  text-align: right;
+}
+
+.p-price-calculator__text {
+  margin-top: 50px;
+  margin-top: 2.5rem;
+  border-bottom: 2px solid #00890E;
+  font-size: 16px;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__text {
+    margin-top: 3.5rem;
+  }
+}
+
+.p-price-calculator__text-small {
+  font-size: 16px;
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+  margin-top: 20px;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__text-small {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+#priceResult {
+  font-weight: bold;
+}
+
+.p-price-calculator__box {
+  background-color: #FF9213;
+  height: 160px;
+  height: 8rem;
+  margin-top: 30px;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__box {
+    padding: 1rem;
+    max-width: 50rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.dl_Block01 {
+  max-width: 600px;
+  max-width: 30rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.dl_Block01 dl {
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .dl_Block01 dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.6rem;
+  }
+}
+.dl_Block01 dt {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .dl_Block01 dt {
+    margin-right: 2.5rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.border {
+  border: 1px solid #b3b3b3;
+  margin: 50px 0;
+  margin: 2.5rem 0;
+}
+/*# sourceMappingURL=p-modal.css.map */

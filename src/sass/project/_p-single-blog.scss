@@ -7,7 +7,11 @@ article {
 .p-single-blog__meta {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: end;
+=======
+    justify-content: left;
+>>>>>>> 8b88864 (first commit)
     color: #b7b7b7;
 }
 
@@ -36,6 +40,7 @@ article {
     }
 }
 
+<<<<<<< HEAD
 .p-single-blog__title-wrap {
     border-bottom: rem(4) solid $color-green;
     margin-bottom: rem(13);
@@ -51,6 +56,46 @@ article {
     border-radius: rem(5);
     margin-left: rem(10);
     margin-bottom: rem(10);
+=======
+.p-single-blog__meta-wrap {
+    @include mq(md) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.p-single-blog__title-wrap {
+    border-bottom: rem(4) solid $color-green;
+    margin-bottom: rem(13);
+    // display: flex;
+    // align-items: flex-end;
+    // justify-content: space-between;
+}
+
+.p-about__note .entry-item-tag {
+    width: 68px;
+}
+
+.entry-item-tag {
+    width: 100px;
+    color: $color-white;
+    padding: rem(4) rem(8);
+    font-size: rem(12);
+    border-radius: rem(60);
+    margin-left: rem(0);
+    // margin-bottom: rem(10);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mq(md) {
+        margin-left: rem(35);
+    }
+    span {
+        min-width: 100px;
+    }
+>>>>>>> 8b88864 (first commit)
 }
 
 .p-single-blog__title {

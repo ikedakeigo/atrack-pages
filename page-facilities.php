@@ -33,12 +33,22 @@ endif; ?>
   </section>
 
   <!-- location -->
+<<<<<<< HEAD
   <section class="p-location-list l-location" id="">
     <div class="p-location-list__inner inner">
       <div class="p-location-list__wrap">
         <h2 class="p-location-list__title main-title iconMapIcon u-textMdCenter">所在地一覧</h2>
         <div class="p-location-list__grid">
           <ul class="p-location-list__list">
+=======
+  <section class="p-location-list l-location forPC" id="">
+    <div class="p-location-list__inner inner">
+      <div class="p-location-list__wrap">
+        <h2 class="p-location-list__title main-title iconMapIcon u-textMdCenter">所在地一覧</h2>
+        <!-- 北九州市 -->
+        <div class="p-location-list__grid">
+          <ul class="p-location-list__list delay">
+>>>>>>> 8b88864 (first commit)
             <!-- 1 -->
             <li class="p-location-list__item">
               <a href="#nakahara" class="p-location-list__item-title">
@@ -87,9 +97,15 @@ endif; ?>
             </li>
           </ul>
 
+<<<<<<< HEAD
           <!-- 2 -->
           <div class="p-location-list__list-left">
             <ul class="p-location-list__list">
+=======
+          <!--"苅田町" -->
+          <div class="p-location-list__list-left">
+            <ul class="p-location-list__list delay">
+>>>>>>> 8b88864 (first commit)
               <li class="p-location-list__item">
                 <a href="#obato" class="p-location-list__item-title">
                   介護付有料老人ホーム いこいの里 小波瀬
@@ -102,7 +118,20 @@ endif; ?>
               </li>
             </ul>
 
+<<<<<<< HEAD
             <!-- 3 -->
+=======
+            <!-- "古賀市" -->
+            <ul class="p-location-list__list delay">
+              <li class="p-location-list__item">
+                <a href="#koga" class="p-location-list__item-title">
+                  住宅型有料老人ホーム いこいの里 古賀
+                </a>
+              </li>
+            </ul>
+
+            <!-- 糸島 -->
+>>>>>>> 8b88864 (first commit)
             <ul class="p-location-list__list">
               <li class="p-location-list__item">
                 <a href="#itoshima" class="p-location-list__item-title">
@@ -111,6 +140,7 @@ endif; ?>
               </li>
             </ul>
 
+<<<<<<< HEAD
             <!-- 4 -->
             <ul class="p-location-list__list">
               <li class="p-location-list__item">
@@ -122,6 +152,11 @@ endif; ?>
 
             <!-- 5 -->
             <ul class="p-location-list__list">
+=======
+
+            <!-- "佐賀県" -->
+            <ul class="p-location-list__list delay">
+>>>>>>> 8b88864 (first commit)
               <li class="p-location-list__item">
                 <a href="#imari" class="p-location-list__item-title">
                   住宅型有料老人ホーム いこいの里 伊万里
@@ -172,6 +207,7 @@ endif; ?>
         <div class="forPC">
           <?php
           // 地方のカテゴリー名
+<<<<<<< HEAD
           $terms = ['北九州', '佐賀県', '苅田町'];
           foreach ($terms as $term) {
             echo "<h3 class=\"p-facility__list-title delay\" id=\"{$term}\">{$term}</h3>";
@@ -202,6 +238,8 @@ endif; ?>
           ?>
           <?php
           // 地方のカテゴリー名
+=======
+>>>>>>> 8b88864 (first commit)
           function display_facilities_by_category($category_name)
           {
             echo "<h3 class=\"p-facility__list-title\" id=\"{$category_name}\">{$category_name}</h3>";
@@ -228,6 +266,7 @@ endif; ?>
             wp_reset_postdata();
           }
           ?>
+<<<<<<< HEAD
           <div class="p-facility-column">
             <div class="p-facility-column__item">
               <?php display_facilities_by_category('糸島市'); ?>
@@ -236,6 +275,19 @@ endif; ?>
               <?php display_facilities_by_category('古賀市'); ?>
             </div>
           </div>
+=======
+          <?php display_facilities_by_category('北九州'); ?>
+          <?php display_facilities_by_category('苅田町'); ?>
+          <div class="p-facility-column">
+            <div class="p-facility-column__item">
+              <?php display_facilities_by_category('古賀市'); ?>
+            </div>
+            <div class="p-facility-column__item">
+              <?php display_facilities_by_category('糸島市'); ?>
+            </div>
+          </div>
+          <?php display_facilities_by_category('佐賀県'); ?>
+>>>>>>> 8b88864 (first commit)
         </div>
 
         <!-- spのみ -->
@@ -270,10 +322,17 @@ endif; ?>
           ?>
 
           <?php display_facilities_by_category2('北九州'); ?>
+<<<<<<< HEAD
           <?php display_facilities_by_category2('佐賀県'); ?>
           <?php display_facilities_by_category2('苅田町'); ?>
           <?php display_facilities_by_category2('糸島市'); ?>
           <?php display_facilities_by_category2('古賀市'); ?>
+=======
+          <?php display_facilities_by_category2('苅田町'); ?>
+          <?php display_facilities_by_category2('古賀市'); ?>
+          <?php display_facilities_by_category2('糸島市'); ?>
+          <?php display_facilities_by_category2('佐賀県'); ?>
+>>>>>>> 8b88864 (first commit)
 
         </div>
 

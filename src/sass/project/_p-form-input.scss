@@ -11,13 +11,24 @@
     font-size: rem(15);
     line-height: 1;
     border-radius: rem(10);
+<<<<<<< HEAD
     border: 1px solid #ff0707;
     background-color: #ff07b929;
+=======
+    // border: 1px solid #ff0707;
+    border: 1px solid #ccc;
+    // background-color: #ff07b929;
+    background-color: #d9d9d963;
+>>>>>>> 8b88864 (first commit)
     appearance: none;
     background-image: none;
     width: 100%;
     @include mq(md) {
+<<<<<<< HEAD
         background-color: #ff070738;
+=======
+        // background-color: #ff070738;
+>>>>>>> 8b88864 (first commit)
         width: per(856, 1080);
     }
 }
@@ -29,6 +40,17 @@
 }
 
 /*===================================
+<<<<<<< HEAD
+=======
+ * バリーデーション
+===================================*/
+.wpcf7-not-valid {
+    border: 1px solid #ff0707 !important;
+    background-color: #ff07b929 !important;
+}
+
+/*===================================
+>>>>>>> 8b88864 (first commit)
  * お問い合わせ確認ページ
 ===================================*/
 
