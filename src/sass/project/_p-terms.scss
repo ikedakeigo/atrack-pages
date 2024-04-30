@@ -51,10 +51,7 @@
 .p-terms__content {
     padding: rem(50) 0;
     border-radius: rem(20);
-<<<<<<< HEAD
-=======
     position: relative;
->>>>>>> 8b88864 (first commit)
     @include mq(md) {
         // padding: rem(20) 0;
     }
@@ -65,17 +62,10 @@
 
 .p-terms__subTitle {
     margin-bottom: rem(30);
-<<<<<<< HEAD
-    font-size:  rem(22);
-    @include mq(md) {
-        margin-bottom: rem(20);
-        font-size:  rem(32);
-=======
     font-size: rem(22);
     @include mq(md) {
         margin-bottom: rem(20);
         font-size: rem(32);
->>>>>>> 8b88864 (first commit)
     }
 }
 
@@ -161,8 +151,10 @@
 
 .p-terms-list__item {
     display: flex;
-    align-items: center;
 
+    @include mq(md) {
+        align-items: center;
+    }
     .num::before {
         counter-increment: number;
         content: counter(number, decimal-leading-zero);
@@ -170,10 +162,6 @@
         width: rem(60);
         height: rem(60);
         border-radius: 50%;
-<<<<<<< HEAD
-        background-color: #d9d9d9;
-        color: $color-black;
-=======
         background-color: $color-green;
         color: $color-white;
         font-weight: bold;
@@ -193,7 +181,6 @@
         border-radius: 50%;
         background-color: $color-orange;
         color: $color-white;
->>>>>>> 8b88864 (first commit)
         font-weight: bold;
         display: flex;
         align-items: center;

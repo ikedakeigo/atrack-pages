@@ -91,30 +91,6 @@ jQuery(function ($) {
 
 jQuery(document).ready(function ($) {
     $('.wp-pagenavi').addClass('wp-pagenavi-list');
-<<<<<<< HEAD
-});
-
-jQuery(document).ready(function ($) {
-    $('.p-price-calculator__form').on('submit', function (e) {
-        e.preventDefault(); // フォームのデフォルト送信動作を防止
-
-        var roomType = $('#roomType').val(); // 介護度区分の値を取得
-        var serviceType = $('#serviceType').val(); // 介護保険の負担割合の値を取得
-
-        // ここで料金計算を行う
-        var price = calculatePrice(roomType, serviceType); // calculatePriceは実際の計算を行う関数
-        // priceが文字列の場合はアラートを表示
-        if (typeof price === 'string') {
-            alert(price);
-            return;
-        }
-        // 句読点を挿入
-        var priceNow = price.toLocaleString();
-        // 計算結果を表示エリアに挿入
-        $('#priceResult').text('計算結果: ' + priceNow + '円');
-    });
-=======
->>>>>>> 8b88864 (first commit)
 });
 
 function calculatePrice(roomType, serviceType) {
@@ -137,54 +113,9 @@ jQuery('.wpcf7-previous').on('click', function () {
     );
 });
 
-<<<<<<< HEAD
-function delayScrollAnime() {
-    var time = 0.2; // 遅延時間を増やす秒数の値
-    var value = time;
-    $('.delay').each(function () {
-        var parent = this; // 親要素を取得
-        var elemPos = $(this).offset().top; // 要素の位置まで来たら
-        var scroll = $(window).scrollTop(); // スクロール値を取得
-        var windowHeight = $(window).height(); // 画面の高さを取得
-        var childs = $(this).children(); // 子要素を取得
-
-        // スクロールが要素の位置に達したか、またはそれを超えたかチェック
-        // かつ、スクロールが要素の下端よりも上にあるかチェック（要素が完全にビューポートから消えたらアニメーションを停止）
-        if (
-            scroll >= elemPos - windowHeight &&
-            scroll <= elemPos + $(parent).outerHeight() &&
-            !$(parent).hasClass('play')
-        ) {
-            $(childs).each(function () {
-                if (!$(this).hasClass('fadeUp')) {
-                    $(parent).addClass('play'); // 親要素にクラス名playを追加
-                    $(this).css('animation-delay', value + 's'); // アニメーション遅延のCSS animation-delayを追加
-                    $(this).addClass('fadeUp'); // アニメーションのクラス名を追加
-                    value = value + time; // delay時間を増加させる
-
-                    var index = $(childs).index(this);
-                    if (childs.length - 1 == index) {
-                        $(parent).removeClass('play');
-                    }
-                }
-            });
-        }
-    });
-}
-
-// 画面をスクロールをしたら動かしたい場合の記述
-jQuery(window).scroll(function () {
-    delayScrollAnime(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面をスクロールをしたら動かしたい場合の記述
-
-// 画面が読み込まれたらすぐに動かしたい場合の記述
-jQuery(window).on('load', function () {
-    delayScrollAnime(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-=======
 jQuery(function ($) {
     function delayScrollAnime() {
-        var time = 0.2; // 遅延時間を増やす秒数の値
+        var time = 0.1; // 遅延時間を増やす秒数の値
         var value = time;
         $('.delay').each(function () {
             var parent = this; // 親要素を取得
@@ -226,7 +157,6 @@ jQuery(function ($) {
         delayScrollAnime(); /* アニメーション用の関数を呼ぶ*/
     }); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 });
->>>>>>> 8b88864 (first commit)
 
 // 以下追加0320
 jQuery(document).ready(function ($) {
@@ -284,8 +214,6 @@ jQuery(function ($) {
         });
     }
 });
-<<<<<<< HEAD
-=======
 
 jQuery(function ($) {
     // 計算する
@@ -592,6 +520,11 @@ jQuery(function ($) {
 
         var price = calculatePrice(roomType, serviceType);
 
+        if (roomType === '選択' || serviceType === '選択') {
+            alert('「介護度区分」と「施設を選択」をどちらも選択してください');
+            return;
+        }
+
         // 結果を表示
         $('#totalMonthlyCost').text(
             `${price.totalMonthlyCost.toLocaleString()}円`
@@ -618,4 +551,27 @@ jQuery(function ($) {
         $('.maskModal').remove();
     });
 });
->>>>>>> 8b88864 (first commit)
+
+jQuery(function ($) {
+    $('.js-modal-open').each(function () {
+        $(this).on('click', function (e) {
+            e.preventDefault();
+            var target = $(this).data('target');
+            var modal = document.getElementById(target);
+            $(modal).fadeIn();
+            $('html,body').css('overflow', 'hidden');
+        });
+    });
+    $('.js-modal-close').on('click', function () {
+        $('.js-modal').fadeOut();
+        $('html,body').css('overflow', 'initial');
+    });
+
+    $('.js-modal').on('click', function (e) {
+        if (e.target === this) {
+            $(this).fadeOut();
+            $('html,body').css('overflow', 'initial');
+            $('.maskModal').remove();
+        }
+    });
+});

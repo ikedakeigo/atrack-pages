@@ -5,12 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-<<<<<<< HEAD
   <title><?php wp_title('|', true, 'right');
           bloginfo('name'); ?> | いこいの里</title>
-=======
-
->>>>>>> 8b88864 (first commit)
   <meta name="description" content="トップページの説明" />
   <meta name="keywords" content="キーワード" />
   <!-- ogp -->
@@ -36,11 +32,7 @@
       <div class="header__wrap">
         <h1 class="header__logo mainLogo">
           <a href="/">
-<<<<<<< HEAD
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.png" alt="いこいの里">
-=======
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.svg" alt="いこいの里">
->>>>>>> 8b88864 (first commit)
           </a>
         </h1>
         <div class="header__menu">

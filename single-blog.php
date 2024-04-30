@@ -24,53 +24,33 @@
 
           <div class="p-single-blog__list">
             <article>
-<<<<<<< HEAD
-              <div class="p-single-blog__title-wrap">
-                <!-- 投稿タイトル -->
-                <h2 class="p-single-blog__title main-title">
-                  <?php the_title(); ?>
-                </h2>
-                <?php
-                $post_id = get_the_ID(); // 現在の投稿のIDを取得
-                $taxonomy = 'blog-cat'; // カスタムタクソノミーの名前を指定
-                $terms = get_the_terms($post_id, $taxonomy);
-
-                if ($terms && !is_wp_error($terms)) :
-                  $category = $terms[0];
-                ?>
-                  <div class="entry-item-tag"><?php echo $category->name; ?></div>
-                <?php endif; ?>
-              </div>
               <!-- 投稿メタ情報 (日付とカテゴリー) -->
-              <div class="p-single-blog__meta">
-=======
-                <!-- 投稿メタ情報 (日付とカテゴリー) -->
-                <div class="p-single-blog__meta-wrap">
+              <div class="p-single-blog__meta-wrap">
                 <div class="p-single-blog__meta">
->>>>>>> 8b88864 (first commit)
+                  <?php
+                  $data = get_field('data');
+                  // 日付が存在する場合はフォーマットを変更して表示
+                  if ($data) {
+                    // DateTimeオブジェクトを作成
+                    $day = new DateTime($data);
+                    // フォーマットを指定して出力
+                    echo '<time datetime="' . esc_attr($day->format('c')) . '">' . esc_html($day->format('Y.m.d')) . '</time>';
+                  }
+                  ?>
+                </div>
                 <?php
-                $data = get_field('data');
-                // 日付が存在する場合はフォーマットを変更して表示
-                if ($data) {
-                  // DateTimeオブジェクトを作成
-                  $day = new DateTime($data);
-                  // フォーマットを指定して出力
-                  echo '<time datetime="' . esc_attr($day->format('c')) . '">' . esc_html($day->format('Y.m.d')) . '</time>';
-                }
-                ?>
-              </div>
-<<<<<<< HEAD
-=======
-              <?php
                 $post_id = get_the_ID(); // 現在の投稿のIDを取得
                 $taxonomy = 'blog-cat'; // カスタムタクソノミーの名前を指定
                 $terms = get_the_terms($post_id, $taxonomy);
 
                 if ($terms && !is_wp_error($terms)) :
-                  $category = $terms[0];
+                  foreach ($terms as $term) :
                 ?>
-                  <div class="entry-item-tag"><?php echo $category->name; ?></div>
-                <?php endif; ?>
+                    <div class="entry-item-tag"><?php echo $term->name; ?></div>
+                <?php
+                  endforeach;
+                endif;
+                ?>
               </div>
               <div class="p-single-blog__title-wrap">
                 <!-- 投稿タイトル -->
@@ -80,18 +60,26 @@
 
               </div>
 
->>>>>>> 8b88864 (first commit)
               <!-- 投稿コンテンツ -->
               <div class="p-single-blog__content">
-              <?php the_field('textarea'); ?>
+                <?php the_field('textarea'); ?>
                 <div class="p-single-blog__bottom-img">
                   <?php for ($i = 1; $i <= 8; $i++) : ?>
                     <?php $image = get_field('image_' . $i); ?>
                     <?php if ($image) : // 画像があるか確認
+
                     ?>
-                      <figure>
+                      <figure class="js-modal-open" data-target="<?php echo $i; ?>">
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                       </figure>
+                      <div class="p-blog-list__modal p-modal-blog js-modal" id="<?php echo $i ?>">
+                        <button class="p-modal__close-button js-modal-close"><span></span>close</button>
+                        <div class="p-modal-blog__inner">
+                          <figure>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                          </figure>
+                        </div>
+                      </div>
                     <?php endif; ?>
                   <?php endfor; ?>
                 </div>

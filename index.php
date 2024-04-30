@@ -60,20 +60,12 @@
     <div class="p-about__inner inner delay">
       <div class="p-about__wrap">
         <h2 class="p-about__title main-title u-textMdCenter delay">いこいの里ってどんな施設？</h2>
-<<<<<<< HEAD
-        <p class="p-about__text u-w700 delay u-lh20">高齢者様の経済的な負担を軽減した『いこいの里シリーズ』は、ライフスタイルに合わせて選べる様々なカタチの住宅型有料老人ホームです。入居者様の個々の性格や個性、人生観を大切にした生活支援はもちろん、地域のお祭りに参加するなど、「繋がり」や「絆」を尊重した社会との交流を大切にしています。<br>
-          <br>
-          さらに職員の夢に向かうハツラツとした姿勢を真近で見ることで、入居者様の心に輝きや活力を与えるような好循環も生まれつつあります。職員の幸せが生み出す、こころのある介護が『いこいの里』の魅力です。<br>
-          <br>
-          要介護1〜5の幅広い介護ニーズ、病院受診・服薬管理などの医療的ニーズの両面で、安心してご入居いただける体制を整えております。
-=======
         <p class="p-about__text u-w700 delay u-lh20">
           介護が必要な方が、入居しやすく生活しやすいように入居一時金不要な『いこいの里シリーズ』は、ライフスタイルに合わせて選べる様々なカタチの有料老人ホームです。<br>
           <br>
           入居者様の個々の尊厳を大切にした介護サービスの提供は勿論、地域社会との繋がりや絆を尊重した交流を大切にしています。<br>
           <br>
           そして、いこいの里の一番のこだわりは、 入居者様の心に輝きや活力を生み出す高品質な介護サービスを提供する職員です。入居者様の幸せと職員の幸せの好循環が『いこいの里』の魅力なのです。
->>>>>>> 8b88864 (first commit)
         </p>
         <div class="p-about__text--main delay">
           <h2 class="u-font32 u-w500 delay">
@@ -198,18 +190,12 @@
 
         <div class="p-about__content delay">
           <h3 class="p-about__subtitle-map">
-<<<<<<< HEAD
           <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
           </h3>
           <div class="p-about__content-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="">
-=======
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="福岡県および佐賀県の施設一覧">
             <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
           </h3>
-          <div class="p-about__content-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="福岡県および佐賀県の施設一覧">
->>>>>>> 8b88864 (first commit)
-          </div>
         </div>
 
       </div>
@@ -231,11 +217,7 @@
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
                   <span class="num forPC"></span>
-<<<<<<< HEAD
-                  <p class="cords-list__item-title u-font20 u-w700">第一優先：接遇</p>
-=======
                   <h3 class="cords-list__item-title u-font20 u-w700">第一優先：接遇</h3>
->>>>>>> 8b88864 (first commit)
                 </div>
                 <p class="cords-list__item-text u-w400 u-lh20">
                   円滑なコミュニケーションや信頼関係を築くために
@@ -400,28 +382,6 @@
         <div class="p-terms__content delay">
           <div class="p-terms__content-inner">
             <h3 class="p-terms__subTitle u-font32 u-w700 delay">原則</h3>
-<<<<<<< HEAD
-            <ol class="p-terms__list">
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  症状が安定しており、一定の医療行為の継続状態にあること
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  訪問診療医の診察で治療のできる状態にあること
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  症状がやや不安定であっても、入院の受け入れ体制の調整が可能な状態にあること
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-=======
             <ol class="p-terms__list  delay">
               <li class="p-terms-list__item">
                 <span class="num"></span>
@@ -442,70 +402,8 @@
                 自傷行動、他害行動がないこと。
                 </p>
               </li>
-              <!-- <li class="p-terms-list__item">
->>>>>>> 8b88864 (first commit)
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  医療提供において、積極的な治療希望が本人、家族にない状態にあること
-                </p>
-<<<<<<< HEAD
-              </li>
             </ol>
           </div>
-        </div>
-
-        <?php get_template_part('template-parts/terms-tables') ?>
-
-        <div class="p-terms__content delay">
-          <div class="p-terms__content-inner">
-            <h3 class="p-terms__subTitle u-w700 u-textMdCenter delay">入居困難及び相談が必要な方</h3>
-            <ol class="p-terms__list">
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  夜間帯の鼻腔内吸引
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  自傷行為・他害行為
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  アルコール依存症
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  頻繁な徘徊により、医療チューブを触る可能性のある方
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  重度認知症
-                </p>
-              </li>
-              <li class="p-terms-list__item delay">
-                <span class="num"></span>
-                <p class="p-terms-list__item-text">
-                  重度精神疾患
-                </p>
-              </li>
-            </ol>
-            <p>
-              個別で判断が必要な場合には、個別で判断させていただきます。
-            </p>
-          </div>
-=======
-              </li> -->
-            </ol>
-          </div>
->>>>>>> 8b88864 (first commit)
         </div>
 
         <?php get_template_part('template-parts/terms-tables') ?>
@@ -555,11 +453,11 @@
               個別で判断が必要な場合には、個別で判断させていただきます。
             </p>
           </div>
-        </div> -->
+        </div>
 
-      </div>
-    </div>
-  </section>
+        <?php get_template_part('template-parts/terms-tables') ?>
+
+       
 
   <?php get_template_part('template-parts/after-item'); ?>
 

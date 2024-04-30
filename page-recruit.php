@@ -21,9 +21,8 @@ endif; ?>
       <div class="p-recrut-top__wrap">
         <h2 class="p-recruit__title main-title iconHome u-textCenter delay">いこいの里 採用情報</h2>
         <div class="p-about__listBox">
-<<<<<<< HEAD
           <?php get_template_part('template-parts/about-item'); ?>
-=======
+
           <ol class="p-about__list p-about-list delay">
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
@@ -67,7 +66,6 @@ endif; ?>
             </li>
           </ol>
 
->>>>>>> 8b88864 (first commit)
         </div>
       </div>
     </div>
@@ -119,13 +117,7 @@ endif; ?>
             パート介護スタッフ <br>
             ケアマネージャー（介護支援専門員） <br>
             常勤看護師 <br>
-<<<<<<< HEAD
-            生活相談員・サービス提供責任者 <br>
-            調理スタッフ <br>
-            パート調理スタッフ
-=======
-            生活相談員・サービス提供責任者 
->>>>>>> 8b88864 (first commit)
+            生活相談員・サービス提供責任者
           </dd>
         </dl>
         <dl class="p-recruit-profile__list delay">
@@ -136,12 +128,7 @@ endif; ?>
           <dd class="p-recruit-profile__description lh2">
             北九州市（戸畑区、小倉北区、小倉南区、八幡西区） <br>
             苅田町、糸島市、古賀市 <br>
-<<<<<<< HEAD
-            佐賀県：佐賀市、伊万里市、唐津市 <br>
-            <span class='listMark-grid'>※上記は勤務可能地です。ご本人の希望がない限り異動・転勤はありません。</span>
-=======
             佐賀県：佐賀市、伊万里市、唐津市
->>>>>>> 8b88864 (first commit)
           </dd>
 
         </dl>
@@ -185,15 +172,9 @@ endif; ?>
         <dl class="p-recruit-profile__list delay">
           <dt class="p-recruit-profile__term">法人</dt>
           <dd class="p-recruit-profile__description lh2">
-<<<<<<< HEAD
-            株式会社いこいの里佐賀<br>
-            株式会社ウキシロケアセンター<br>
-            株式会社ウキシロホールディングス<br>
-=======
             株式会社ウキシロホールディングス<br>
             株式会社ウキシロケアセンター<br>
             株式会社いこいの里佐賀<br>
->>>>>>> 8b88864 (first commit)
             <br>
             3社で運営。<br>
             スケールメリットを活かした経営を心がけています。
