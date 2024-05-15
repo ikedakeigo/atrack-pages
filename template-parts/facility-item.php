@@ -4,7 +4,7 @@ $url = get_field('url');
 ?>
 <li id="<?php echo $post_id ?>" class="p-facility-list__item delay">
 
-  <a href="<?php echo $url; ?>">
+  <a href="<?php echo $url ?>">
     <div class="p-facility-list__item-img u-hover-img delay">
       <?php
       $image = get_field('image');
@@ -16,6 +16,19 @@ $url = get_field('url');
       <?php endif; ?>
     </div>
     <div class="p-facility-list__item-content delay">
+      <p class="p-facility-list__item-reservation">
+
+        <?php
+          $custom_vacancy = get_field('vacancy');
+
+          if ($custom_vacancy === '⚪︎') {
+            echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_maru.svg" alt="White Image">';
+          } else {
+            echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_sankaku2.svg" alt="Black Image">';
+          }
+
+        ?>
+      </p>
       <p class="p-facility-list__item-title delay">
         <?php the_title(); ?>
         <?php the_post_thumbnail(); ?>
@@ -26,7 +39,7 @@ $url = get_field('url');
 
         if ($custom_postNum) {
           $formatted_postNum = format_japanese_phone_number($custom_postNum);
-          echo '〒：' . esc_html($formatted_postNum);
+          echo '〒' . esc_html($formatted_postNum);
         }
         echo '<br>';
         echo get_post_meta(get_the_ID(), 'address', true);
@@ -46,6 +59,7 @@ $url = get_field('url');
           $formatted_fax = format_japanese_phone_number($custom_fax);
           echo 'FAX：' . esc_html($formatted_fax);
         }
+
         ?>
       </p>
     </div>

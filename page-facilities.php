@@ -32,6 +32,7 @@ endif; ?>
     </div>
   </section>
 
+  <!-- location -->
   <section class="p-location-list l-location forPC" id="">
     <div class="p-location-list__inner inner">
       <div class="p-location-list__wrap">
@@ -87,9 +88,6 @@ endif; ?>
             </li>
           </ul>
 
-          <!-- 2 -->
-          <div class="p-location-list__list-left">
-            <ul class="p-location-list__list">
           <!--"苅田町" -->
           <div class="p-location-list__list-left">
             <ul class="p-location-list__list delay">
@@ -105,7 +103,6 @@ endif; ?>
               </li>
             </ul>
 
-            <!-- 3 -->
             <!-- "古賀市" -->
             <ul class="p-location-list__list delay">
               <li class="p-location-list__item">
@@ -124,16 +121,6 @@ endif; ?>
               </li>
             </ul>
 
-            <!-- 4 -->
-            <ul class="p-location-list__list">
-              <li class="p-location-list__item">
-                <a href="#koga" class="p-location-list__item-title">
-                  住宅型有料老人ホーム いこいの里 古賀
-                </a>
-              </li>
-            </ul>
-
-            <!-- 5 -->
 
             <!-- "佐賀県" -->
             <ul class="p-location-list__list delay">

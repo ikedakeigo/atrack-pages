@@ -1,8 +1,1 @@
-<<<<<<< HEAD
 <svg width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.102 11.054C21.102 5.504 16.6 1 11.05 1S1 5.503 1 11.054c0 5.55 4.502 10.054 10.05 10.054 5.55 0 10.052-4.503 10.052-10.054z" stroke="#4ECB71" stroke-width="1.875" stroke-miterlimit="10"/><path d="M16.076 6.867l-7.035 8.379-3.016-3.352" stroke="#4ECB71" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/></svg>
-=======
-<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.1016 11.0541C21.1016 5.50339 16.5997 1 11.0508 1C5.50193 1 1 5.50339 1 11.0541C1 16.6048 5.50193 21.1082 11.0508 21.1082C16.5997 21.1082 21.1016 16.6048 21.1016 11.0541Z" stroke="#4ECB71" stroke-width="1.875" stroke-miterlimit="10"/>
-<path d="M16.0762 6.86719L9.04063 15.2456L6.02539 11.8942" stroke="#4ECB71" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
->>>>>>> 8b88864 (first commit)

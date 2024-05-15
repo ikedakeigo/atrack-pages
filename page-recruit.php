@@ -21,12 +21,10 @@ endif; ?>
       <div class="p-recrut-top__wrap">
         <h2 class="p-recruit__title main-title iconHome u-textCenter delay">いこいの里 採用情報</h2>
         <div class="p-about__listBox">
-          <?php get_template_part('template-parts/about-item'); ?>
-
           <ol class="p-about__list p-about-list delay">
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.jpg" alt="私たちが目指す社会">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he1.jpg" alt="私たちが目指す社会">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">01</span>
@@ -40,7 +38,7 @@ endif; ?>
             </li>
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_02.jpg" alt="私たちが目指す職場">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he2.jpg" alt="私たちが目指す職場">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">02</span>
@@ -54,13 +52,13 @@ endif; ?>
             </li>
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_03.jpg" alt="私たちの使命">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he3.jpg" alt="私たちの使命">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">03</span>
                 <h3 class="p-about-list__item-title u-w900">私たちの使命</h3>
                 <p class="p-about-list__item-text u-lh20">
-                人としての想いと接遇、介護のプロとしての知識と技術をもって家庭では実現できない安心で豊かな生活を提供します。
+                  人としての想いと接遇、介護のプロとしての知識と技術をもって家庭では実現できない安心で豊かな生活を提供します。
                 </p>
               </div>
             </li>
@@ -129,6 +127,22 @@ endif; ?>
             北九州市（戸畑区、小倉北区、小倉南区、八幡西区） <br>
             苅田町、糸島市、古賀市 <br>
             佐賀県：佐賀市、伊万里市、唐津市
+          </dd>
+
+        </dl>
+        <dl class="p-recruit-profile__list delay">
+          <dt class="p-recruit-profile__term">
+            給与
+          </dt>
+          <dd class="p-recruit-profile__description lh2">
+            ★給与例<br>
+            265,000円<br>
+            介護職員、夜勤4回ありの場合の月収例です。<br>
+            <br>
+            ここから年次昇給がございます。<br>
+            夜勤なしの働き方もあります。詳細についてはお問い合わせください。<br>
+            また、事務・看護・相談員等の募集もございます。<br>
+            詳しくは<a href="/contact" class="textLink">お問い合わせ</a>、もしくは<a href="tel:093-871-5800" class="textLink">お電話</a>でお問い合わせください。
           </dd>
 
         </dl>

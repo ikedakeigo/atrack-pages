@@ -61,7 +61,7 @@
       <div class="p-about__wrap">
         <h2 class="p-about__title main-title u-textMdCenter delay">いこいの里ってどんな施設？</h2>
         <p class="p-about__text u-w700 delay u-lh20">
-          介護が必要な方が、入居しやすく生活しやすいように入居一時金不要な『いこいの里シリーズ』は、ライフスタイルに合わせて選べる様々なカタチの有料老人ホームです。<br>
+          「いこいの里」は、介護が必要な方が現在のライフスタイルに合わせて選べる有料老人ホームです。<br>
           <br>
           入居者様の個々の尊厳を大切にした介護サービスの提供は勿論、地域社会との繋がりや絆を尊重した交流を大切にしています。<br>
           <br>
@@ -79,7 +79,7 @@
 
 
         <div class="p-about__img innerWidth delay">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="" class="">
+          <a href="/blog"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="" class=""></a>
         </div>
         <div class="p-about__text-box delay">
           <h3 class="p-about__subtitle">TOPICS</h3>
@@ -90,7 +90,9 @@
               <?php
               $args = array(
                 'post_type' => 'news',
-                'posts_per_page' => 3 // 表示件数
+                'posts_per_page' => 3, // 表示件数
+                'orderby' => 'date', // 日付で並び替え
+                'order' => 'DESC' // 降順に並び替え
               );
               $topics_query = new WP_Query($args);
               if ($topics_query->have_posts()) :
@@ -141,7 +143,9 @@
             <dl>
               <?php $args = array(
                 'post_type' => 'blog',
-                'posts_per_page' => 3 // 表示件数
+                'posts_per_page' => 3, // 表示件数
+                'orderby' => 'date', // 日付で並び替え
+                'order' => 'DESC' // 降順に並び替え
               );
               $blog_query = new WP_Query($args);
               if ($blog_query->have_posts()) :
@@ -190,12 +194,11 @@
 
         <div class="p-about__content delay">
           <h3 class="p-about__subtitle-map">
-          <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
+            <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
           </h3>
           <div class="p-about__content-img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="福岡県および佐賀県の施設一覧">
-            <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
-          </h3>
+          </div>
         </div>
 
       </div>
@@ -308,7 +311,7 @@
                 <p class="cords-list__item-text u-w400 u-lh20">
                   たしかな知識と技術をもって、入居者様の尊厳を大切にした介護サービスを提供しています。 特に排泄・入浴に関しての同性介護（同性の職員が対応する）にはこだわりを持って取り組んでいます。<br>
                   <br>
-                  また、いすに座れる方にはいすに座ってもらう、歩ける方には歩いていただく、など 「本人ができないこと」に目を向けるのではなく、「本人ができること」に目を向けた介護サービスを徹底しています。<br>
+                  また、椅子に座れる方には椅子に座ってもらう、歩ける方に歩いていただく、など 「本人ができないこと」に目を向けるのではなく、「本人ができること」に目を向けた介護サービスを徹底しています。<br>
                   <br>
                   いこいの里は、終の住処としてターミナルケア（終末期介護）まで心のこもったお付き合いをさせていただきます。
                 </p>
@@ -386,22 +389,28 @@
               <li class="p-terms-list__item">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text">
-                要介護認定を受けられていること。<br>
-                (申請準備中、申請中であっても入居可能です。)
+                  要介護認定を受けられていること。<br>
+                  (申請準備中、申請中であっても入居可能です。)
                 </p>
               </li>
               <li class="p-terms-list__item">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text">
-                症状が安定しており、在宅生活が可能な状況にあること。
+                  症状が安定しており、在宅生活が可能な状況にあること。
                 </p>
               </li>
               <li class="p-terms-list__item">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text">
-                自傷行動、他害行動がないこと。
+                  自傷行動、他害行動がないこと。
                 </p>
               </li>
+              <!-- <li class="p-terms-list__item">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text">
+                  医療提供において、積極的な治療希望が本人、家族にない状態にあること
+                </p>
+              </li> -->
             </ol>
           </div>
         </div>
@@ -453,11 +462,11 @@
               個別で判断が必要な場合には、個別で判断させていただきます。
             </p>
           </div>
-        </div>
+        </div> -->
 
-        <?php get_template_part('template-parts/terms-tables') ?>
-
-       
+      </div>
+    </div>
+  </section>
 
   <?php get_template_part('template-parts/after-item'); ?>
 

@@ -23,6 +23,7 @@ function custom_menu_order($menu_ord)
     'edit.php?post_type=news', // 投稿
     'edit.php?post_type=blog', // ブログ
     'edit.php?post_type=facilitie', // 施設
+    'edit.php?post_type=facilities', // 施設詳細
     'edit.php?post_type=price', // 入居料金
     'edit.php?post_type=faq', // よくあるご質問
     'edit.php?post_type=page', // 固定ページ
@@ -237,6 +238,21 @@ function create_post_type()
       'supports' => array('title'),
     )
   );
+
+  // register_post_type(
+  //   'facilities',
+  //   array(
+  //     'labels' => array(
+  //       'name' => __('施設詳細'),
+  //       'singular_name' => __('施設詳細'),
+  //     ),
+  //     // 'rewrite' => array('slug' => 'facilitie/detail'),
+  //     'public' => true,
+  //     'has_archive' => true,
+  //     'menu_icon' => 'dashicons-universal-access',
+  //     'supports' => array('title'),
+  //   )
+  // );
 }
 add_action('init', 'create_post_type');
 
@@ -286,6 +302,16 @@ function add_link_files()
   wp_enqueue_script('animation', get_stylesheet_directory_uri() . '/js/animation/web-animations.min.js', array());
 }
 add_action('wp_enqueue_scripts', 'add_link_files');
+
+
+//管理画面にスタイルを付与
+function enqueue_admin_styles()
+{
+  wp_enqueue_style('admin-style', get_stylesheet_directory_uri() . '/assets/css/style.css');
+}
+
+add_action('admin_enqueue_scripts', 'enqueue_admin_styles');
+
 
 
 /* スクリプトの読み込み */
@@ -478,9 +504,10 @@ add_filter('get_the_archive_title', 'my_archive_title');
 
 
 //ヘッダーメニューにclassを追加する
-function wp_nav_menu_allow_html($menu) {
+function wp_nav_menu_allow_html($menu)
+{
   return preg_replace_callback('/&(lt|gt);/', function ($m) {
-      return $m[1] == 'lt' ? '<' : '>';
+    return $m[1] == 'lt' ? '<' : '>';
   }, $menu);
 }
 add_filter('wp_nav_menu', 'wp_nav_menu_allow_html');

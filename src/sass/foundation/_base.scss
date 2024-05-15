@@ -345,227 +345,22 @@ p {
         align-items: flex-end;
     }
 }
-
-/*===================================
- * 404ページ
-===================================*/
-.text-wrapper {
-    margin: 100px auto;
-    font-size: large;
-
-    h1 {
-        text-align: center;
-        font-weight: bold;
-        font-size: xx-large;
-        color: $color-green;
-    }
-    p {
-        text-align: center;
-        font-weight: bold;
-    }
-}
-
-.acf-field .acf-label label {
-    display: block;
-    font-weight: bold;
-    margin: 0 0 3px;
-    padding: 0;
-}
-
-/*===================================
- * テキストリンク
-===================================*/
-.textLink {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #1d3994 !important;
-    margin-right: rem(0);
-}
-
-.anchor {
-    position: absolute;
-    top: rem(-100);
-    @include mq(md) {
-        top: rem(-250);
-    }
-}
-
-@use 'variables' as *;
-@use 'mixin' as *;
-@use 'functions' as *;
-
-html {
-    @if $break-flg == 0 {
-        // 375px以下
-        @media (max-width: 375px) {
-            font-size: vw(375, strip-unit($base-font-size));
-        }
-
-        // 375px〜767px
-        font-size: $base-font-size;
-
-        // 768px〜inner
-        @include mq('md') {
-            font-size: vw(strip-unit($inner), strip-unit($base-font-size));
-        }
-
-        //inner以上
-        @media (min-width: $inner) {
-            font-size: $base-font-size;
-        }
-    } @else {
-        //inner以上
-        font-size: $base-font-size;
-
-        // 768px〜inner
-        @media (max-width: $inner) {
-            font-size: vw(strip-unit($inner), strip-unit($base-font-size));
-        }
-
-        // 375px〜767px
-        @include mq('md') {
-            font-size: $base-font-size;
-        }
-
-        // 375px以下
-        @media (max-width: 375px) {
-            font-size: vw(375, strip-unit($base-font-size));
-        }
-    }
-
-    scroll-behavior: smooth;
-    scroll-padding-top: clamp(rem(200), 10vw, rem(300));
-}
-
-body {
-    font-family: $font-family-base;
-    font-weight: $regular;
-    color: $color-black;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 0.3s;
-}
-a:hover {
-    @if $break-flg ==0 {
-        @include mq('md') {
-            opacity: 0.8;
-        }
-    } @else {
-        opacity: 0.8;
-        @include mq('md') {
-            opacity: 1;
-        }
-    }
-}
-
-p {
-    line-height: 1.6;
-    letter-spacing: 0.08em;
-}
-
-/*===================================
- * sp・pc共通
-===================================*/
-.forSP {
-    display: block;
-    @include mq('md') {
-        display: none !important;
-    }
-}
-
-.forPC {
-    display: none;
-    @include mq('md') {
-        display: block;
-    }
-}
-
-.forSP_ib {
-    display: inline-block;
-    @include mq('md') {
-        display: none !important;
-    }
-}
-
-.forPC_ib {
-    display: none;
-    @include mq('md') {
-        display: inline-block;
-    }
-}
-
-/*===================================
- * メインタイトル
-===================================*/
-.main-title {
-    font-size: rem(24);
-    line-height: calc(24 / 20);
-    font-weight: 700;
-    @include mq(md) {
-        font-size: rem(40);
-        line-height: calc(48 / 40);
-    }
-}
-
-/*===================================
- * テキスト
-===================================*/
-
-// #main p {
-//   font-size:  rem(18);
-//   font-weight: 400;
-//   line-height: 1.5;
-//   @include mq(md){
-//     font-size:  rem(20);
-//   }
-// }
-
-/*===================================
- * 点
-===================================*/
-.listMemo01 li {
-    position: relative;
-    display: block;
-    padding-left: rem(22.5);
-}
-
-.listMark01 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: 'Noto Sans JP', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro',
-        Osaka, 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-}
-
-.listMark-grid {
-    font-size: rem(14);
-    line-height: 1;
-    // padding-left: rem(10);
-}
-
-/*===================================
- * アイコン
-===================================*/
-
-.iconHome {
+.iconPin {
     display: block;
     &::before {
         content: '';
         display: block;
-        background-image: url('../img/icon/icon_home.svg');
+        background-image: url('../img/icon/iconPin.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        margin-right: auto;
-        margin-left: auto;
-        width: rem(40);
-        height: rem(40);
+        // margin-right: auto;
+        // margin-left: auto;
+        width: rem(30);
+        height: rem(30);
         margin-bottom: rem(10);
         @include mq(md) {
-            width: rem(70);
-            height: rem(70);
+            width: rem(30);
+            height: rem(30);
             margin-right: rem(20);
             margin-left: rem(0);
             margin-bottom: rem(0);
@@ -576,157 +371,22 @@ p {
         align-items: flex-end;
     }
 }
-
-.iconMap {
+.iconTrain {
     display: block;
     &::before {
         content: '';
         display: block;
-        background-image: url('../img/icon/icon_map.svg');
+        background-image: url('../img/icon/iconTrain.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        margin-right: auto;
-        margin-left: auto;
-        width: rem(40);
-        height: rem(40);
+        // margin-right: auto;
+        // margin-left: auto;
+        width: rem(30);
+        height: rem(30);
         margin-bottom: rem(10);
         @include mq(md) {
-            width: rem(70);
-            height: rem(70);
-            margin-right: rem(20);
-            margin-left: rem(0);
-            margin-bottom: rem(0);
-        }
-    }
-    @include mq(md) {
-        display: flex;
-        align-items: flex-end;
-    }
-}
-
-.iconMapIcon {
-    display: block;
-    &::before {
-        content: '';
-        display: block;
-        background-image: url('../img/icon/icon_mapIcon.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-right: auto;
-        margin-left: auto;
-        width: rem(40);
-        height: rem(40);
-        margin-bottom: rem(10);
-        @include mq(md) {
-            width: rem(70);
-            height: rem(70);
-            margin-right: rem(20);
-            margin-left: rem(0);
-            margin-bottom: rem(0);
-        }
-    }
-    @include mq(md) {
-        display: flex;
-        align-items: flex-end;
-    }
-}
-
-.iconMath {
-    display: block;
-    &::before {
-        content: '';
-        display: block;
-        background-image: url('../img/icon/icon_math.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-right: auto;
-        margin-left: auto;
-        width: rem(40);
-        height: rem(40);
-        margin-bottom: rem(10);
-        @include mq(md) {
-            width: rem(70);
-            height: rem(70);
-            margin-right: rem(20);
-            margin-left: rem(0);
-            margin-bottom: rem(0);
-        }
-    }
-    @include mq(md) {
-        display: flex;
-        align-items: flex-end;
-    }
-}
-
-.iconQa {
-    display: block;
-    &::before {
-        content: '';
-        display: block;
-        background-image: url('../img/icon/icon_qa.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-right: auto;
-        margin-left: auto;
-        width: rem(40);
-        height: rem(40);
-        margin-bottom: rem(10);
-        @include mq(md) {
-            width: rem(70);
-            height: rem(70);
-            margin-right: rem(20);
-            margin-left: rem(0);
-            margin-bottom: rem(0);
-        }
-    }
-    @include mq(md) {
-        display: flex;
-        align-items: flex-end;
-    }
-}
-
-.iconVision {
-    display: block;
-    &::before {
-        content: '';
-        display: block;
-        background-image: url('../img/icon/icon_vision.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-right: auto;
-        margin-left: auto;
-        width: rem(40);
-        height: rem(40);
-        margin-bottom: rem(10);
-        @include mq(md) {
-            width: rem(70);
-            height: rem(70);
-            margin-right: rem(20);
-            margin-left: rem(0);
-            margin-bottom: rem(0);
-        }
-    }
-    @include mq(md) {
-        display: flex;
-        align-items: flex-end;
-    }
-}
-.iconConcept {
-    display: block;
-    &::before {
-        content: '';
-        display: block;
-        background-image: url('../img/icon/icon_concept.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-right: auto;
-        margin-left: auto;
-        width: rem(40);
-        height: rem(40);
-        margin-bottom: rem(10);
-        @include mq(md) {
-            width: rem(70);
-            height: rem(70);
+            width: rem(30);
+            height: rem(30);
             margin-right: rem(20);
             margin-left: rem(0);
             margin-bottom: rem(0);
@@ -782,3 +442,18 @@ p {
     }
 }
 
+/*===================================
+ * 管理画面
+===================================*/
+
+#acf-group_663350979e041 {
+    .inside.acf-fields.-top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* 画像の間隔 */
+    }
+
+    .acf-fields .acf-field {
+        width: 30%;
+    }
+}
