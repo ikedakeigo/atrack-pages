@@ -6,16 +6,19 @@
     top: 0;
     right: 0;
     left: 0;
-    overflow: scroll;
+    overflow: auto;
+    height: 100vh;
     z-index: 1001;
     @include mq(md) {
-        top: 0;
+        overflow: hidden;
     }
 }
 
 .p-modal {
     padding: rem(100) 0;
     display: none;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .p-modal__close-button {
@@ -34,6 +37,7 @@
     border-radius: rem(10);
     background-color: $color-orange;
     cursor: pointer;
+    z-index: 1002;
     @include mq(md) {
         right: 10%;
         top: rem(50);
@@ -44,13 +48,15 @@
 .p-modal__inner {
     margin: auto;
     padding: rem(20);
+    padding-top: rem(50);
+    padding-bottom: rem(50);
     width: 100%;
     background-color: $color-white;
-    // border: 4px solid $color-green;
     box-shadow: 0 0 6px rgba($color: #1b1310, $alpha: 0.4);
+    position: relative;
     @include mq(mw) {
-        max-height: 80vh; /* ビューポートの高さの80%を最大高さとする */
-        overflow-y: auto; /* 縦方向にコンテンツがオーバーフローしたらスクロールバーを表示 */
+        // max-height: 80vh; /* ビューポートの高さの80%を最大高さとする */
+        // overflow-y: auto; /* 縦方向にコンテンツがオーバーフローしたらスクロールバーを表示 */
     }
     @include mq(md) {
         padding: rem(50);
@@ -114,11 +120,12 @@
 
 .p-price-calculator__result-body {
     font-size: rem(21);
-    margin-top: rem(15);
+    // margin-top: rem(15);
+    margin-top: rem(30);
     @include mq(md) {
         display: flex;
         align-items: center;
-        height: rem(101);
+        // height: rem(101);
     }
 }
 
@@ -126,6 +133,7 @@
     height: 100%;
     text-align: center;
     padding-top: rem(35);
+    padding-bottom: rem(35);
     @include mq(md) {
         width: rem(110);
         border-right: 1px solid #b3b3b3;
@@ -147,6 +155,7 @@
 
 .row {
     display: flex;
+    align-items: center;
 }
 
 .row p {
@@ -189,11 +198,14 @@
 
 .p-price-calculator__box {
     background-color: $color-orange;
-    height: rem(160);
+    // height: rem(160);
     margin-top: rem(30);
     border-radius: rem(10);
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    padding: rem(20);
     @include mq(md) {
-        padding: rem(20);
         max-width: rem(1000);
         margin-right: auto;
         margin-left: auto;
@@ -201,23 +213,28 @@
 }
 
 .dl_Block01 {
-    max-width: rem(600);
+    max-width: rem(800);
     margin-right: auto;
     margin-left: auto;
     dl {
-        margin-bottom: rem(10);
         color: $color-white;
         font-size: rem(20);
         text-align: center;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
         @include mq(md) {
-            display: flex;
             font-size: rem(32);
         }
     }
     dt {
         font-weight: bold;
-        margin-bottom: rem(10);
+        font-size: clamp(rem(14), 2vw, rem(16));
         @include mq(md) {
+            font-size: rem(32);
             margin-right: rem(50);
             margin-bottom: rem(0);
         }
@@ -227,4 +244,66 @@
 .border {
     border: 1px solid #b3b3b3;
     margin: rem(50) 0;
+}
+
+#footer.contact-confirm {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*===================================
+ * 計算結果スタイル
+===================================*/
+
+#resultHead {
+    .col1 {
+        @include mq(md) {
+            width: 40%;
+        }
+    }
+    .col2 {
+        @include mq(md){
+            padding-right: rem(20);
+        }
+    }
+}
+
+#resultBody {
+    .t_left {
+        width: 35%;
+    }
+    .t_right {
+        padding-right: rem(20);
+        @include mq(md) {
+            width: 35%;
+        }
+    }
+
+    .p-price-calculator__monthlyFee2 {
+        width: 35%;
+        @include mq(md){
+            width: 30%;
+
+        }
+    }
+}
+.p-price-calculator__monthlyFee2 {
+    font-size:  rem(16);
+    @include mq(md){
+        font-size:  rem(21);
+
+    }
+}
+
+.p-price-calculator__monthlyCost3 {
+    display: flex;
+    align-items: center;
+    font-size: rem(24);
+    justify-content: center;
+    @include mq(md) {
+        width: 25%;
+        justify-content: flex-end;
+    }
 }

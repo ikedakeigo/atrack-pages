@@ -213,7 +213,6 @@ endif; ?>
             wp_reset_postdata();
           }
           ?>
-
           <?php display_facilities_by_category('北九州'); ?>
           <?php display_facilities_by_category('苅田町'); ?>
           <div class="p-facility-column">

@@ -172,6 +172,24 @@ p {
   }
 }
 
+.forSP_ib {
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .forSP_ib {
+    display: none !important;
+  }
+}
+
+.forPC_ib {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .forPC_ib {
+    display: inline-block;
+  }
+}
+
 /*===================================
  * メインタイトル
 ===================================*/
@@ -212,6 +230,25 @@ p {
   font-size: 14px;
   font-size: 0.7rem;
   line-height: 1;
+}
+
+.block {
+  display: block;
+}
+
+.caution {
+  font-size: 0.5em; /*　文字サイズ調整 */
+  vertical-align: top; /* 文字の位置調整 */
+}
+
+.forPC2 {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .forPC2 {
+    display: block;
+    margin-bottom: 0 !important;
+  }
 }
 
 /*===================================
@@ -483,6 +520,78 @@ p {
   }
 }
 
+.iconPin {
+  display: block;
+}
+.iconPin::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/iconPin.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  width: 1.5rem;
+  height: 30px;
+  height: 1.5rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconPin::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconPin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.iconTrain {
+  display: block;
+}
+.iconTrain::before {
+  content: "";
+  display: block;
+  background-image: url("../img/icon/iconTrain.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  width: 1.5rem;
+  height: 30px;
+  height: 1.5rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .iconTrain::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iconTrain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
 /*===================================
  * 404ページ
 ===================================*/
@@ -526,7 +635,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .anchor {
-    top: -12.5rem;
+    top: -100px;
   }
 }
 
@@ -536,12 +645,13 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  overflow: scroll;
+  overflow: auto;
+  height: 100vh;
   z-index: 1001;
 }
 @media screen and (min-width: 768px) {
   .p-price-calculator__result {
-    top: 0;
+    overflow: hidden;
   }
 }
 
@@ -549,6 +659,8 @@ p {
   padding: 100px 0;
   padding: 5rem 0;
   display: none;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .p-modal__close-button {
@@ -569,6 +681,7 @@ p {
   border-radius: 0.5rem;
   background-color: #FF9213;
   cursor: pointer;
+  z-index: 1002;
 }
 @media screen and (min-width: 768px) {
   .p-modal__close-button {
@@ -582,16 +695,15 @@ p {
   margin: auto;
   padding: 20px;
   padding: 1rem;
+  padding-top: 50px;
+  padding-top: 2.5rem;
+  padding-bottom: 50px;
+  padding-bottom: 2.5rem;
   width: 100%;
   background-color: #fff;
   -webkit-box-shadow: 0 0 6px rgba(27, 19, 16, .4);
           box-shadow: 0 0 6px rgba(27, 19, 16, .4);
-}
-@media screen and (max-width: 767px) {
-  .p-modal__inner {
-    max-height: 80vh; /* ビューポートの高さの80%を最大高さとする */
-    overflow-y: auto; /* 縦方向にコンテンツがオーバーフローしたらスクロールバーを表示 */
-  }
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .p-modal__inner {
@@ -677,8 +789,8 @@ p {
 .p-price-calculator__result-body {
   font-size: 21px;
   font-size: 1.05rem;
-  margin-top: 15px;
-  margin-top: 0.75rem;
+  margin-top: 30px;
+  margin-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .p-price-calculator__result-body {
@@ -688,7 +800,6 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 5.05rem;
   }
 }
 
@@ -697,6 +808,8 @@ p {
   text-align: center;
   padding-top: 35px;
   padding-top: 1.75rem;
+  padding-bottom: 35px;
+  padding-bottom: 1.75rem;
 }
 @media screen and (min-width: 768px) {
   .p-price-calculator__result-body .head {
@@ -726,6 +839,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .row p {
@@ -778,15 +894,20 @@ p {
 
 .p-price-calculator__box {
   background-color: #FF9213;
-  height: 160px;
-  height: 8rem;
   margin-top: 30px;
   margin-top: 1.5rem;
   border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) {
   .p-price-calculator__box {
-    padding: 1rem;
     max-width: 50rem;
     margin-right: auto;
     margin-left: auto;
@@ -794,34 +915,40 @@ p {
 }
 
 .dl_Block01 {
-  max-width: 600px;
-  max-width: 30rem;
+  max-width: 800px;
+  max-width: 40rem;
   margin-right: auto;
   margin-left: auto;
 }
 .dl_Block01 dl {
-  margin-bottom: 10px;
-  margin-bottom: 0.5rem;
   color: #fff;
   font-size: 20px;
   font-size: 1rem;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.dl_Block01 dl:not(:last-child) {
+  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .dl_Block01 dl {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     font-size: 1.6rem;
   }
 }
 .dl_Block01 dt {
   font-weight: bold;
-  margin-bottom: 10px;
-  margin-bottom: 0.5rem;
+  font-size: clamp(14px, 2vw, 16px);
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
 }
 @media screen and (min-width: 768px) {
   .dl_Block01 dt {
+    font-size: 1.6rem;
     margin-right: 2.5rem;
     margin-bottom: 0rem;
   }
@@ -831,5 +958,79 @@ p {
   border: 1px solid #b3b3b3;
   margin: 50px 0;
   margin: 2.5rem 0;
+}
+
+#footer.contact-confirm {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/*===================================
+ * 計算結果スタイル
+===================================*/
+@media screen and (min-width: 768px) {
+  #resultHead .col1 {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #resultHead .col2 {
+    padding-right: 1rem;
+  }
+}
+
+#resultBody .t_left {
+  width: 35%;
+}
+#resultBody .t_right {
+  padding-right: 20px;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  #resultBody .t_right {
+    width: 35%;
+  }
+}
+#resultBody .p-price-calculator__monthlyFee2 {
+  width: 35%;
+}
+@media screen and (min-width: 768px) {
+  #resultBody .p-price-calculator__monthlyFee2 {
+    width: 30%;
+  }
+}
+
+.p-price-calculator__monthlyFee2 {
+  font-size: 16px;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__monthlyFee2 {
+    font-size: 1.05rem;
+  }
+}
+
+.p-price-calculator__monthlyCost3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-size: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .p-price-calculator__monthlyCost3 {
+    width: 25%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 /*# sourceMappingURL=p-modal.css.map */

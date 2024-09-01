@@ -28,18 +28,18 @@ endif; ?>
     <div class="p-contact-botton__inner inner">
       <div class="p-contact-botton__menu">
         <ul class="p-contact-botton__menu-list">
-          <li class="p-contact-botton__menu-item">
-            <!-- お問い合わせ -->
-            <a href="/contact/" class="p-contact-botton__menu-link">
+          <a href="/contact/" class="p-contact-botton__menu-item">
+            <li class="p-contact-botton__menu-link">
+              <!-- お問い合わせ -->
               <span>お問い合わせ</span>
-            </a>
-          </li>
-          <li class="p-contact-botton__menu-item">
-            <!-- 電話番号 -->
-            <a href="tel:093-871-5800" class="p-contact-botton__menu-link">
+            </li>
+          </a>
+          <a href="tel:093-871-5800" class="p-contact-botton__menu-item ">
+            <li class=" p-contact-botton__menu-link">
+              <!-- 電話番号 -->
               <span>電話する</span>
-            </a>
-          </li>
+            </li>
+          </a>
         </ul>
       </div>
     </div>

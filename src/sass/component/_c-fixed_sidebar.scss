@@ -1,0 +1,75 @@
+@use '../foundation' as *;
+
+.side_fixedBtnArea {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 200;
+    // 縦文字
+    writing-mode: vertical-rl;
+
+    height: max-content;
+}
+
+.p-price-calculator__top-btn {
+    background-color: $color-orange;
+    color: $color-white;
+    border-top-left-radius: rem(8);
+    border-top-right-radius: rem(8);
+    padding: rem(20) rem(40);
+    font-weight: bold;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.fixedBtn {
+}
+
+.p-price-calculator__bottom-btn {
+    border-bottom-left-radius: rem(8);
+    border-bottom-right-radius: rem(8);
+    @include mq(mw) {
+        border-radius: rem(10);
+    }
+}
+
+.p-price-calculator__bottom {
+    margin-top: rem(50);
+    display: grid;
+    justify-content: center;
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.p-price-calculator__bottom-btn {
+    background-color: $color-green;
+    color: $color-white;
+    font-weight: bold;
+    padding: rem(20) rem(40);
+    text-align: center;
+    font-size: rem(20);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+    cursor: pointer;
+    @include mq(md) {
+        max-width: rem(1000);
+    }
+}
+
+#roomUrl {
+    &.p-price-calculator__bottom-btn {
+        margin-top: rem(15);
+        border-radius: rem(8);
+        background-color: $color-background;
+        color: $color-black;
+    }
+}
+
+
+#roomUrlSp{
+    &.p-price-calculator__bottom-btn {
+        background-color: $color-background;
+        color: $color-black;
+        margin-bottom: rem(30);
+    }
+}

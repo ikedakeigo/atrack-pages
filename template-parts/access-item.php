@@ -1,4 +1,4 @@
-<section class="p-access l-access delay" id="">
+<section class="p-access l-access delay" id="map">
   <div class="p-access__inner inner">
     <div class="p-access__map-wrap">
       <h2 class="p-access__title main-title iconMap u-textMdCenter delay">拠点マップ</h2>
@@ -12,3 +12,12 @@
     </div>
   </div>
 </section>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- jQuery RWD Image Maps -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+
+<script>
+  jQuery('img[usemap]').rwdImageMaps();
+</script>

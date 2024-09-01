@@ -27,7 +27,7 @@
               $blog_query->the_post();
           ?>
               <li class="p-archive-blog__title-item">
-                <a class="p-archive-blog__title-link" href="<?php the_permalink(); ?>"><?php echo mb_strimwidth(get_the_title(), 0, 20, '...'); ?></a>
+                <a class="p-archive-blog__title-link" href="<?php the_permalink(); ?>"><?php echo mb_strimwidth(get_the_title(), 0, 30, '...'); ?></a>
               </li>
           <?php
             endwhile;

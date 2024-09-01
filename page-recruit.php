@@ -26,7 +26,7 @@ endif; ?>
           <ol class="p-about__list p-about-list delay">
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.jpg" alt="私たちが目指す社会">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he1.jpg" alt="私たちが目指す社会">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">01</span>
@@ -40,7 +40,7 @@ endif; ?>
             </li>
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_02.jpg" alt="私たちが目指す職場">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he2.jpg" alt="私たちが目指す職場">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">02</span>
@@ -54,7 +54,7 @@ endif; ?>
             </li>
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_03.jpg" alt="私たちの使命">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he3.jpg" alt="私たちの使命">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">03</span>
@@ -113,8 +113,8 @@ endif; ?>
             職種
           </dt>
           <dd class="p-recruit-profile__description delay">
-            常勤介護スタッフ <br>
-            パート介護スタッフ <br>
+            常勤介護職員 <br>
+            パート介護職員 <br>
             ケアマネージャー（介護支援専門員） <br>
             常勤看護師 <br>
             生活相談員・サービス提供責任者

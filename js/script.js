@@ -219,15 +219,19 @@ jQuery(function ($) {
     // 計算する
     function calculatePrice(roomType, serviceType) {
         let initialCost = 0; // 敷金
-        let monthlyCost = 0; // 共済費
+        let monthlyCost = 0; // 共済会費
+        let expenseCost = 0; // 諸費用
+        let otherCost = 0; // その他費用
         let careCost = 0; // 要介護費用
         let monthlyFee = 0; // 月額費用
         let totalMonthlyCost = 0; // 総月額費用
 
         // 施設と要介護レベルに応じて料金を決定
-        if (roomType === 'いこいの里小波瀬') {
+        if (roomType === 'いこいの里 小波瀬') {
             initialCost = 100000;
             monthlyCost = 20000;
+            expenseCost = 7700;
+            otherCost = 0;
 
             if (serviceType === '要介護1') {
                 careCost = 16140;
@@ -242,9 +246,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 92000;
-        } else if (roomType === 'グループホーム小波瀬') {
+            monthlyFee2 = 0;
+            roomUrl = '/obase';
+        } else if (roomType === 'GHいこいの里 小波瀬') {
             initialCost = 100000;
             monthlyCost = 0;
+            // expenseCost = 0;
+            otherCost = 0;
 
             if (serviceType === '要介護1') {
                 careCost = 22560;
@@ -259,9 +267,12 @@ jQuery(function ($) {
             }
 
             monthlyFee = 95000;
-        } else if (roomType === 'グループホーム中原') {
+            roomUrl = '/obase02';
+        } else if (roomType === 'グループホーム 中原') {
             initialCost = 100000;
             monthlyCost = 0;
+            // expenseCost = 0;
+            otherCost = 0;
 
             if (serviceType === '要介護1') {
                 careCost = 22560;
@@ -276,9 +287,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 117850;
-        } else if (roomType === 'グループホーム宇佐町') {
+            monthlyFee2 = 0;
+            roomUrl = '/nakabaru';
+        } else if (roomType === 'グループホーム 宇佐町') {
             initialCost = 100000;
             monthlyCost = 0;
+            // expenseCost = 0;
+            otherCost = 0;
 
             if (serviceType === '要介護1') {
                 careCost = 22920;
@@ -293,9 +308,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 135200;
-        } else if (roomType === 'いこいの里若園') {
+            monthlyFee2 = 0;
+            roomUrl = '/usamachi';
+        } else if (roomType === 'いこいの里 若園') {
             initialCost = 0;
             monthlyCost = 20000;
+            expenseCost = 3500;
+            otherCost = 0;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -310,9 +329,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 153700;
-        } else if (roomType === 'いこいの里赤犬丸') {
+            monthlyFee2 = 189700;
+            roomUrl = '/wakazono';
+        } else if (roomType === 'いこいの里 永犬丸') {
             initialCost = 0;
             monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 0;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -327,9 +350,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 81200;
-        } else if (roomType === 'いこいの里本城壱番館') {
+            monthlyFee2 = 0;
+            roomUrl = '/einomaru';
+        } else if (roomType === 'いこいの里 本城壱番館') {
             initialCost = 0;
             monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 8000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -344,9 +371,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 88200;
-        } else if (roomType === 'いこいの里本城弐番館') {
+            monthlyFee2 = 0;
+            roomUrl = '/honjo';
+        } else if (roomType === 'いこいの里 本城弐番館') {
             initialCost = 0;
             monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 8000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -361,9 +392,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 107200;
-        } else if (roomType === 'いこいの里本城徳吉') {
+            monthlyFee2 = 0;
+            roomUrl = '/honjo02';
+        } else if (roomType === 'いこいの里 徳吉') {
             initialCost = 0;
             monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 8000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -378,9 +413,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 105700;
-        } else if (roomType === 'いこいの里曽根壱番館') {
+            monthlyFee2 = 0;
+            roomUrl = '/tokuyoshi';
+        } else if (roomType === 'いこいの里 曽根壱番館') {
             initialCost = 0;
-            monthlyCost = 40000;
+            monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 20000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -395,9 +434,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 105700;
-        } else if (roomType === 'いこいの里曽根弐番館') {
+            monthlyFee2 = 0;
+            roomUrl = '/sone';
+        } else if (roomType === 'いこいの里 曽根弐番館') {
             initialCost = 0;
-            monthlyCost = 40000;
+            monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 20000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -412,9 +455,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 95700;
-        } else if (roomType === 'いこいの里古賀') {
+            monthlyFee2 = 0;
+            roomUrl = '/sone02';
+        } else if (roomType === 'いこいの里 古賀') {
             initialCost = 0;
-            monthlyCost = 40000;
+            monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 20000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -429,9 +476,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 105700;
-        } else if (roomType === 'いこいの里糸島') {
+            monthlyFee2 = 0;
+            roomUrl = '/koga';
+        } else if (roomType === 'いこいの里 糸島') {
             initialCost = 0;
-            monthlyCost = 40000;
+            monthlyCost = 20000;
+            expenseCost = 8800;
+            otherCost = 20000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -446,9 +497,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 98700;
-        } else if (roomType === 'いこいの里伊万里') {
+            monthlyFee2 = 0;
+            roomUrl = '/itoshima';
+        } else if (roomType === 'いこいの里 伊万里') {
             initialCost = 0;
             monthlyCost = 0;
+            expenseCost = 8800;
+            otherCost = 6000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -463,9 +518,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 73700;
-        } else if (roomType === 'いこいの里唐津') {
+            monthlyFee2 = 0;
+            roomUrl = '/imari';
+        } else if (roomType === 'いこいの里 唐津') {
             initialCost = 0;
             monthlyCost = 0;
+            expenseCost = 8800;
+            otherCost = 6000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -480,9 +539,13 @@ jQuery(function ($) {
             }
 
             monthlyFee = 89700;
-        } else if (roomType === 'いこいの里巨勢') {
+            monthlyFee2 = 0;
+            roomUrl = '/karatsu';
+        } else if (roomType === 'いこいの里 巨勢') {
             initialCost = 0;
             monthlyCost = 0;
+            expenseCost = 8800;
+            otherCost = 8000;
 
             if (serviceType === '要介護1') {
                 careCost = 16765;
@@ -497,18 +560,29 @@ jQuery(function ($) {
             }
 
             monthlyFee = 99500;
+            monthlyFee2 = 0;
+            roomUrl = '/kose';
         }
 
-        totalMonthlyCost = initialCost + monthlyCost;
-        let monthlyCost2 = monthlyFee + careCost;
+        // totalMonthlyCost = initialCost + monthlyCost + expenseCost + otherCost;
+        totalMonthlyCost = initialCost + monthlyCost + otherCost;
+        let monthlyCost2 = monthlyFee + careCost + expenseCost;
+        if (monthlyFee2 !== 0) {
+            monthlyCost3 = monthlyFee2 + careCost;
+        }
 
         return {
             initialCost,
             monthlyCost,
             careCost,
+            expenseCost,
+            otherCost,
             totalMonthlyCost,
             monthlyCost2,
-            monthlyFee
+            monthlyCost3,
+            monthlyFee,
+            monthlyFee2,
+            roomUrl
         };
     }
 
@@ -517,6 +591,9 @@ jQuery(function ($) {
 
         var roomType = $('#roomType').val();
         var serviceType = $('#serviceType').val();
+
+        monthlyFee2 = 0;
+        monthlyCost3 = 0;
 
         var price = calculatePrice(roomType, serviceType);
 
@@ -529,10 +606,53 @@ jQuery(function ($) {
         $('#totalMonthlyCost').text(
             `${price.totalMonthlyCost.toLocaleString()}円`
         );
+        $('#expenseCost').text(`${price.expenseCost.toLocaleString()}円`);
         $('#deposit').text(`${price.initialCost.toLocaleString()}円`);
         $('#mutualAid').text(`${price.monthlyCost.toLocaleString()}円`);
+        // $('#otherCost').text(`${price.otherCost.toLocaleString()}円`);
         $('#monthlyCost2').text(`${price.monthlyCost2.toLocaleString()}円`);
+
+        $('#roomUrl').attr('href', roomUrl);
+        $('#roomUrlSp').attr('href', roomUrl);
+
+        if (price.otherCost === 0) {
+            $('#description').html('備品代');
+            $('#otherCost').html(`${price.otherCost.toLocaleString()}円`);
+        } else if (price.otherCost === 8000 || price.otherCost === 6000) {
+            $('#description').html('備品代(防炎カーテン)');
+            $('#otherCost').html(`${price.otherCost.toLocaleString()}円`);
+        } else if (price.otherCost === 20000) {
+            $('#description').html('備品代(防炎ｶｰﾃﾝ・ﾁｪｽﾄ）');
+            $('#otherCost').html(`${price.otherCost.toLocaleString()}円`);
+        }
+
+        if (monthlyCost3 !== 0) {
+            // monthlyFee2が0でなければ表示、そうでなければ空にする
+            $('#monthlyCost3')
+                .text(`(${price.monthlyCost3.toLocaleString()}円)`)
+                .addClass('p-price-calculator__monthlyCost3');
+            $('.result-js').attr('id', 'resultHead');
+        } else {
+            $('#monthlyCost3')
+                .text('')
+                .removeClass('p-price-calculator__monthlyCost3'); // クラスを削除するのが良い場合
+            $('.result-js').removeAttr('id');
+        }
+
         $('#monthlyFee').text(`${price.monthlyFee.toLocaleString()}円`);
+
+        if (price.monthlyFee2 !== 0) {
+            $('#monthlyFee2')
+                .text(`(${price.monthlyFee2.toLocaleString()}円)`)
+                .addClass('p-price-calculator__monthlyFee2');
+            $('.result-js2').attr('id', 'resultBody');
+        } else {
+            $('#monthlyFee2')
+                .text('')
+                .removeClass('p-price-calculator__monthlyFee2');
+            $('.result-js2').removeAttr('id');
+        }
+
         $('#careLevelLabel').text(serviceType);
         $('#careLevelCost').text(`${price.careCost.toLocaleString()}円`);
 

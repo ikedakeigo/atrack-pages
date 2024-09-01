@@ -61,7 +61,7 @@
       <div class="p-about__wrap">
         <h2 class="p-about__title main-title u-textMdCenter delay">いこいの里ってどんな施設？</h2>
         <p class="p-about__text u-w700 delay u-lh20">
-          介護が必要な方が、入居しやすく生活しやすいように入居一時金不要な『いこいの里シリーズ』は、ライフスタイルに合わせて選べる様々なカタチの有料老人ホームです。<br>
+          「いこいの里」は、介護が必要な方が現在のライフスタイルに合わせて選べる有料老人ホームです。<br>
           <br>
           入居者様の個々の尊厳を大切にした介護サービスの提供は勿論、地域社会との繋がりや絆を尊重した交流を大切にしています。<br>
           <br>
@@ -79,7 +79,7 @@
 
 
         <div class="p-about__img innerWidth delay">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="" class="">
+          <a href="/blog"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="" class=""></a>
         </div>
         <div class="p-about__text-box delay">
           <h3 class="p-about__subtitle">TOPICS</h3>
@@ -90,7 +90,9 @@
               <?php
               $args = array(
                 'post_type' => 'news',
-                'posts_per_page' => 3 // 表示件数
+                'posts_per_page' => 3, // 表示件数
+                'orderby' => 'date', // 日付で並び替え
+                'order' => 'DESC' // 降順に並び替え
               );
               $topics_query = new WP_Query($args);
               if ($topics_query->have_posts()) :
@@ -141,7 +143,9 @@
             <dl>
               <?php $args = array(
                 'post_type' => 'blog',
-                'posts_per_page' => 3 // 表示件数
+                'posts_per_page' => 3, // 表示件数
+                'orderby' => 'date', // 日付で並び替え
+                'order' => 'DESC' // 降順に並び替え
               );
               $blog_query = new WP_Query($args);
               if ($blog_query->have_posts()) :
@@ -198,6 +202,15 @@
           </h3>
         </div>
 
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- jQuery RWD Image Maps -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+
+        <script>
+          jQuery('img[usemap]').rwdImageMaps();
+        </script>
+
       </div>
     </div>
   </section>
@@ -220,10 +233,7 @@
                   <h3 class="cords-list__item-title u-font20 u-w700">第一優先：接遇</h3>
                 </div>
                 <p class="cords-list__item-text u-w400 u-lh20">
-                  円滑なコミュニケーションや信頼関係を築くために
-                  入居者様の目線に立ち、一人ひとりに寄り添ったサポートを心がけています。
-                  職員の接遇スキルや知識を身につけることで、より高い接遇が実現します。
-
+                  円滑なコミュニケーションや信頼関係を築くために 入居者様の目線に立ち、一人ひとりに寄り添ったサポートを心がけています。 接遇を大切にすることでお客様によりよい生活を提供いたします。
                 </p>
               </div>
             </a>
@@ -257,7 +267,8 @@
                   <span class="num forPC"></span>
                   <p class="cords-list__item-title u-font20 u-w700">立ち振舞い</p>
                 </div>
-                <p class="cords-list__item-text u-w400 u-lh20">入居者様やその家族、同僚、他の職員に対して、尊重と礼儀正しい態度を持つことが大切です。職員は敬意を払いポジティブな雰囲気を醸し出します。
+                <p class="cords-list__item-text u-w400 u-lh20">
+                  入居者様やご家族様、職員間においても互いを尊重し、敬意を払い、礼儀正しく接します。そのような人間関係によって心地よい住環境を作ります。
                 </p>
               </div>
             </a>
@@ -274,7 +285,7 @@
                   <p class="cords-list__item-title u-font20 u-w700 sp-Pl">医療的なサポートについて</p>
                 </div>
                 <p class="cords-list__item-text u-w400 u-lh20">
-                  協力医療機関による訪問診療、提携薬局からのお薬の配達、看護職員による服薬管理などの医療的なサポート体制を整えております。
+                  協力医療機関による訪問診療、提携薬局から薬の配達、看護職員による服薬管理などの医療的なサポート体制を整えております。
                 </p>
               </div>
             </a>
@@ -290,7 +301,9 @@
                   <span class="num forPC"></span>
                   <p class="cords-list__item-title u-font20 u-w700">自慢の手作り食事</p>
                 </div>
-                <p class="cords-list__item-text u-w400 u-lh20">入居者様にとって食事は毎日の生活の中で最も生きる活力に繋がるもの。だからこそ、 いこいの里ではご入居されるまでにご家庭で食べていらっしゃったような、温かい料理、食べやすい料理、季節感を取り入れた料理を、手作りしてご提供しています。 入居者様のご状態に合わせた刻み食・嚥下食なども、もちろん対応しております。</p>
+                <p class="cords-list__item-text u-w400 u-lh20">
+                  入居者様にとって食事は毎日の生活の中で最も生きる活力に繋がるもの。だからこそ、 いこいの里では入居されるまでにご家庭で召し上がられていたような、温かい料理、食べやすい料理、季節感を取り入れた料理を、手作りしてご提供しています。 入居者様の状態に合わせ、刻み食・嚥下食などにも対応しております。
+                </p>
               </div>
             </a>
           </li>
@@ -308,9 +321,7 @@
                 <p class="cords-list__item-text u-w400 u-lh20">
                   たしかな知識と技術をもって、入居者様の尊厳を大切にした介護サービスを提供しています。 特に排泄・入浴に関しての同性介護（同性の職員が対応する）にはこだわりを持って取り組んでいます。<br>
                   <br>
-                  また、いすに座れる方にはいすに座ってもらう、歩ける方には歩いていただく、など 「本人ができないこと」に目を向けるのではなく、「本人ができること」に目を向けた介護サービスを徹底しています。<br>
-                  <br>
-                  いこいの里は、終の住処としてターミナルケア（終末期介護）まで心のこもったお付き合いをさせていただきます。
+                  また、いこいの里では終の住処としてお過ごしいただくため、看取りまでの介護サービスを行っております。
                 </p>
               </div>
             </a>
@@ -386,20 +397,20 @@
               <li class="p-terms-list__item">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text">
-                要介護認定を受けられていること。<br>
-                (申請準備中、申請中であっても入居可能です。)
+                  要介護認定を受けられていること。<br>
+                  (申請準備中、申請中であっても入居可能です。)
                 </p>
               </li>
               <li class="p-terms-list__item">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text">
-                症状が安定しており、在宅生活が可能な状況にあること。
+                  症状が安定しており、在宅生活が可能な状況にあること。
                 </p>
               </li>
               <li class="p-terms-list__item">
                 <span class="num"></span>
                 <p class="p-terms-list__item-text">
-                自傷行動、他害行動がないこと。
+                  自傷行動、他害行動がないこと。
                 </p>
               </li>
             </ol>
@@ -457,7 +468,7 @@
 
         <?php get_template_part('template-parts/terms-tables') ?>
 
-       
+
 
   <?php get_template_part('template-parts/after-item'); ?>
 

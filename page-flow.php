@@ -22,11 +22,10 @@ endif; ?>
 
   <!-- terms -->
   <section class="p-terms l-terms delay" id="">
-
     <p class="anchor" id="terms"></p>
     <div class="p-terms__inner inner delay">
       <div class="p-terms__wrap">
-        <h2 class="p-terms__title main-title iconHome u-textMdCenter delay">入居条件</h2>
+        <h2 class="p-terms__title main-title iconHome u-textMdCenter delay" >入居条件</h2>
 
         <div class="p-terms__content delay">
           <div class="p-terms__content-inner">
@@ -112,7 +111,6 @@ endif; ?>
               </li>
             </ol>
           </div>
-
         </div>
       </div>
   </section>

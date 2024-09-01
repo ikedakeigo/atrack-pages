@@ -75,7 +75,9 @@
                 </div>
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title u-w700">感染症対策</p>
-                  <p class="cords-list__item-text u-w400 u-lh20">外部からの感染リスクを最小限に抑えるための対策及び、入居者様の健康状態を定期的にモニタリングし、発熱や呼吸器症状などがみられる場合は速やかに対応します。</p>
+                  <p class="cords-list__item-text u-w400 u-lh20">
+                    感染リスクを最小限に抑えるため、予防と対応に関する定期的な社内研修、並びにそれらを活かした取り組みを日々実践しております。
+                  </p>
                 </div>
               </a>
             </li>
@@ -99,7 +101,7 @@
                   <p class="cords-list__item-title u-w700">入浴</p>
                   <p class="cords-list__item-text u-w400 u-lh20">
                     入浴時は同性介護が基本です。<br>
-                    入居者様の状況やライフスタイルにあわせて週に3回、毎日、など入浴介助致します。
+                    入居者様の身体的負担を軽減するために入浴用リフトを使用するなど、状況に応じた入浴介助を行っております。
                   </p>
                 </div>
               </a>

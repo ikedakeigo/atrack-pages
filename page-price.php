@@ -66,8 +66,9 @@ endif; ?>
 
         <!-- 計算結果表示エリア -->
         <div class="p-price-calculator__result js-modal p-modal" id="1">
-          <button class="p-modal__close-button js-modal-close"><span></span>閉じる</button>
+          <button class="p-modal__close-button js-modal-close forSP"><span></span>閉じる</button>
           <div class="p-modal__inner inner">
+            <?php get_template_part('template-parts/fixed_btn-sidebar') ?>
             <h2 class="main-title u-textCenter">入居料金の目安</h2>
             <p class="p-price-calculator__text-small u-textCenter">
               より詳細な料金を<br class="forSP">お知りになりたい方は<br class="forSP">お問合せください。<br class="forSP">093-871-5800
@@ -82,6 +83,12 @@ endif; ?>
               <div class="p-price-calculator__result-body">
                 <div class="head">内訳</div>
                 <div class="body">
+                  <!-- <div class="row">
+                    <p class="t_left">諸費用</p>
+                    <p class="t_right" id="expenseCost">
+
+                    </p>
+                  </div> -->
                   <div class="row">
                     <p class="t_left">敷金</p>
                     <p class="t_right" id="deposit">
@@ -89,9 +96,15 @@ endif; ?>
                     </p>
                   </div>
                   <div class="row">
-                    <p class="t_left">共済会</p>
+                    <p class="t_left">共済会費</p>
                     <p class="t_right" id="mutualAid">
                       <!-- mutualAid -->
+                    </p>
+                  </div>
+                  <div class="row">
+                    <p class="t_left u-font18" id="description"></p>
+                    <p class="t_right" id="otherCost">
+                      <!-- otherCost -->
                     </p>
                   </div>
                 </div>
@@ -101,13 +114,14 @@ endif; ?>
             <div class="border"></div>
 
             <div class="p-price-calculator__result-content">
-              <div class="p-price-calculator__result-head">
+              <div class="p-price-calculator__result-head result-js">
                 <p class="col1">■毎月の費用</p>
                 <p class="col2" id="monthlyCost2">
                   <!-- monthlyCost2 -->
                 </p>
+                <p id="monthlyCost3"></p>
               </div>
-              <div class="p-price-calculator__result-body">
+              <div class="p-price-calculator__result-body result-js2">
                 <div class="head">内訳</div>
                 <div class="body">
                   <div class="row">
@@ -115,6 +129,7 @@ endif; ?>
                     <p class="t_right" id="monthlyFee">
                       <!-- monthlyFee -->
                     </p>
+                    <span id="monthlyFee2"></span>
                   </div>
                   <div class="row">
                     <p class="t_left" id="careLevelLabel">
@@ -124,6 +139,12 @@ endif; ?>
                       <!-- careLevelCost -->
                     </p>
                   </div>
+                  <div class="row">
+                    <p class="t_left">諸費用</p>
+                    <p class="t_right" id="expenseCost">
+                      <!-- expenseCost -->
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,7 +152,7 @@ endif; ?>
             <div class="p-price-calculator__box">
               <div class='dl_Block01'>
                 <dl>
-                  <dt>施　設　名</dt>
+                  <dt>施設名</dt>
                   <dd id="roomType2"></dd>
                 </dl>
                 <dl>
@@ -139,6 +160,19 @@ endif; ?>
                   <dd id="serviceType2"></dd>
                 </dl>
               </div>
+            </div>
+
+            <div class="p-price-calculator__bottom forSP">
+              <a class="p-price-calculator__bottom-btn" id="roomUrlSp">
+                <span class="">
+                  施設の詳細を見る
+                </span>
+              </a>
+              <a href="/contact/" class="p-price-calculator__bottom-btn">
+                <span class="">
+                  入居のお問い合わせ
+                </span>
+              </a>
             </div>
 
           </div>

@@ -24,7 +24,30 @@
                   $news_query->the_post();
               ?>
                   <dt>
-                    <?php the_time('Y.m.j'); ?>
+                    <?php
+                    $data = get_field('data');
+
+                    // 日付が存在する場合はフォーマットを変更して表示
+                    if ($data) {
+                      // DateTimeオブジェクトを作成
+                      $day = new DateTime($data);
+
+                      // フォーマットを指定して出力
+                      echo '<time datetime="' . esc_attr($day->format('c')) . '">' . esc_html($day->format('Y.m.d')) . '</time>';
+                    }
+                    ?>
+                    <?php
+                    $post_id = get_the_ID(); // 現在の投稿のIDを取得
+                    $taxonomy = 'news-cat'; // カスタムタクソノミーの名前を指定
+                    $terms = get_the_terms($post_id, $taxonomy);
+
+                    if ($terms && !is_wp_error($terms)) :
+                      $category = $terms[0];
+                    ?>
+                      <span class="entry-item-tag">
+                        <?php echo $category->name; ?>
+                      </span>
+                    <?php endif; ?>
                   </dt>
                   <dd>
                     <a href="<?php the_permalink(); ?>">
@@ -44,12 +67,12 @@
 
       <!-- ページナビゲーション -->
       <div class="p-pagenavi-list">
-      <div class="p-pagenavi-list__inner">
-        <!-- WP-Pagenavi-listで出力される部分 ここから -->
-        <?php wp_pagenavi(); ?>
-        <!-- WP-Pagenavi-listで出力される部分 ここまで -->
+        <div class="p-pagenavi-list__inner">
+          <!-- WP-Pagenavi-listで出力される部分 ここから -->
+          <?php wp_pagenavi(); ?>
+          <!-- WP-Pagenavi-listで出力される部分 ここまで -->
+        </div>
       </div>
-    </div>
 
     </div>
   </section>

@@ -2,6 +2,40 @@
 <html lang="ja">
 
 <head>
+  <!-- GoogleAnalytics -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)
+
+      [0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-69789978-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-29N90DKP7D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-29N90DKP7D');
+  </script>
+
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
@@ -10,18 +44,20 @@
   <meta name="description" content="トップページの説明" />
   <meta name="keywords" content="キーワード" />
   <!-- ogp -->
-  <meta property="og:title" content="いこいの里" />
+  <meta property="og:title" content="いこいの里 - 心安らぐ老人ホーム" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="サイトのドメイン" />
-  <meta property="og:image" content="OGP IMAGE" />
-  <meta property="og:site_name" content="サイトのドメイン" />
-  <meta property="og:description" content="トップページの説明" />
+  <meta property="og:url" content="https://ikoino-sato.com/" />
+  <meta property="og:image" content="https://ikoino-sato.com/wp-content/uploads/2024/02/mv01.png" />
+  <meta property="og:image:width" content="240" />
+  <meta property="og:image:height" content="240" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:site_name" content="いこいの里" />
+  <meta property="og:description" content="北九州・苅田・佐賀のグループホーム・老人ホーム「いこいの里」公式ホームページ" />
+
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
   <link rel="apple-touch-icon" href="" />
-  <!-- CSS -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" /> -->
+
   <?php wp_head(); ?>
 </head>
 
@@ -98,3 +134,15 @@
     </div>
 
   </header>
+
+
+  <script>
+    // リンクをクリックしたときのイベントリスナーを追加
+    document.getElementById('menu-item-20').addEventListener('click', function(event) {
+      // touchstartイベントが存在しない場合、PCと判断する
+      if (!('ontouchstart' in window)) {
+
+        alert('電話番号: 093-871-5800'); // ダイアログボックスを表示
+      }
+    });
+  </script>

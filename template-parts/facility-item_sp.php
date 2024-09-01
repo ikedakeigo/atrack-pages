@@ -16,6 +16,19 @@ $url = get_field('url');
       <?php endif; ?>
     </div>
     <div class="p-facility-list__item-content ">
+      <p class="p-facility-list__item-reservation">
+
+        <?php
+        $custom_vacancy = get_field('vacancy');
+
+        if ($custom_vacancy === '⚪︎') {
+          echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_maru.svg" alt="White Image">';
+        } else {
+          echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_sankaku2.svg" alt="Black Image">';
+        }
+
+        ?>
+      </p>
       <p class="p-facility-list__item-title ">
         <?php the_title(); ?>
         <?php the_post_thumbnail(); ?>
@@ -37,15 +50,17 @@ $url = get_field('url');
         $custom_tel = get_field('tel');
         $custom_fax = get_field('fax');
 
-        if ($custom_tel) {
-          $formatted_tel = format_japanese_phone_number($custom_tel);
-          echo 'TEL：' . esc_html($formatted_tel);
-        }
+        // if ($custom_tel) {
+        //   $formatted_tel = format_japanese_phone_number($custom_tel);
+        //   echo 'TEL：' . esc_html($formatted_tel);
+        // }
+        echo 'TEL：' . esc_html($custom_tel);
         echo '<br>';
-        if ($custom_fax) {
-          $formatted_fax = format_japanese_phone_number($custom_fax);
-          echo 'FAX：' . esc_html($formatted_fax);
-        }
+        echo 'FAX：' . esc_html($custom_fax);
+        // if ($custom_fax) {
+        //   $formatted_fax = format_japanese_phone_number($custom_fax);
+        //   echo 'FAX：' . esc_html($formatted_fax);
+        // }
         ?>
       </p>
     </div>

@@ -154,6 +154,23 @@ p {
     // padding-left: rem(10);
 }
 
+.block {
+    display: block;
+}
+
+.caution {
+    font-size: 0.5em; /*　文字サイズ調整 */
+    vertical-align: top; /* 文字の位置調整 */
+}
+
+.forPC2 {
+    display: none;
+    @include mq(md) {
+        display: block;
+        margin-bottom: 0 !important;
+    }
+}
+
 /*===================================
  * アイコン
 ===================================*/
@@ -346,6 +363,60 @@ p {
     }
 }
 
+.iconPin {
+    display: block;
+    &::before {
+        content: '';
+        display: block;
+        background-image: url('../img/icon/iconPin.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        // margin-right: auto;
+        // margin-left: auto;
+        width: rem(30);
+        height: rem(30);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(30);
+            height: rem(30);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
+    }
+    @include mq(md) {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.iconTrain {
+    display: block;
+    &::before {
+        content: '';
+        display: block;
+        background-image: url('../img/icon/iconTrain.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        // margin-right: auto;
+        // margin-left: auto;
+        width: rem(30);
+        height: rem(30);
+        margin-bottom: rem(10);
+        @include mq(md) {
+            width: rem(30);
+            height: rem(30);
+            margin-right: rem(20);
+            margin-left: rem(0);
+            margin-bottom: rem(0);
+        }
+    }
+    @include mq(md) {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
 /*===================================
  * 404ページ
 ===================================*/
@@ -386,7 +457,7 @@ p {
     position: absolute;
     top: rem(-100);
     @include mq(md) {
-        top: rem(-250);
+        top: -100px;
     }
 }
 
@@ -781,4 +852,3 @@ p {
         top: rem(-250);
     }
 }
-

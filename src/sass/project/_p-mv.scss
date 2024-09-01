@@ -99,7 +99,8 @@
         object-fit: cover;
         height: auto;
         @include mq(md) {
-            aspect-ratio: 1430/600;
+            // aspect-ratio: 1430/600;
+            aspect-ratio: 1430/700;
         }
     }
 }

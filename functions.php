@@ -97,7 +97,7 @@ function create_post_type()
         'title',
         'author',
         'custom-fields',
-        'thumbnail',
+        // 'thumbnail',
       ),
     )
   );
@@ -137,7 +137,6 @@ function create_post_type()
         'title',
         'author',
         'custom-fields',
-        'thumbnail',
       ),
     )
   );
@@ -220,6 +219,22 @@ function create_post_type()
       // 'has_archive' => true,
       'menu_icon' => 'dashicons-format-chat',
       'supports' => array('title', 'editor'),
+    )
+  );
+  register_taxonomy(
+    'faq-cat', // カテゴリースラッグ
+    'faq', // カスタム投稿タイプ
+    array(
+      'hierarchical' => true, // カテゴリータイプの指定
+      'update_count_callback' => '_update_post_term_count',
+      'public' => true,
+      'hierarchical' => true,
+      'label' => 'よくあるご質問カテゴリー', // ダッシュボードに表示させる名前
+      'show_ui' => true,
+      'query_var' => true,
+      'singular_label' => 'よくあるご質問カテゴリー名',
+      'show_in_rest' => true,
+      'show_admin_column' => true
     )
   );
 
@@ -359,8 +374,8 @@ add_filter('nav_menu_item_title', 'allow_html_in_menu_items', 10, 4);
 
 
 
-/* 電話版号のフォーマット */
-function format_japanese_phone_number($number)
+/* 電話番号のフォーマット */
+function format_japanese_phone_number($number) //非数字の文字を取り除く
 {
   $digits = preg_replace('/\D+/', '', $number);
 
@@ -377,30 +392,31 @@ function format_japanese_phone_number($number)
 
 
 
-function my_acf_save_post($post_id)
-{
-  // 処理を適用するフィールドのリスト
-  $fields_to_clean = array('tel', 'post_number', 'address', 'fax');
+// 一旦コメントアウト
+// function my_acf_save_post($post_id)
+// {
+//   // 処理を適用するフィールドのリスト
+//   $fields_to_clean = array('tel', 'post_number', 'address', 'fax');
 
-  foreach ($fields_to_clean as $field_key) {
-    // ACF フィールドから値を取得
-    $value = get_field($field_key, $post_id, false);
+//   foreach ($fields_to_clean as $field_key) {
+//     // ACF フィールドから値を取得
+//     $value = get_field($field_key, $post_id, false);
 
-    // 数字以外の文字を削除（ただし、'address' フィールドは除外）
-    if ($field_key !== 'address') {
-      $cleaned_value = preg_replace('/\D/', '', $value);
-    } else {
-      // 'address' フィールドの場合は、特定の処理を適用するか、そのまま使用する
-      $cleaned_value = $value; // ここで 'address' に対する特定の処理を行うことも可能
-    }
+//     // 数字以外の文字を削除（ただし、'address' フィールドは除外）
+//     if ($field_key !== 'address') {
+//       $cleaned_value = preg_replace('/\D/', '', $value);
+//     } else {
+//       // 'address' フィールドの場合は、特定の処理を適用するか、そのまま使用する
+//       $cleaned_value = $value; // ここで 'address' に対する特定の処理を行うことも可能
+//     }
 
-    // クリーニング後の値を更新
-    update_field($field_key, $cleaned_value, $post_id);
-  }
-}
+//     // クリーニング後の値を更新
+//     update_field($field_key, $cleaned_value, $post_id);
+//   }
+// }
 
-// ACF の save_post アクションにフック
-add_action('acf/save_post', 'my_acf_save_post', 20);
+// // ACF の save_post アクションにフック
+// add_action('acf/save_post', 'my_acf_save_post', 20);
 
 
 
@@ -478,16 +494,113 @@ add_filter('get_the_archive_title', 'my_archive_title');
 
 
 //ヘッダーメニューにclassを追加する
-function wp_nav_menu_allow_html($menu) {
+function wp_nav_menu_allow_html($menu)
+{
   return preg_replace_callback('/&(lt|gt);/', function ($m) {
-      return $m[1] == 'lt' ? '<' : '>';
+    return $m[1] == 'lt' ? '<' : '>';
   }, $menu);
 }
 add_filter('wp_nav_menu', 'wp_nav_menu_allow_html');
 
-
-
-//ページごとにタイトルを自動設定する
+// ページごとにタイトルを自動設定する
 add_action('init', function () {
   add_theme_support('title-tag');
 });
+
+
+// カテゴリーのデフォルト設定
+add_action('save_post', 'set_default_categories_for_custom_posts', 10, 3);
+
+function set_default_categories_for_custom_posts($post_id, $post, $update)
+{
+  // 既存の投稿を更新する場合は何もしない
+  if ($update) {
+    return;
+  }
+
+  // カスタム投稿タイプとデフォルトのカテゴリーIDの設定
+  $post_types = [
+    'news' => 15, // 'news'カスタム投稿タイプのデフォルトカテゴリーID
+    'blog' => 8, // 'blog'カスタム投稿タイプのデフォルトカテゴリーID
+  ];
+
+  // カスタム投稿タイプに基づいてカテゴリーを割り当てる
+  if (array_key_exists($post->post_type, $post_types)) {
+    $default_term_id = $post_types[$post->post_type];
+    $taxonomy = 'category'; // 'category'またはカスタムタクソノミーのスラッグ
+
+    wp_set_object_terms($post_id, $default_term_id, $taxonomy);
+  }
+}
+
+// メディアボタンを非表示
+
+function my_admin_style()
+{
+?>
+  <style>
+    .wp-media-buttons .insert-media {
+      display: none !important;
+    }
+
+    .acf-field.acf-field-text.acf-field-65f00f9bbc66e {
+      display: none !important;
+    }
+  </style>
+<?php
+}
+add_action('admin_head', 'my_admin_style');
+
+
+
+// 施設一覧の新規追加ボタンを非表示
+function remove_add_new_custom_post_type()
+{
+  global $submenu;
+  // 'edit.php?post_type=your_custom_post_type'を実際のカスタム投稿タイプURLに置き換える
+  unset($submenu['edit.php?post_type=facilitie'][10]);
+}
+add_action('admin_menu', 'remove_add_new_custom_post_type');
+
+function remove_add_new_button()
+{
+  $screen = get_current_screen();
+  if ('facilitie' === $screen->post_type) {
+    echo '<script type="text/javascript">
+          jQuery(document).ready(function($) {
+              $(".page-title-action").remove();
+          });
+      </script>';
+  }
+}
+add_action('admin_head', 'remove_add_new_button');
+
+
+
+// ユーザー権限によるメニュー表示制御
+function filter_custom_post_types_for_author($query)
+{
+  if (is_admin() && $query->is_main_query() && !current_user_can('administrator')) {
+    if (current_user_can('author')) {
+      $post_type = $query->get('post_type');
+      if (empty($post_type)) {
+        $post_type = array('post', 'news', 'blog');
+      }
+      $query->set('post_type', $post_type);
+    }
+  }
+}
+add_action('pre_get_posts', 'filter_custom_post_types_for_author');
+
+
+add_action('admin_menu', 'remove_menu_pages_for_author', 1000);
+function remove_menu_pages_for_author()
+{
+  if (current_user_can('author')) {
+    remove_menu_page('admin.php?page=wpcf7');
+    remove_menu_page('edit.php?post_type=price');
+    remove_menu_page('edit.php?post_type=faq');
+    remove_menu_page('edit.php?post_type=slider');
+    remove_menu_page('edit.php?post_type=facilitie');
+  }
+}
