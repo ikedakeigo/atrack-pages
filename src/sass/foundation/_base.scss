@@ -461,9 +461,6 @@ p {
     }
 }
 
-@use 'variables' as *;
-@use 'mixin' as *;
-@use 'functions' as *;
 
 html {
     @if $break-flg == 0 {

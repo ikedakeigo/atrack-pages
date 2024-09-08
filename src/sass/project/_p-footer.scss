@@ -20,7 +20,8 @@
 .p-footer__wrap {
     @include mq(md){
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        // justify-content: space-between;
     }
 }
 
@@ -90,6 +91,7 @@
     text-align: center;
     @include mq(md){
         padding: rem(15);
+        font-size:  rem(16);
     }
 }
 .p-footer__nav-item a.active {
