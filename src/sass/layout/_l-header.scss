@@ -160,8 +160,9 @@
     font-weight: bold;
     position: relative;
     @include mq(md) {
-        width: per(178, 1280);
-        font-size: clamp(rem(15), 1.5vw, rem(18));
+        width: per(150, 1280);
+        // width: per(178, 1280);
+        font-size: clamp(rem(12), 1.5vw, rem(16));
         line-height: calc(24 / 20);
     }
 

@@ -5,3 +5,5 @@ package-lock.json
 .node-versions
 en/src/img
 .prettierr
+assets/img/*
+/src/img/*
