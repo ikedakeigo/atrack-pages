@@ -115,13 +115,16 @@
 ===================================*/
 .u-hover-img {
     cursor: pointer;
-    max-width: 500px;
+    max-width: 100%;
     overflow: hidden;
     width: 100%;
+    @include mq(md){
+        max-width: 500px;
+    }
 }
 .u-hover-img img {
     height: auto;
-    transition: transform 0.8s ease !important; /* ゆっくり変化させる */
+    transition: transform 0.5s ease !important; /* ゆっくり変化させる */
 }
 .u-hover-img:hover img {
     transform: scale(1.1) !important; /* 拡大 */

@@ -4547,6 +4547,16 @@ p {
   }
 }
 
+.p-facility-list__item-reservation__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.p-facility-list__item-reservation__box .p-facility-list__item-reservation + .p-facility-list__item-reservation {
+  margin-left: 10px;
+  margin-left: 0.5rem;
+}
+
 .p-facility-list__item-reservation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4563,6 +4573,7 @@ p {
   background-color: #FBF6EF;
   padding: 10px 20px;
   padding: 0.5rem 1rem;
+  border-radius: 10px;
 }
 @media screen and (min-width: 768px) {
   .p-facility-list__item-reservation {
@@ -8734,17 +8745,22 @@ article {
 ===================================*/
 .u-hover-img {
   cursor: pointer;
-  max-width: 500px;
+  max-width: 100%;
   overflow: hidden;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .u-hover-img {
+    max-width: 500px;
+  }
 }
 
 .u-hover-img img {
   height: auto;
-  -webkit-transition: -webkit-transform 0.8s ease !important;
-  transition: -webkit-transform 0.8s ease !important;
-  transition: transform 0.8s ease !important;
-  transition: transform 0.8s ease, -webkit-transform 0.8s ease !important; /* ゆっくり変化させる */
+  -webkit-transition: -webkit-transform 0.5s ease !important;
+  transition: -webkit-transform 0.5s ease !important;
+  transition: transform 0.5s ease !important;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease !important; /* ゆっくり変化させる */
 }
 
 .u-hover-img:hover img {

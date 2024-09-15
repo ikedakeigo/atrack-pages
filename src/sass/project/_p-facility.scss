@@ -44,6 +44,14 @@
     }
 }
 
+.p-facility-list__item-reservation__box {
+    display: flex;
+
+    .p-facility-list__item-reservation + .p-facility-list__item-reservation {
+        margin-left:  rem(10);
+    }
+}
+
 .p-facility-list__item-reservation {
     display: flex;
     align-items: center;
@@ -52,6 +60,7 @@
     margin-bottom: rem(20);
     background-color: $color-background;
     padding:  rem(10) rem(20);
+    border-radius: 10px;
     @include mq(md){
         width: 50%;
     }
