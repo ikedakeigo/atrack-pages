@@ -50,7 +50,7 @@ endif; ?>
         </div>
         <div class="p-company-image__img">
           <img
-            src="<?php echo get_template_directory_uri(); ?>/assets/img/company/company_image.jpg"
+            src="<?php echo get_template_directory_uri(); ?>/assets/img/company/company_image.svg"
             alt="ウキシログループ" />
         </div>
       </div>
