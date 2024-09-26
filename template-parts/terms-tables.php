@@ -64,7 +64,7 @@
         </td>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>鼻腔・経管栄養</p>
           </div>
         </td>
@@ -86,7 +86,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>人工呼吸器</p>
           </div>
         </td>
@@ -114,7 +114,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-batumark"></span>
+            <span class="icon-sankakumark"></span>
             <p>気管切開</p>
           </div>
         </td>
@@ -300,7 +300,7 @@
         </td>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>鼻腔・経管栄養</p>
           </div>
         </td>
@@ -325,7 +325,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>人工呼吸器</p>
           </div>
         </td>
@@ -356,7 +356,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-batumark"></span>
+            <span class="icon-sankakumark"></span>
             <p>気管切開</p>
           </div>
         </td>
@@ -511,7 +511,8 @@
     </tbody>
   </table>
 </div>
-<div class="p-terms__content">
+
+<!-- <div class="p-terms__content">
   <h3 class="p-terms__subTitle u-w700 u-font32 ">
     対応可能な医療措置
     <small class="forPC u-font18">(施設によって対応できない医療処置もございます)</small>
@@ -535,11 +536,8 @@
   </div>
 
   <table class="p-terms-list radius-table">
-    <!--
-      pc表示
-    -->
+
     <tbody class="forPC delay">
-      <!-- 1 -->
       <tr class="">
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -567,7 +565,6 @@
         </td>
       </tr>
 
-      <!-- 2 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -577,7 +574,7 @@
         </td>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>鼻腔・経管栄養</p>
           </div>
         </td>
@@ -595,11 +592,10 @@
         </td>
       </tr>
 
-      <!-- 3 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>人工呼吸器</p>
           </div>
         </td>
@@ -623,11 +619,10 @@
         </td>
       </tr>
 
-      <!-- 4 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-batumark"></span>
+            <span class="icon-sankakumark"></span>
             <p>気管切開</p>
           </div>
         </td>
@@ -652,7 +647,6 @@
         </td>
       </tr>
 
-      <!-- 5 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -680,7 +674,6 @@
         </td>
       </tr>
 
-      <!-- 6 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -708,7 +701,6 @@
         </td>
       </tr>
 
-      <!-- 7 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -736,7 +728,6 @@
         </td>
       </tr>
 
-      <!-- 8 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -766,13 +757,10 @@
 
     </tbody>
 
-    <!--
-      sp表示
-    -->
+
 
     <tbody class="forSP delay">
       <div class="scrolldown4"><span>スクロール</span></div>
-      <!-- 1 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -803,7 +791,6 @@
         </td>
       </tr>
 
-      <!-- 2 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -813,7 +800,7 @@
         </td>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>鼻腔・経管栄養</p>
           </div>
         </td>
@@ -834,11 +821,10 @@
         </td>
       </tr>
 
-      <!-- 3 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>人工呼吸器</p>
           </div>
         </td>
@@ -865,11 +851,10 @@
         </td>
       </tr>
 
-      <!-- 4 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-batumark"></span>
+            <span class="icon-sankakumark"></span>
             <p>気管切開</p>
           </div>
         </td>
@@ -897,7 +882,6 @@
         </td>
       </tr>
 
-      <!-- 5 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -928,7 +912,6 @@
         </td>
       </tr>
 
-      <!-- 6 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -959,7 +942,6 @@
         </td>
       </tr>
 
-      <!-- 7 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -990,7 +972,6 @@
         </td>
       </tr>
 
-      <!-- 8 -->
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
@@ -1023,4 +1004,4 @@
 
     </tbody>
   </table>
-</div>
+</div> -->
