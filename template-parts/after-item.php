@@ -63,7 +63,7 @@
                 <div class="cords-list__item-content">
                   <p class="cords-list__item-title u-w700">受診対応</p>
                   <p class="cords-list__item-text u-w400 u-lh20">
-                    検査等で通院する必要がある場合は、ご家族付き添いをお願いしております。有料ですが施設の職員で対応することも可能です。
+                    検査等で通院する必要がある場合は、ご家族様付き添いをお願いしております。有料ですが施設の職員で対応することも可能です。
                   </p>
                 </div>
               </a>
