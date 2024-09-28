@@ -39,8 +39,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-  <title><?php wp_title('|', true, 'right');
-          bloginfo('name'); ?> | いこいの里</title>
   <meta name="description" content="北九州・苅田・佐賀のグループホーム・老人ホーム「いこいの里」公式ホームページ" />
   <meta name="keywords" content="老人ホーム,グループホーム,介護施設,北九州,苅田,佐賀,介護,いこいの里,ウキシロケアセンター" />
   <!-- ogp -->

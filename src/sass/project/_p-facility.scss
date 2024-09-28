@@ -43,6 +43,13 @@
         justify-content: center;
     }
 }
+.p-facility-list__item-reservation__box{
+    display: flex;
+
+    .p-facility-list__item-reservation + .p-facility-list__item-reservation {
+        margin-left:  rem(10);
+    }
+}
 
 .p-facility-list__item-reservation {
     display: flex;
