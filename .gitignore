@@ -3,7 +3,8 @@ node_modules
 package-lock.json
 .DS_Store
 .node-versions
-en/src/img
+src/img/*
+assets/img/*
 .prettierr
 assets/img/*
 /src/img/*

@@ -41,8 +41,8 @@
   <meta name="format-detection" content="telephone=no" />
   <title><?php wp_title('|', true, 'right');
           bloginfo('name'); ?> | いこいの里</title>
-  <meta name="description" content="トップページの説明" />
-  <meta name="keywords" content="キーワード" />
+  <meta name="description" content="北九州・苅田・佐賀のグループホーム・老人ホーム「いこいの里」公式ホームページ" />
+  <meta name="keywords" content="老人ホーム,グループホーム,介護施設,北九州,苅田,佐賀,介護,いこいの里,ウキシロケアセンター" />
   <!-- ogp -->
   <meta property="og:title" content="いこいの里 - 心安らぐ老人ホーム" />
   <meta property="og:type" content="website" />
@@ -68,7 +68,7 @@
       <div class="header__wrap">
         <h1 class="header__logo mainLogo">
           <a href="/">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.png" alt="いこいの里">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.svg" alt="いこいの里">
           </a>
         </h1>
         <div class="header__menu">
