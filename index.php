@@ -196,43 +196,23 @@
           <h3 class="p-about__subtitle-map">
             <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
           </h3>
-          <!-- <div class="p-about__content-img">
+          <div class="p-about__content-img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="福岡県および佐賀県の施設一覧">
-          </div> -->
-          <div class="p-access__content-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map2.png" usemap="#ImageMap" alt="福岡県および佐賀県の施設一覧" />
-            <map name="ImageMap">
-              <area shape="circle" coords="147,1484,81" href="/imari" alt="" />
-              <area shape="circle" coords="341,1175,93" href="/karatsu" alt="" />
-              <area shape="circle" coords="945,1553,79" href="/kose/" alt="" />
-              <area shape="circle" coords="645,699,68" href="/itoshima" alt="" />
-              <area shape="circle" coords="823,486,74" href="/koga" alt="" />
-              <area shape="circle" coords="1429,490,73" href="/honjo" alt="" />
-              <area shape="circle" coords="1389,627,73" href="/honjo02/" alt="" />
-              <area shape="circle" coords="1511,715,74" href="/einomaru" alt="" />
-              <area shape="circle" coords="1972,393,67" href="/nakabaru" alt="" />
-              <area shape="circle" coords="2348,582,86" href="/usamachi" alt="" />
-              <area shape="circle" coords="2232,822,90" href="/wakazono" alt="" />
-              <area shape="circle" coords="2608,767,76" href="/sone" alt="" />
-              <area shape="circle" coords="2505,902,80" href="/sone02" alt="" />
-              <area shape="circle" coords="2234,1034,88" href="/tokuyoshi/" alt="" />
-              <area shape="circle" coords="2739,1170,92" href="/obase/" alt="" />
-              <area shape="circle" coords="2569,1289,97" href="/obase02/" alt="" />
-            </map>
+            <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
+            </h3>
           </div>
+
+          <!-- jQuery -->
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <!-- jQuery RWD Image Maps -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+
+          <script>
+            jQuery('img[usemap]').rwdImageMaps();
+          </script>
+
         </div>
-
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <!-- jQuery RWD Image Maps -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
-
-        <script>
-          jQuery('img[usemap]').rwdImageMaps();
-        </script>
-
       </div>
-    </div>
   </section>
 
   <!-- feature -->
@@ -438,8 +418,10 @@
         </div>
 
         <?php get_template_part('template-parts/terms-tables') ?>
-
-        <!-- <div class="p-terms__content delay">
+      </div>
+    </div>
+  </section>
+  <!-- <div class="p-terms__content delay">
           <div class="p-terms__content-inner">
             <h3 class="p-terms__subTitle u-w700 u-textMdCenter delay">入居困難及び相談が必要な方</h3>
             <ol class="p-terms__list delay">
@@ -486,7 +468,6 @@
           </div>
         </div>
 
-        <?php get_template_part('template-parts/terms-tables') ?>
 
 
 

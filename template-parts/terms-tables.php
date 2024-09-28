@@ -64,7 +64,7 @@
         </td>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>鼻腔・経管栄養</p>
           </div>
         </td>
@@ -86,7 +86,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>人工呼吸器</p>
           </div>
         </td>
@@ -114,7 +114,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-batumark"></span>
+            <span class="icon-sankakumark"></span>
             <p>気管切開</p>
           </div>
         </td>
@@ -300,7 +300,7 @@
         </td>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>鼻腔・経管栄養</p>
           </div>
         </td>
@@ -325,7 +325,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-checkmark"></span>
+            <span class="icon-sankakumark"></span>
             <p>人工呼吸器</p>
           </div>
         </td>
@@ -356,7 +356,7 @@
       <tr>
         <td class="p-terms-list__data">
           <div class="p-terms-list-data__inner">
-            <span class="icon-batumark"></span>
+            <span class="icon-sankakumark"></span>
             <p>気管切開</p>
           </div>
         </td>
