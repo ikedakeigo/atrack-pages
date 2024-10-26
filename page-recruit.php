@@ -24,7 +24,7 @@ endif; ?>
           <ol class="p-about__list p-about-list delay">
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he1.jpg" alt="私たちが目指す社会">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.jpg" alt="私たちが目指す社会">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">01</span>
@@ -38,7 +38,7 @@ endif; ?>
             </li>
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he2.jpg" alt="私たちが目指す職場">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_02.jpg" alt="私たちが目指す職場">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">02</span>
@@ -52,7 +52,7 @@ endif; ?>
             </li>
             <li class="p-about-list__item delay">
               <div class="p-about-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_he3.jpg" alt="私たちの使命">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_03.jpg" alt="私たちの使命">
               </div>
               <div class="p-about-list__item-text-wrap">
                 <span class="num forPC">03</span>

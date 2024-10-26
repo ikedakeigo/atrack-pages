@@ -7,6 +7,10 @@
 
   <!-- p-blog -->
   <section class="p-blog" id="blog">
+    <div class="p-single-blog__mv">
+      <img class="forPC" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="mv" />
+      <img class="forSP" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv_sp.png" alt="mv" />
+    </div>
     <div class="inner">
       <h2 class="main-title">ブログ一覧</h2>
       <div id="topics_block">

@@ -12,14 +12,8 @@
 
           <!-- 投稿のメイン画像 (アイキャッチ画像) -->
           <div class="p-single-blog__mv">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="mv" />
-            <?php /*
-            <?php if (has_post_thumbnail()) : ?>
-              <?php the_post_thumbnail('full', ['class' => 'p-single-blog__featured-image', 'alt' => get_the_title()]); ?>
-            <?php else : ?>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="デフォルト画像" />
-            <?php endif; ?>
-            */ ?>
+            <img class="forPC" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="mv" />
+            <img class="forSP" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv_sp.png" alt="mv" />
           </div>
 
           <div class="p-single-blog__list">
