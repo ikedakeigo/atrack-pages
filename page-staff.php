@@ -189,9 +189,9 @@ endif; ?>
               <div class="p-staff-concept-list__item-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_05.jpg" alt="省略">
               </div>
-              <div class="p-staff-concept-list__item-img">
+              <!-- <div class="p-staff-concept-list__item-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_06.jpg" alt="省略">
-              </div>
+              </div> -->
             </div>
             <div class="p-staff-concept-list__item-text-wrap delay">
 

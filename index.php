@@ -196,7 +196,7 @@
           </h3>
           <div class="p-about__content-img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="福岡県および佐賀県の施設一覧">
-            <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
+            <!-- <span>福岡県および<br class="forSP">佐賀県の施設一覧</span> -->
             </h3>
           </div>
 
@@ -223,7 +223,7 @@
           <li class="cords-list__item delay">
             <a tabindex="-1">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_01.jpg" alt="第一優先：接遇" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_01-1.jpg" alt="第一優先：接遇" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -292,7 +292,7 @@
           <li class="cords-list__item delay">
             <a tabindex="-1">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_05.jpg" alt="自慢の手作り食事" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_05-1.jpg" alt="自慢の手作り食事" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
