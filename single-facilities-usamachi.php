@@ -145,7 +145,7 @@ get_header(); ?>
                   </tr>
                   <tr>
                     <td class="left pl">
-                      管理費
+                      水道光熱費
                       <span class="forSP">24,200円</span>
                     </td>
                     <td class="align_r forPC2 pr">

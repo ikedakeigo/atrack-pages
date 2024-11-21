@@ -37,7 +37,6 @@
     margin-bottom: rem(30);
     padding: rem(30) 0;
     @include mq(md) {
-        width: per(800, 1280);
         margin-bottom: rem(90);
     }
     img {
@@ -45,7 +44,7 @@
         object-fit: cover;
         height: auto;
         @include mq(md) {
-            aspect-ratio: 800/180;
+            aspect-ratio: 1280/330;
         }
     }
 }

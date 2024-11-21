@@ -2,6 +2,7 @@
   <div class="p-access__inner inner">
     <div class="p-access__map-wrap">
       <h2 class="p-access__title main-title iconMap u-textMdCenter delay">拠点マップ</h2>
+
       <div class="p-access__content-img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map2.png" usemap="#ImageMap" alt="福岡県および佐賀県の施設一覧" />
         <map name="ImageMap">

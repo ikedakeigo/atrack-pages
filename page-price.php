@@ -56,7 +56,7 @@ endif; ?>
             </select>
           </div>
           <div class="u-bottom-line"></div>
-          <p class="p-price-calculator__description u-lh20">シミュレーションは北九州エリアの内容、料金はエリアにより異なります。また、入居者様やご家族の皆様の状況に合わせた各種減額プランも準備しておりますので、お気軽にご相談ください。</p>
+          <p class="p-price-calculator__description u-lh20">シミュレーションは北九州エリアの内容、料金はエリアにより異なります。また、入居者様やご家族様の皆様の状況に合わせた各種減額プランも準備しておりますので、お気軽にご相談ください。</p>
           <div class="p-price-calculator__button">
             <input type="submit" value="料金を表示する" />
           </div>

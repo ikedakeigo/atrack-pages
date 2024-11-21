@@ -16,19 +16,26 @@ $url = get_field('url');
       <?php endif; ?>
     </div>
     <div class="p-facility-list__item-content delay">
-      <p class="p-facility-list__item-reservation">
-
-        <?php
-        $custom_vacancy = get_field('vacancy');
-
-        if ($custom_vacancy === '⚪︎') {
-          echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_maru.svg" alt="White Image">';
-        } else {
-          echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_sankaku2.svg" alt="Black Image">';
-        }
-
-        ?>
-      </p>
+      <div class="p-facility-list__item-reservation__box">
+        <p class="p-facility-list__item-reservation">
+          <?php
+          $custom_vacancy = get_field('vacancy');
+          if ($custom_vacancy === '⚪︎') {
+            echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_maru.svg" alt="White Image">';
+          } else {
+            echo '空室状況 <img src="' . get_template_directory_uri() . '/assets/img/icon/icon_sankaku2.svg" alt="Black Image">';
+          }
+          ?>
+        </p>
+        <p class="p-facility-list__item-reservation">
+          <?php
+          $capacity = get_field('capacity');
+          if ($custom_vacancy) {
+            echo '定員：' . esc_html($capacity) . '名';
+          }
+          ?>
+        </p>
+      </div>
       <p class="p-facility-list__item-title delay">
         <?php the_title(); ?>
         <?php the_post_thumbnail(); ?>

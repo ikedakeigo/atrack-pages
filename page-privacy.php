@@ -20,7 +20,7 @@ h3.privacy-title {
   margin-bottom: 10px;
 }
 </style>
-<div class="note_block">
+<!-- <div class="note_block">
   <div class="p-privacy-policy">
     <div class="p-privacy-policy__inner">
       <p class="p-privacy-policy__introduction">
@@ -116,9 +116,9 @@ h3.privacy-title {
       </dl>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="p-privacy-policy5">
+<div class="p-privacy-policy">
   <div class="p-privacy-policy__inner">
     <h1 class="p-privacy-policy__title">プライバシーポリシー</h1>
     <p class="p-privacy-policy__introduction">

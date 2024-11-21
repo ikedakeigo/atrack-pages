@@ -64,7 +64,7 @@ get_header(); ?>
                     所在地
                   </dt>
                   <dd class="p-facilities-single-access__item">
-                    〒800-0345<br class="forSP"> 福岡県京都郡苅田町大字新津1505-27<br>
+                    〒800-0344<br class="forSP"> 福岡県京都郡苅田町大字新津1505-27<br>
                     TEL：0930-24-9051<br class="forSP"> FAX：0930-24-9052
                   </dd>
                 </dl>
@@ -145,7 +145,7 @@ get_header(); ?>
                   </tr>
                   <tr>
                     <td class="left pl">
-                      管理費
+                      水道光熱費
                       <span class="forSP">10,000円</span>
                     </td>
                     <td class="align_r forPC2 pr">

@@ -1,7 +1,7 @@
 <ol class="p-about__list p-about-list delay">
     <li class="p-about-list__item delay">
         <div class="p-about-list__item-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.jpg" alt="私たちが目指す社会">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01-1.jpg" alt="私たちが目指す社会">
         </div>
         <div class="p-about-list__item-text-wrap">
             <span class="num forPC">01</span>
@@ -21,7 +21,7 @@
             <span class="num forPC">02</span>
             <h3 class="p-about-list__item-title u-w900">お客様への想い</h3>
             <p class="p-about-list__item-text u-lh20">
-                入居者様とそのご家族の両方を「お客様」とし、プロの視点で入居者様一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組んでいます。
+                入居者様とそのご家族様の両方を「お客様」とし、プロの視点で入居者様一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組んでいます。
             </p>
         </div>
     </li>

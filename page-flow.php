@@ -50,11 +50,18 @@ endif; ?>
                   自傷行動、他害行動がないこと。
                 </p>
               </li>
+              <!-- <li class="p-terms-list__item delay">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text u-font24">
+                  医療提供において、積極的な治療希望が本人、家族にない状態にあること
+                </p>
+              </li> -->
             </ol>
           </div>
         </div>
 
         <?php get_template_part('template-parts/terms-tables') ?>
+
 
         <p class="mapBtn">
           <a href="#map" class="btnWFull mapBtnLink btn03">
@@ -72,43 +79,40 @@ endif; ?>
                   夜間帯の鼻腔内吸引
                 </p>
               </li>
-              <li class="p-about-list__item delay">
-                <div class="p-about-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/flow_02.jpg" alt="私たちの使命">
-                </div>
-                <div class="p-about-list__item-text-wrap">
-                  <span class="num forPC">02</span>
-                  <h3 class="p-about-list__item-title u-w900">私たちの使命私たちの使命</h3>
-                  <p class="p-about-list__item-text u-font24">
-                    人としての想いと接遇、介護のプロとしての知識と技術をもって家庭では実現できない安心で豊かな生活を提供します
-                  </p>
-                </div>
+              <li class="p-terms-list__item delay">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text u-font24">
+                  自傷行為・他害行為
+                </p>
               </li>
-              <li class="p-about-list__item delay">
-                <div class="p-about-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/flow_03.jpg" alt="お客様への想い">
-                </div>
-                <div class="p-about-list__item-text-wrap">
-                  <span class="num forPC">03</span>
-                  <h3 class="p-about-list__item-title u-w900">お客様への想い</h3>
-                  <p class="p-about-list__item-text u-font24">
-                    入居者様とそのご家族の両方を「お客様」とし、プロの視点で入居者一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組みます。
-                  </p>
-                </div>
+              <li class="p-terms-list__item delay">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text u-font24">
+                  アルコール依存症
+                </p>
               </li>
-              <li class="p-about-list__item delay">
-                <div class="p-about-list__item-img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/flow_04.jpg" alt="入居者様の尊厳">
-                </div>
-                <div class="p-about-list__item-text-wrap">
-                  <span class="num forPC">04</span>
-                  <h3 class="p-about-list__item-title u-w900">入居者様の尊厳</h3>
-                  <p class="p-about-list__item-text u-font24">
-                    入居者様それぞれの価値観に寄りそうために、ひとりの人間として敬意と関心を持って入居者様と接し、深く耳を傾け（言語）、思いを感じ取り（非言語）、ご意向を（口頭で）確認しよう。汲み取り介護を実践しよう。介護につなげよう
-                  </p>
-                </div>
+              <li class="p-terms-list__item delay">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text u-font24">
+                  頻繁な徘徊により、医療チューブを触る可能性のある方
+                </p>
+              </li>
+              <li class="p-terms-list__item delay">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text u-font24">
+                  重度認知症
+                </p>
+              </li>
+              <li class="p-terms-list__item delay">
+                <span class="num"></span>
+                <p class="p-terms-list__item-text u-font24">
+                  重度精神疾患
+                </p>
               </li>
             </ol>
+            <p>
+              個別で判断が必要な場合には、個別で判断させていただきます。
+            </p>
           </div>
         </div> -->
 
@@ -149,7 +153,7 @@ endif; ?>
                 <span class="num forPC">03</span>
                 <h3 class="p-about-list__item-title u-w900">お客様への想い</h3>
                 <p class="p-about-list__item-text u-font24">
-                  入居者様とそのご家族の両方を「お客様」とし、プロの視点で入居者様一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組みます。
+                  入居者様とそのご家族様の両方を「お客様」とし、プロの視点で入居者様一人ひとりに目を配り、全てのお客様に満足していただける親切で公平な介護に取り組みます。
                 </p>
               </div>
             </li>
@@ -169,6 +173,7 @@ endif; ?>
         </div>
 
       </div>
+    </div>
   </section>
 
 
