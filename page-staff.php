@@ -159,7 +159,7 @@ endif; ?>
 
           <li class="p-staff-concept-list__item forPC delay">
             <div class="p-staff-concept-list__item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_06.jpg" alt="私たちの使命">
+              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_06.jpg" alt="私たちの使命"> -->
             </div>
             <div class="p-staff-concept-list__item-text-wrap">
               <div class="p-staff-concept-list__item-box delay">
