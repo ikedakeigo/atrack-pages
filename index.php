@@ -39,11 +39,6 @@
 
               <?php else : ?>
 
-                <!-- <div class="swiper-slide">
-                  <div class="swiper-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/dummy.jpg" alt="ダミー" />
-                  </div>
-                </div> -->
           <?php endif;
             endwhile;
             wp_reset_postdata();
@@ -79,7 +74,10 @@
 
 
         <div class="p-about__img innerWidth delay">
-          <a href="/blog"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="" class=""></a>
+          <a href="/blog">
+            <img class="forPC" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv.png" alt="mv" />
+            <img class="forSP" src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/blog_mv_sp.png" alt="mv" />
+          </a>
         </div>
         <div class="p-about__text-box delay">
           <h3 class="p-about__subtitle">TOPICS</h3>
@@ -198,7 +196,7 @@
           </h3>
           <div class="p-about__content-img">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/map.png" alt="福岡県および佐賀県の施設一覧">
-            <span>福岡県および<br class="forSP">佐賀県の施設一覧</span>
+            <!-- <span>福岡県および<br class="forSP">佐賀県の施設一覧</span> -->
             </h3>
           </div>
 
@@ -225,7 +223,7 @@
           <li class="cords-list__item delay">
             <a tabindex="-1">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_01.jpg" alt="第一優先：接遇" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_01-1.jpg" alt="第一優先：接遇" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -242,7 +240,7 @@
           <li class="cords-list__item delay">
             <a tabindex="-1">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_02.png" alt="言葉遣い" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_02.jpg" alt="言葉遣い" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">
@@ -294,7 +292,7 @@
           <li class="cords-list__item delay">
             <a tabindex="-1">
               <div class="cords-list__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_05.png" alt="自慢の手作り食事" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/feature/cords_05-1.jpg" alt="自慢の手作り食事" />
               </div>
               <div class="cords-list__item-content">
                 <div class="cords-list__item-titleBox">

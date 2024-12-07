@@ -1,7 +1,7 @@
 <ol class="p-about__list p-about-list delay">
     <li class="p-about-list__item delay">
         <div class="p-about-list__item-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01.jpg" alt="私たちが目指す社会">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_01-1.jpg" alt="私たちが目指す社会">
         </div>
         <div class="p-about-list__item-text-wrap">
             <span class="num forPC">01</span>

@@ -20,16 +20,6 @@ endif; ?>
     <div class="p-staff-about__inner inner delay">
       <div class="p-staff-about__wrap">
         <h2 class="p-staff-about__title main-title iconHome u-textMdCenter delay">いこいの里の職員について</h2>
-        <!-- <p class="p-staff-about__text-top u-w900 delay">
-          いこいの里ではスタッフ教育に力を入れているのでメディアで取り上げられました
-        </p>
-        <div class="p-youtube" id="custom-youtube-player delay" data-embed="KiY9kG39JMs">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/youtube_mv.png" alt="動画を再生する" class="youtube-thumbnail" />
-          <div class="youtube-iframe"></div>
-        </div>
-        <p class="p-youtube__dec u-w400 delay">
-          TV番組めんたいワイド[8分36秒]
-        </p> -->
       </div>
     </div>
   </section>
@@ -93,7 +83,7 @@ endif; ?>
 
         <div class="p-staff-info__content delay">
           <div class="p-staff-info__img delay">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_04.png" alt="自分の将来を考え安心できます" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_04.jpg" alt="自分の将来を考え安心できます" />
           </div>
           <div class="p-staff-info__textBox delay">
             <h3 class="p-staff-info__subTitle u-w700 u-textMdCenter">
@@ -169,7 +159,7 @@ endif; ?>
 
           <li class="p-staff-concept-list__item forPC delay">
             <div class="p-staff-concept-list__item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_06.jpg" alt="私たちの使命">
+              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_06.jpg" alt="私たちの使命"> -->
             </div>
             <div class="p-staff-concept-list__item-text-wrap">
               <div class="p-staff-concept-list__item-box delay">
@@ -199,9 +189,9 @@ endif; ?>
               <div class="p-staff-concept-list__item-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_05.jpg" alt="省略">
               </div>
-              <div class="p-staff-concept-list__item-img">
+              <!-- <div class="p-staff-concept-list__item-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff_06.jpg" alt="省略">
-              </div>
+              </div> -->
             </div>
             <div class="p-staff-concept-list__item-text-wrap delay">
 
@@ -359,7 +349,7 @@ endif; ?>
               </p>
             </div>
             <div class="p-staff-value-list__item-img delay">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff-value_06.png" alt="仲間とともに成長する">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/staff/staff-value_06.jpg" alt="仲間とともに成長する">
             </div>
             <div class="p-staff-value-list__item-text u-font20 u-w400 delay">
               <p>

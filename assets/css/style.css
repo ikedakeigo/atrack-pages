@@ -2060,7 +2060,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .p-about__img {
-    width: 62.5%;
     margin-bottom: 4.5rem;
   }
 }
@@ -2072,7 +2071,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .p-about__img img {
-    aspect-ratio: 800/180;
+    aspect-ratio: 1280/330;
   }
 }
 
@@ -3684,6 +3683,26 @@ p {
     text-align: center;
     font-size: 1rem;
   }
+}
+
+.note_block {
+  border: 1px solid #cccccc;
+  clear: both;
+  height: 200px;
+  overflow: auto;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .note_block {
+    padding: 10px 60px;
+  }
+}
+
+h3.privacy-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .p-footer {
