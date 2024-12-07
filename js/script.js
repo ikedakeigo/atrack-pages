@@ -18,6 +18,12 @@ jQuery(function ($) {
             }
         });
 
+        $('.js-click-menu').on('click', function () {
+            // bodyのスタイルをリセット
+            // 採用情報をクリックした際に、メニューが開いたままになるのを防ぐ   
+            $('body').css({ height: '', overflow: '' });
+        });
+
         // backgroundまたはページ内リンクをクリックで閉じる
         $('.js-drawer a[href]').on('click', function () {
             closeDrawer();
