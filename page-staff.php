@@ -250,7 +250,7 @@ endif; ?>
 
 
   <!-- p-staff-value -->
-  <section class="p-staff-value l-staff-value forPC delay" id="">
+  <section class="p-staff-value l-staff-value delay" id="">
     <div class="p-staff-value__inner inner">
       <div class="p-staff-value__wrap">
         <h2 class="p-staff-value__title main-title delay">
@@ -375,6 +375,7 @@ endif; ?>
 
 
 <script>
+  /*
   document.getElementById('custom-youtube-player').addEventListener('click', function() {
     var iframeContainer = this.querySelector('.youtube-iframe');
     if (!iframeContainer.hasChildNodes()) { // Check if the iframe has already been added
@@ -403,4 +404,5 @@ endif; ?>
     var thumbnail = this.querySelector('img');
     thumbnail.style.visibility = 'hidden';
   });
+  */
 </script>
